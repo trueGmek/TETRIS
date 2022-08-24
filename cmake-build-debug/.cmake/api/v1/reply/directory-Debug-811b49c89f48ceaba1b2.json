@@ -1,0 +1,45 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"/home/gmek/Dev/C++/Dependencies/glfw/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 391,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"/home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a"
+			],
+			"targetId" : "glfw::@b577d4b5cc0fe87588b6",
+			"targetIndex" : 1,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "/home/gmek/Dev/C++/Dependencies/glfw/src/src",
+		"source" : "/home/gmek/Dev/C++/Dependencies/glfw/src"
+	}
+}
