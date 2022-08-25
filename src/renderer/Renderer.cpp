@@ -4,7 +4,7 @@
 
 GLFWwindow* MyWindow;
 Shader* basicShader;
-unsigned int Vbo, Vao;
+unsigned int Vbo, Vao, Ebo;
 
 static void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
@@ -51,15 +51,18 @@ bool Renderer::Initialize()
 
 	glGenVertexArrays(1, &Vao);
 	glGenBuffers(1, &Vbo);
+	glGenBuffers(1, &Ebo);
 
 	glBindVertexArray(Vao);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, Ebo);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(Primitives::CubeIndices), Primitives::CubeIndices, GL_STATIC_DRAW);
 	glBindBuffer(GL_ARRAY_BUFFER, Vbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(Primitives::Cube), Primitives::Cube, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(Primitives::CubeVertices), Primitives::CubeVertices, GL_STATIC_DRAW);
 
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 
-	*basicShader = Shader("/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/fragment.glsl",
+	basicShader = new Shader("/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/vertex.glsl",
 		"/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/fragment.glsl");
 
 	return true;
@@ -79,7 +82,8 @@ void Renderer::Update()
 
 	basicShader->Use();
 	glBindVertexArray(Vao);
-	glDrawArrays(GL_TRIANGLES, 0, 3);
+	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+	glBindVertexArray(0);
 
 	glfwPollEvents();
 	glfwSwapBuffers(MyWindow);

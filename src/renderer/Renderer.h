@@ -10,7 +10,7 @@
 
 
 const int InitialWidth = 640;
-const int InitialHeight = 480;
+const int InitialHeight = 1280;
 
 namespace Renderer
 {

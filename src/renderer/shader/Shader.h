@@ -13,12 +13,12 @@ class Shader
 {
 public:
 	unsigned int ID;
-	Shader(const char* vertexShaderPath, const char* fragmentShaderPath);
+	Shader(const std::string& vertexShaderPath, const std::string& fragmentShaderPath);
 	void Use();
 private:
-	static void LoadShader(unsigned int* shader, GLenum type, const char* shaderSource);
-	static int CompileShader(unsigned int* shader, GLenum type, const char* shaderSource);
-	static const char* ReadShader(const char* pathToShader);
+	static void LoadShader(unsigned int* shader, GLenum type, const std::string& shaderSource);
+	static int CompileShader(unsigned int* shader, GLenum type, const std::string& shaderSource);
+	static std::string* ReadShader(const std::string& pathToShader);
 	void CheckLinking(unsigned int id);
 };
 
