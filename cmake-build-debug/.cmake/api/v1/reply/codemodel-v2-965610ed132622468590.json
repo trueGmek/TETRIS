@@ -9,7 +9,8 @@
 					"childIndexes" : 
 					[
 						1,
-						3
+						2,
+						4
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
@@ -25,10 +26,55 @@
 					]
 				},
 				{
+					"build" : "external/glad",
+					"jsonFile" : "directory-external.glad-Debug-37f0033dbad014580c42.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "external/glad",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "external/glm",
+					"childIndexes" : 
+					[
+						3
+					],
+					"jsonFile" : "directory-external.glm-Debug-a6dc993d5209625b6587.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "external/glm",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "external/glm/glm",
+					"jsonFile" : "directory-external.glm.glm-Debug-32a2ad45a04345e60681.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "external/glm/glm"
+				},
+				{
 					"build" : "/home/gmek/Dev/C++/Dependencies/glfw/src",
 					"childIndexes" : 
 					[
-						2
+						5
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-Debug-f8aa7fd193a8ed422bc1.json",
@@ -37,12 +83,8 @@
 						"string" : "3.4"
 					},
 					"parentIndex" : 0,
-					"projectIndex" : 1,
-					"source" : "/home/gmek/Dev/C++/Dependencies/glfw",
-					"targetIndexes" : 
-					[
-						3
-					]
+					"projectIndex" : 3,
+					"source" : "/home/gmek/Dev/C++/Dependencies/glfw"
 				},
 				{
 					"build" : "/home/gmek/Dev/C++/Dependencies/glfw/src/src",
@@ -52,28 +94,13 @@
 					{
 						"string" : "3.4"
 					},
-					"parentIndex" : 1,
-					"projectIndex" : 1,
+					"parentIndex" : 4,
+					"projectIndex" : 3,
 					"source" : "/home/gmek/Dev/C++/Dependencies/glfw/src",
 					"targetIndexes" : 
 					[
 						1,
 						4
-					]
-				},
-				{
-					"build" : "external/glad",
-					"jsonFile" : "directory-external.glad-Debug-37f0033dbad014580c42.json",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.20"
-					},
-					"parentIndex" : 0,
-					"projectIndex" : 2,
-					"source" : "external/glad",
-					"targetIndexes" : 
-					[
-						0
 					]
 				}
 			],
@@ -84,7 +111,8 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
 					"directoryIndexes" : 
 					[
@@ -99,22 +127,7 @@
 				{
 					"directoryIndexes" : 
 					[
-						1,
-						2
-					],
-					"name" : "GLFW",
-					"parentIndex" : 0,
-					"targetIndexes" : 
-					[
-						1,
-						3,
-						4
-					]
-				},
-				{
-					"directoryIndexes" : 
-					[
-						3
+						1
 					],
 					"name" : "Glad",
 					"parentIndex" : 0,
@@ -122,44 +135,71 @@
 					[
 						0
 					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3
+					],
+					"name" : "glm",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4,
+						5
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						4
+					]
 				}
 			],
 			"targets" : 
 			[
 				{
-					"directoryIndex" : 3,
+					"directoryIndex" : 1,
 					"id" : "glad::@55512df44c152ef9a2ca",
 					"jsonFile" : "target-glad-Debug-eefc48c04d44080d038e.json",
 					"name" : "glad",
-					"projectIndex" : 2
+					"projectIndex" : 1
 				},
 				{
-					"directoryIndex" : 2,
+					"directoryIndex" : 5,
 					"id" : "glfw::@b577d4b5cc0fe87588b6",
 					"jsonFile" : "target-glfw-Debug-e655ffb5bbf9413922f2.json",
 					"name" : "glfw",
-					"projectIndex" : 1
+					"projectIndex" : 3
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "tetris::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-tetris-Debug-fe9860eb527320ff4072.json",
+					"jsonFile" : "target-tetris-Debug-732890352afd0c8e1411.json",
 					"name" : "tetris",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 1,
-					"id" : "uninstall::@61ec16fc05650c0c3a6d",
-					"jsonFile" : "target-uninstall-Debug-1cf444d437519fd4fd70.json",
+					"directoryIndex" : 2,
+					"id" : "uninstall::@446904e9652187aa75c1",
+					"jsonFile" : "target-uninstall-Debug-4ad19783886d9fac26b1.json",
 					"name" : "uninstall",
-					"projectIndex" : 1
+					"projectIndex" : 2
 				},
 				{
-					"directoryIndex" : 2,
+					"directoryIndex" : 5,
 					"id" : "update_mappings::@b577d4b5cc0fe87588b6",
 					"jsonFile" : "target-update_mappings-Debug-109244a8b735e2aff531.json",
 					"name" : "update_mappings",
-					"projectIndex" : 1
+					"projectIndex" : 3
 				}
 			]
 		}

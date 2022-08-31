@@ -1,4 +1,4 @@
-# Install script for directory: /home/gmek/Dev/C++/OpenGL/tetris
+# Install script for directory: /home/gmek/Dev/C++/OpenGL/tetris/external/glm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,27 +43,8 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glad/cmake_install.cmake")
+  # Include the install script for each subdirectory.
+  include("/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm/glm/cmake_install.cmake")
+
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/gmek/Dev/C++/Dependencies/glfw/src/cmake_install.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT)
-  set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
-else()
-  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
-endif()
-
-string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
-       "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
-     "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -52,23 +52,44 @@ build cmake_object_order_depends_target_tetris: phony || cmake_object_order_depe
 build CMakeFiles/tetris.dir/src/main.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/main.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/main.cpp.o.d
   FLAGS = -g -std=gnu++20
-  INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include
+  INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src
 
 build CMakeFiles/tetris.dir/src/renderer/Renderer.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Renderer.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/renderer/Renderer.cpp.o.d
   FLAGS = -g -std=gnu++20
-  INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include
+  INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/renderer
 
 build CMakeFiles/tetris.dir/src/renderer/shader/Shader.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/shader/Shader.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/renderer/shader/Shader.cpp.o.d
   FLAGS = -g -std=gnu++20
-  INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include
+  INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/renderer/shader
+
+build CMakeFiles/tetris.dir/src/camera/Camera.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/camera/Camera.cpp || cmake_object_order_depends_target_tetris
+  DEP_FILE = CMakeFiles/tetris.dir/src/camera/Camera.cpp.o.d
+  FLAGS = -g -std=gnu++20
+  INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
+  OBJECT_DIR = CMakeFiles/tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/camera
+
+build CMakeFiles/tetris.dir/src/renderer/primitives/Cube.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/primitives/Cube.cpp || cmake_object_order_depends_target_tetris
+  DEP_FILE = CMakeFiles/tetris.dir/src/renderer/primitives/Cube.cpp.o.d
+  FLAGS = -g -std=gnu++20
+  INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
+  OBJECT_DIR = CMakeFiles/tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/renderer/primitives
+
+build CMakeFiles/tetris.dir/src/game/Game.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/game/Game.cpp || cmake_object_order_depends_target_tetris
+  DEP_FILE = CMakeFiles/tetris.dir/src/game/Game.cpp.o.d
+  FLAGS = -g -std=gnu++20
+  INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
+  OBJECT_DIR = CMakeFiles/tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/game
 
 
 # =============================================================================
@@ -78,9 +99,9 @@ build CMakeFiles/tetris.dir/src/renderer/shader/Shader.cpp.o: CXX_COMPILER__tetr
 #############################################
 # Link the executable tetris
 
-build tetris: CXX_EXECUTABLE_LINKER__tetris_Debug CMakeFiles/tetris.dir/src/main.cpp.o CMakeFiles/tetris.dir/src/renderer/Renderer.cpp.o CMakeFiles/tetris.dir/src/renderer/shader/Shader.cpp.o | /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a external/glad/libglad.a /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a external/glad/libglad.a
+build tetris: CXX_EXECUTABLE_LINKER__tetris_Debug CMakeFiles/tetris.dir/src/main.cpp.o CMakeFiles/tetris.dir/src/renderer/Renderer.cpp.o CMakeFiles/tetris.dir/src/renderer/shader/Shader.cpp.o CMakeFiles/tetris.dir/src/camera/Camera.cpp.o CMakeFiles/tetris.dir/src/renderer/primitives/Cube.cpp.o CMakeFiles/tetris.dir/src/game/Game.cpp.o | external/glad/libglad.a /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a external/glad/libglad.a
   FLAGS = -g
-  LINK_LIBRARIES = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a  external/glad/libglad.a  /usr/lib/x86_64-linux-gnu/librt.a  -lm  -ldl  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
+  LINK_LIBRARIES = external/glad/libglad.a  /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a  /usr/lib/x86_64-linux-gnu/librt.a  -lm  -ldl  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
   OBJECT_DIR = CMakeFiles/tetris.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -158,11 +179,263 @@ build install/strip: phony CMakeFiles/install/strip.util
 # /home/gmek/Dev/C++/OpenGL/tetris/CMakeLists.txt
 # =============================================================================
 
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glad
+
+
+#############################################
+# Order-only phony target for glad
+
+build cmake_object_order_depends_target_glad: phony || external/glad/CMakeFiles/glad.dir
+
+build external/glad/CMakeFiles/glad.dir/src/glad.c.o: C_COMPILER__glad_Debug /home/gmek/Dev/C++/OpenGL/tetris/external/glad/src/glad.c || cmake_object_order_depends_target_glad
+  DEP_FILE = external/glad/CMakeFiles/glad.dir/src/glad.c.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include
+  OBJECT_DIR = external/glad/CMakeFiles/glad.dir
+  OBJECT_FILE_DIR = external/glad/CMakeFiles/glad.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glad
+
+
+#############################################
+# Link the static library external/glad/libglad.a
+
+build external/glad/libglad.a: C_STATIC_LIBRARY_LINKER__glad_Debug external/glad/CMakeFiles/glad.dir/src/glad.c.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = external/glad/CMakeFiles/glad.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = external/glad/libglad.a
+  TARGET_PDB = glad.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build external/glad/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glad && /snap/clion/204/bin/cmake/linux/bin/ccmake -S/home/gmek/Dev/C++/OpenGL/tetris -B/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build external/glad/edit_cache: phony external/glad/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build external/glad/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glad && /snap/clion/204/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/gmek/Dev/C++/OpenGL/tetris -B/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build external/glad/rebuild_cache: phony external/glad/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build external/glad/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build external/glad/CMakeFiles/install.util: CUSTOM_COMMAND external/glad/all
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glad && /snap/clion/204/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build external/glad/install: phony external/glad/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build external/glad/CMakeFiles/install/local.util: CUSTOM_COMMAND external/glad/all
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glad && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build external/glad/install/local: phony external/glad/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build external/glad/CMakeFiles/install/strip.util: CUSTOM_COMMAND external/glad/all
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glad && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build external/glad/install/strip: phony external/glad/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/gmek/Dev/C++/OpenGL/tetris/CMakeLists.txt
+# =============================================================================
+
 
 #############################################
 # Utility command for uninstall
 
-build /home/gmek/Dev/C++/Dependencies/glfw/src/uninstall: phony /home/gmek/Dev/C++/Dependencies/glfw/src/CMakeFiles/uninstall
+build external/glm/uninstall: phony external/glm/CMakeFiles/uninstall
+
+
+#############################################
+# Utility command for edit_cache
+
+build external/glm/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm && /snap/clion/204/bin/cmake/linux/bin/ccmake -S/home/gmek/Dev/C++/OpenGL/tetris -B/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build external/glm/edit_cache: phony external/glm/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build external/glm/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm && /snap/clion/204/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/gmek/Dev/C++/OpenGL/tetris -B/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build external/glm/rebuild_cache: phony external/glm/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build external/glm/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build external/glm/CMakeFiles/install.util: CUSTOM_COMMAND external/glm/all
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm && /snap/clion/204/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build external/glm/install: phony external/glm/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build external/glm/CMakeFiles/install/local.util: CUSTOM_COMMAND external/glm/all
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build external/glm/install/local: phony external/glm/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build external/glm/CMakeFiles/install/strip.util: CUSTOM_COMMAND external/glm/all
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build external/glm/install/strip: phony external/glm/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for external/glm/CMakeFiles/uninstall
+
+build external/glm/CMakeFiles/uninstall | ${cmake_ninja_workdir}external/glm/CMakeFiles/uninstall: CUSTOM_COMMAND
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm && /snap/clion/204/bin/cmake/linux/bin/cmake -P /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/cmake_uninstall.cmake
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/gmek/Dev/C++/OpenGL/tetris/external/glm/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build external/glm/glm/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm/glm && /snap/clion/204/bin/cmake/linux/bin/ccmake -S/home/gmek/Dev/C++/OpenGL/tetris -B/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build external/glm/glm/edit_cache: phony external/glm/glm/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build external/glm/glm/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm/glm && /snap/clion/204/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/gmek/Dev/C++/OpenGL/tetris -B/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build external/glm/glm/rebuild_cache: phony external/glm/glm/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build external/glm/glm/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build external/glm/glm/CMakeFiles/install.util: CUSTOM_COMMAND external/glm/glm/all
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm/glm && /snap/clion/204/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build external/glm/glm/install: phony external/glm/glm/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build external/glm/glm/CMakeFiles/install/local.util: CUSTOM_COMMAND external/glm/glm/all
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm/glm && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build external/glm/glm/install/local: phony external/glm/glm/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build external/glm/glm/CMakeFiles/install/strip.util: CUSTOM_COMMAND external/glm/glm/all
+  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm/glm && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build external/glm/glm/install/strip: phony external/glm/glm/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/gmek/Dev/C++/OpenGL/tetris/CMakeLists.txt
+# =============================================================================
 
 
 #############################################
@@ -229,13 +502,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/CMakeFiles/install/strip.util: CU
   restat = 1
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/install/strip: phony /home/gmek/Dev/C++/Dependencies/glfw/src/CMakeFiles/install/strip.util
-
-
-#############################################
-# Custom command for /home/gmek/Dev/C++/Dependencies/glfw/src/CMakeFiles/uninstall
-
-build /home/gmek/Dev/C++/Dependencies/glfw/src/CMakeFiles/uninstall: CUSTOM_COMMAND
-  COMMAND = cd /home/gmek/Dev/C++/Dependencies/glfw/src && /snap/clion/204/bin/cmake/linux/bin/cmake -P /home/gmek/Dev/C++/Dependencies/glfw/src/cmake_uninstall.cmake
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -524,109 +790,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/update_mappings: C
   DESC = Updating gamepad mappings from upstream repository
 
 # =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /home/gmek/Dev/C++/OpenGL/tetris/CMakeLists.txt
-# =============================================================================
-
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target glad
-
-
-#############################################
-# Order-only phony target for glad
-
-build cmake_object_order_depends_target_glad: phony || external/glad/CMakeFiles/glad.dir
-
-build external/glad/CMakeFiles/glad.dir/src/glad.c.o: C_COMPILER__glad_Debug /home/gmek/Dev/C++/OpenGL/tetris/external/glad/src/glad.c || cmake_object_order_depends_target_glad
-  DEP_FILE = external/glad/CMakeFiles/glad.dir/src/glad.c.o.d
-  FLAGS = -g
-  INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include
-  OBJECT_DIR = external/glad/CMakeFiles/glad.dir
-  OBJECT_FILE_DIR = external/glad/CMakeFiles/glad.dir/src
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target glad
-
-
-#############################################
-# Link the static library external/glad/libglad.a
-
-build external/glad/libglad.a: C_STATIC_LIBRARY_LINKER__glad_Debug external/glad/CMakeFiles/glad.dir/src/glad.c.o
-  LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = external/glad/CMakeFiles/glad.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = external/glad/libglad.a
-  TARGET_PDB = glad.a.dbg
-
-
-#############################################
-# Utility command for edit_cache
-
-build external/glad/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glad && /snap/clion/204/bin/cmake/linux/bin/ccmake -S/home/gmek/Dev/C++/OpenGL/tetris -B/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug
-  DESC = Running CMake cache editor...
-  pool = console
-  restat = 1
-
-build external/glad/edit_cache: phony external/glad/CMakeFiles/edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build external/glad/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glad && /snap/clion/204/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/gmek/Dev/C++/OpenGL/tetris -B/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build external/glad/rebuild_cache: phony external/glad/CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Utility command for list_install_components
-
-build external/glad/list_install_components: phony
-
-
-#############################################
-# Utility command for install
-
-build external/glad/CMakeFiles/install.util: CUSTOM_COMMAND external/glad/all
-  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glad && /snap/clion/204/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build external/glad/install: phony external/glad/CMakeFiles/install.util
-
-
-#############################################
-# Utility command for install/local
-
-build external/glad/CMakeFiles/install/local.util: CUSTOM_COMMAND external/glad/all
-  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glad && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build external/glad/install/local: phony external/glad/CMakeFiles/install/local.util
-
-
-#############################################
-# Utility command for install/strip
-
-build external/glad/CMakeFiles/install/strip.util: CUSTOM_COMMAND external/glad/all
-  COMMAND = cd /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glad && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-  DESC = Installing the project stripped...
-  pool = console
-  restat = 1
-
-build external/glad/install/strip: phony external/glad/CMakeFiles/install/strip.util
-
-# =============================================================================
 # Target aliases.
 
 build glad: phony external/glad/libglad.a
@@ -637,7 +800,7 @@ build libglad.a: phony external/glad/libglad.a
 
 build libglfw3.a: phony /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a
 
-build uninstall: phony /home/gmek/Dev/C++/Dependencies/glfw/src/uninstall
+build uninstall: phony external/glm/uninstall
 
 build update_mappings: phony /home/gmek/Dev/C++/Dependencies/glfw/src/src/update_mappings
 
@@ -663,7 +826,7 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/all: phony /home/gmek/Dev/C++
 #############################################
 # Folder: /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug
 
-build all: phony tetris /home/gmek/Dev/C++/Dependencies/glfw/src/all external/glad/all
+build all: phony tetris external/glad/all external/glm/all /home/gmek/Dev/C++/Dependencies/glfw/src/all
 
 # =============================================================================
 
@@ -673,20 +836,34 @@ build all: phony tetris /home/gmek/Dev/C++/Dependencies/glfw/src/all external/gl
 build external/glad/all: phony external/glad/libglad.a
 
 # =============================================================================
+
+#############################################
+# Folder: /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm
+
+build external/glm/all: phony external/glm/glm/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug/external/glm/glm
+
+build external/glm/glm/all: phony
+
+# =============================================================================
 # Built-in targets
 
 
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../external/glad/CMakeLists.txt /home/gmek/Dev/C++/Dependencies/glfw/CMake/cmake_uninstall.cmake.in /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3.pc.in /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3Config.cmake.in /home/gmek/Dev/C++/Dependencies/glfw/CMakeLists.txt /home/gmek/Dev/C++/Dependencies/glfw/src/CMakeLists.txt /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDependentOption.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckFunctionExists.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckIncludeFile.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckLibraryExists.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindFontconfig.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindFreetype.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindOpenGL.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageMessage.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPkgConfig.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindThreads.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindX11.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/GNUInstallDirs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/SelectLibraryConfigurations.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../external/glad/CMakeLists.txt ../external/glm/CMakeLists.txt ../external/glm/cmake/cmake_uninstall.cmake.in ../external/glm/glm/CMakeLists.txt /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3.pc.in /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3Config.cmake.in /home/gmek/Dev/C++/Dependencies/glfw/CMakeLists.txt /home/gmek/Dev/C++/Dependencies/glfw/src/CMakeLists.txt /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDependentOption.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckFunctionExists.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckIncludeFile.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckLibraryExists.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindFontconfig.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindFreetype.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindOpenGL.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageMessage.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPkgConfig.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindThreads.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindX11.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/GNUInstallDirs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/SelectLibraryConfigurations.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../external/glad/CMakeLists.txt /home/gmek/Dev/C++/Dependencies/glfw/CMake/cmake_uninstall.cmake.in /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3.pc.in /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3Config.cmake.in /home/gmek/Dev/C++/Dependencies/glfw/CMakeLists.txt /home/gmek/Dev/C++/Dependencies/glfw/src/CMakeLists.txt /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDependentOption.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckFunctionExists.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckIncludeFile.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckLibraryExists.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindFontconfig.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindFreetype.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindOpenGL.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageMessage.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPkgConfig.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindThreads.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindX11.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/GNUInstallDirs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/SelectLibraryConfigurations.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../external/glad/CMakeLists.txt ../external/glm/CMakeLists.txt ../external/glm/cmake/cmake_uninstall.cmake.in ../external/glm/glm/CMakeLists.txt /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3.pc.in /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3Config.cmake.in /home/gmek/Dev/C++/Dependencies/glfw/CMakeLists.txt /home/gmek/Dev/C++/Dependencies/glfw/src/CMakeLists.txt /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDependentOption.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckFunctionExists.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckIncludeFile.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckLibraryExists.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindFontconfig.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindFreetype.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindOpenGL.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageMessage.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPkgConfig.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindThreads.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindX11.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/GNUInstallDirs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/SelectLibraryConfigurations.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
 
 
 #############################################

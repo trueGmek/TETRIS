@@ -1,10 +1,10 @@
 #include "Renderer.h"
 #include "shader/Shader.h"
-#include "Primitives.h"
+#include "../debug/Debug.h"
 
 GLFWwindow* MyWindow;
-Shader* basicShader;
-unsigned int Vbo, Vao, Ebo;
+
+std::queue<Renderer::Primitive*> Renderer::_primitivesQueue{};
 
 static void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
@@ -29,7 +29,7 @@ bool Renderer::Initialize()
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	MyWindow = glfwCreateWindow(InitialWidth, InitialHeight, "TETRIS", nullptr, nullptr);
+	MyWindow = glfwCreateWindow(INITIAL_WIDTH, INITIAL_HEIGHT, "TETRIS", nullptr, nullptr);
 	if (!MyWindow)
 
 		return false;
@@ -44,26 +44,12 @@ bool Renderer::Initialize()
 	glfwSetKeyCallback(MyWindow, KeyCallback);
 	glfwSetErrorCallback(ErrorCallback);
 
-	glViewport(0, 0, InitialWidth, InitialHeight);
+	glViewport(0, 0, INITIAL_WIDTH, INITIAL_HEIGHT);
 	glfwSetFramebufferSizeCallback(MyWindow, FramebufferSizeCallback);
 
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 
-	glGenVertexArrays(1, &Vao);
-	glGenBuffers(1, &Vbo);
-	glGenBuffers(1, &Ebo);
-
-	glBindVertexArray(Vao);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, Ebo);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(Primitives::CubeIndices), Primitives::CubeIndices, GL_STATIC_DRAW);
-	glBindBuffer(GL_ARRAY_BUFFER, Vbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(Primitives::CubeVertices), Primitives::CubeVertices, GL_STATIC_DRAW);
-
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-	glEnableVertexAttribArray(0);
-
-	basicShader = new Shader("/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/vertex.glsl",
-		"/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/fragment.glsl");
+	glEnable(GL_DEPTH_TEST);
 
 	return true;
 }
@@ -78,12 +64,18 @@ void Renderer::Terminate()
 
 void Renderer::Update()
 {
-	glClear(GL_COLOR_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	basicShader->Use();
-	glBindVertexArray(Vao);
-	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-	glBindVertexArray(0);
+	while (!Renderer::_primitivesQueue.empty())
+	{
+
+		Renderer::_primitivesQueue.front()->Bind();
+		Renderer::_primitivesQueue.front()->SetData();
+		Renderer::_primitivesQueue.front()->Draw();
+		Renderer::_primitivesQueue.front()->Unbind();
+
+		Renderer::_primitivesQueue.pop();
+	}
 
 	glfwPollEvents();
 	glfwSwapBuffers(MyWindow);

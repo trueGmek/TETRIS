@@ -7,7 +7,15 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(GLFW_DIR /home/gmek/Dev/C++/Dependencies/glfw/)
 
-add_executable(tetris src/main.cpp src/renderer/Renderer.h src/renderer/Renderer.cpp src/renderer/Primitives.h src/renderer/shader/Shader.cpp src/renderer/shader/Shader.h)
+add_executable(tetris src/main.cpp src/renderer/Renderer.h src/renderer/Renderer.cpp src/renderer/Primitives.h src/renderer/shader/Shader.cpp src/renderer/shader/Shader.h src/Transform.h src/camera/Camera.cpp src/camera/Camera.h src/debug/Debug.h src/renderer/primitives/Primitive.h src/renderer/primitives/Cube.cpp src/renderer/primitives/Cube.h src/renderer/Material.h src/game/Game.cpp src/game/Game.h)
+
+# ADD GLAD
+add_subdirectory(external/glad)
+target_link_libraries(${PROJECT_NAME} PUBLIC glad)
+
+# ADD GLM
+add_subdirectory(external/glm)
+target_link_libraries(${PROJECT_NAME} PUBLIC glm)
 
 # ADD GLFW
 add_subdirectory(${GLFW_DIR}
@@ -17,12 +25,9 @@ set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
-target_link_libraries(${PROJECT_NAME} glfw)
-target_link_libraries(${PROJECT_NAME} OpenGL::GL)
+target_link_libraries(${PROJECT_NAME} PUBLIC glfw)
 
+# ADD OPENGL
 FIND_PACKAGE(OpenGL REQUIRED)
-
-# ADD GLAD
-add_subdirectory(external/glad)
-target_link_libraries(${PROJECT_NAME} glad)
+target_link_libraries(${PROJECT_NAME} PUBLIC OpenGL::GL)
 

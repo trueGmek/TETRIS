@@ -1,4 +1,5 @@
 #include "Shader.h"
+#include "glm/gtc/type_ptr.hpp"
 
 Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentShaderPath)
 {
@@ -89,4 +90,14 @@ void Shader::CheckLinking(unsigned int id)
 		glGetProgramInfoLog(ID, 512, nullptr, infoLog);
 		std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
 	}
+}
+
+void Shader::SetMat4Uniform(const std::string& name, glm::mat4 value) const
+{
+	glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
+}
+
+void Shader::SetVec4Uniform(const std::string& name, glm::vec4 value) const
+{
+	glUniform4f(glGetUniformLocation(ID, name.c_str()), value.x, value.y, value.z, value.w);
 }

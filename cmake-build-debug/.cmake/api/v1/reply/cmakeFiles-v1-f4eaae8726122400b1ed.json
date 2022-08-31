@@ -137,6 +137,23 @@
 			"path" : "/snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageMessage.cmake"
 		},
 		{
+			"path" : "external/glad/CMakeLists.txt"
+		},
+		{
+			"path" : "external/glm/CMakeLists.txt"
+		},
+		{
+			"path" : "external/glm/cmake/cmake_uninstall.cmake.in"
+		},
+		{
+			"path" : "external/glm/glm/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/GNUInstallDirs.cmake"
+		},
+		{
 			"isExternal" : true,
 			"path" : "/home/gmek/Dev/C++/Dependencies/glfw/CMakeLists.txt"
 		},
@@ -203,10 +220,6 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/gmek/Dev/C++/Dependencies/glfw/CMake/cmake_uninstall.cmake.in"
 		},
 		{
 			"isExternal" : true,
@@ -290,9 +303,6 @@
 		{
 			"isExternal" : true,
 			"path" : "/home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3.pc.in"
-		},
-		{
-			"path" : "external/glad/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",
