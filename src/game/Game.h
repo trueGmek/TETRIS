@@ -1,14 +1,14 @@
-#ifndef TETRIS_SRC_GAME_GAME_H
-#define TETRIS_SRC_GAME_GAME_H
+#ifndef TETRIS_SRC_GAME_GAME_H_
+#define TETRIS_SRC_GAME_GAME_H_
 
-#include "../renderer/primitives/Cube.h"
+#include "../renderer/primitives/cube/Cube.h"
 
-namespace Game
-{
-	bool Initialize();
-	void Update();
-	void Terminate();
+namespace game {
+
+bool Initialize();
+void Update();
+void Terminate();
 
 } // Game
 
-#endif //TETRIS_SRC_GAME_GAME_H
+#endif //TETRIS_SRC_GAME_GAME_H_

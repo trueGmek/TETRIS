@@ -1,41 +1,22 @@
-#ifndef TETRIS_SRC_RENDERER_PRIMITIVES_PRIMITIVE_H
-#define TETRIS_SRC_RENDERER_PRIMITIVES_PRIMITIVE_H
+#ifndef TETRIS_SRC_RENDERER_PRIMITIVES_PRIMITIVE_H_
+#define TETRIS_SRC_RENDERER_PRIMITIVES_PRIMITIVE_H_
 
 #include "../shader/Shader.h"
 #include "../Material.h"
 #include "../../Transform.h"
 
-namespace Renderer
-{
+namespace renderer {
+class Primitive {
+ public:
+  virtual void Bind() = 0;
 
-	class Primitive
-	{
-	protected:
-		Shader* _shader;
-		Material _material;
-		Transform _transform;
+  virtual void Unbind() = 0;
 
-		unsigned int _vbo;
-		unsigned int _vao;
-		unsigned int _ebo;
+  virtual void SetData() = 0;
 
-	public:
-		virtual void Bind()
-		{
-			glBindVertexArray(_vao);
-			_shader->Use();
-		}
-
-		virtual void Unbind()
-		{
-			glBindVertexArray(0);
-		}
-
-		virtual void SetData() = 0;
-
-		virtual void Draw() = 0;
-	};
+  virtual void Draw() = 0;
+};
 
 } // Renderer
 
-#endif //TETRIS_SRC_RENDERER_PRIMITIVES_PRIMITIVE_H
+#endif //TETRIS_SRC_RENDERER_PRIMITIVES_PRIMITIVE_H_

@@ -1,17 +1,15 @@
 #include "renderer/Renderer.h"
 #include "game/Game.h"
 
-int main()
-{
-	Renderer::Initialize();
-	Game::Initialize();
+int main() {
+  renderer::Initialize();
+  game::Initialize();
 
-	while (!Renderer::IsWindowClosing())
-	{
-		Game::Update();
-		Renderer::Update();
-	}
+  while (!renderer::IsWindowClosing()) {
+	game::Update();
+	renderer::Update();
+  }
 
-	Game::Terminate();
-	Renderer::Terminate();
+  game::Terminate();
+  renderer::Terminate();
 }

@@ -1,87 +1,75 @@
 #include "Renderer.h"
 #include "shader/Shader.h"
 #include "../debug/Debug.h"
+#include "Provider.h"
 
-GLFWwindow* MyWindow;
+GLFWwindow *renderer::window;
 
-std::queue<Renderer::Primitive*> Renderer::_primitivesQueue{};
-
-static void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
-{
-	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-		glfwSetWindowShouldClose(window, GLFW_TRUE);
+static void KeyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
+  if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+	glfwSetWindowShouldClose(window, GLFW_TRUE);
 }
 
-static void ErrorCallback(int error, const char* description)
-{
-	std::cout << "Error: " << description << std::endl;
+static void ErrorCallback(int error, const char *description) {
+  std::cout << "Error: " << description << std::endl;
 }
 
-static void FramebufferSizeCallback(GLFWwindow* window, int width, int height)
-{
-	glViewport(0, 0, width, height);
+static void FramebufferSizeCallback(GLFWwindow *window, int width, int height) {
+  glViewport(0, 0, width, height);
 }
 
-bool Renderer::Initialize()
-{
-	if (!glfwInit())
-		return false;
+bool renderer::Initialize() {
+  if (!glfwInit())
+	return false;
 
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	MyWindow = glfwCreateWindow(INITIAL_WIDTH, INITIAL_HEIGHT, "TETRIS", nullptr, nullptr);
-	if (!MyWindow)
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+  window = glfwCreateWindow(kInitialWidth, kInitialHeight, "TETRIS", nullptr, nullptr);
+  if (!window)
 
-		return false;
-	glfwMakeContextCurrent(MyWindow);
+	return false;
+  glfwMakeContextCurrent(window);
 
-	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-	{
-		std::cout << "Failed to Initialize OpenGL context" << std::endl;
-		return false;
-	}
+  if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+	std::cout << "Failed to Initialize OpenGL context" << std::endl;
+	return false;
+  }
 
-	glfwSetKeyCallback(MyWindow, KeyCallback);
-	glfwSetErrorCallback(ErrorCallback);
+  glfwSetKeyCallback(window, KeyCallback);
+  glfwSetErrorCallback(ErrorCallback);
 
-	glViewport(0, 0, INITIAL_WIDTH, INITIAL_HEIGHT);
-	glfwSetFramebufferSizeCallback(MyWindow, FramebufferSizeCallback);
+  glViewport(0, 0, kInitialWidth, kInitialHeight);
+  glfwSetFramebufferSizeCallback(window, FramebufferSizeCallback);
 
-	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+  glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 
-	glEnable(GL_DEPTH_TEST);
+  glEnable(GL_DEPTH_TEST);
 
-	return true;
+  return true;
 }
 
-void Renderer::Terminate()
-{
-	if (MyWindow != nullptr)
-		glfwDestroyWindow(MyWindow);
+void renderer::Terminate() {
+  if (window != nullptr)
+	glfwDestroyWindow(window);
 
-	glfwTerminate();
+  glfwTerminate();
 }
 
-void Renderer::Update()
-{
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+void renderer::Update() {
+  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	while (!Renderer::_primitivesQueue.empty())
-	{
+  for (auto primitive : primitivesList) {
+	primitive->Bind();
+	primitive->SetData();
+	primitive->Draw();
+	primitive->Unbind();
+  }
 
-		Renderer::_primitivesQueue.front()->Bind();
-		Renderer::_primitivesQueue.front()->SetData();
-		Renderer::_primitivesQueue.front()->Draw();
-		Renderer::_primitivesQueue.front()->Unbind();
-
-		Renderer::_primitivesQueue.pop();
-	}
-
-	glfwPollEvents();
-	glfwSwapBuffers(MyWindow);
+  primitivesList.clear();
+  glfwPollEvents();
+  glfwSwapBuffers(window);
 }
 
-bool Renderer::IsWindowClosing()
-{
-	return glfwWindowShouldClose(MyWindow);
+bool renderer::IsWindowClosing() {
+  return glfwWindowShouldClose(window);
 }

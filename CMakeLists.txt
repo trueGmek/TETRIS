@@ -7,7 +7,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(GLFW_DIR /home/gmek/Dev/C++/Dependencies/glfw/)
 
-add_executable(tetris src/main.cpp src/renderer/Renderer.h src/renderer/Renderer.cpp src/renderer/Primitives.h src/renderer/shader/Shader.cpp src/renderer/shader/Shader.h src/Transform.h src/camera/Camera.cpp src/camera/Camera.h src/debug/Debug.h src/renderer/primitives/Primitive.h src/renderer/primitives/Cube.cpp src/renderer/primitives/Cube.h src/renderer/Material.h src/game/Game.cpp src/game/Game.h)
+add_executable(tetris src/main.cpp src/renderer/Renderer.h src/renderer/Renderer.cpp src/renderer/shader/Shader.cpp src/renderer/shader/Shader.h src/Transform.h src/camera/Camera.cpp src/camera/Camera.h src/debug/Debug.h src/renderer/primitives/Primitive.h src/renderer/primitives/cube/Cube.cpp src/renderer/primitives/cube/Cube.h src/renderer/Material.h src/game/Game.cpp src/game/Game.h src/renderer/primitives/line/Line.cpp src/renderer/primitives/line/Line.h src/renderer/primitives/Colors.h src/renderer/primitives/line/LineMaterial.h src/game/GameCube.cpp src/game/GameCube.h src/game/GameObject.h src/renderer/Provider.cpp src/renderer/Provider.h)
 
 # ADD GLAD
 add_subdirectory(external/glad)

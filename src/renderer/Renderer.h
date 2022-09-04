@@ -1,5 +1,5 @@
-#ifndef TETRIS_SRC_RENDERER_RENDERER_H
-#define TETRIS_SRC_RENDERER_RENDERER_H
+#ifndef TETRIS_SRC_RENDERER_RENDERER_H_
+#define TETRIS_SRC_RENDERER_RENDERER_H_
 
 #define GLFW_INCLUDE_NONE
 
@@ -10,17 +10,16 @@
 #include "primitives/Primitive.h"
 #include "queue"
 
-const int INITIAL_WIDTH{ 640 };
-const int INITIAL_HEIGHT{ 480 };
+const int kInitialWidth{640};
+const int kInitialHeight{480};
 
-namespace Renderer
-{
-	extern std::queue<Renderer::Primitive*> _primitivesQueue;
+namespace renderer {
+extern GLFWwindow *window;
 
-	bool Initialize();
-	void Terminate();
-	void Update();
-	bool IsWindowClosing();
+bool Initialize();
+void Terminate();
+void Update();
+bool IsWindowClosing();
 }
 
-#endif //TETRIS_SRC_RENDERER_RENDERER_H
+#endif //TETRIS_SRC_RENDERER_RENDERER_H_

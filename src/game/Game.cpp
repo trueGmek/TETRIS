@@ -1,57 +1,76 @@
 #include "Game.h"
 #include "glm/vec3.hpp"
 #include "../renderer/Renderer.h"
+#include "../renderer/primitives/line/Line.h"
+#include "../renderer/primitives/Colors.h"
+#include "../renderer/Provider.h"
 
-Renderer::Cube* cube1;
-Renderer::Cube* cube2;
-Renderer::Cube* cube3;
-Renderer::Cube* cube4;
+renderer::Cube *cube1;
+renderer::Cube *cube2;
+renderer::Cube *cube3;
+renderer::Cube *cube4;
 
-bool Game::Initialize()
-{
+renderer::Line *line1;
 
-	cube1 = new Renderer::Cube();
-	cube2 = new Renderer::Cube();
-	cube3 = new Renderer::Cube();
-	cube4 = new Renderer::Cube();
+bool game::Initialize() {
 
-	return true;
+  cube1 = new renderer::Cube();
+  cube2 = new renderer::Cube();
+  cube3 = new renderer::Cube();
+  cube4 = new renderer::Cube();
+
+  line1 = new renderer::Line();
+
+  return true;
 }
 
-void Game::Update()
-{
-	Transform transform1, transform2, transform3, transform4;
-	Material material1, material2, material3, material4;
+void game::Update() {
+  Transform transform_1, transform_2, transform_3, transform_4;
+  Transform line_start, line_end, line_pivot;
 
-	material1.Color = glm::vec4{ 1, 0, 0, 1 };
-	material2.Color = glm::vec4{ 0, 1, 0, 1 };
-	material3.Color = glm::vec4{ 0, 0, 1, 1 };
-	material4.Color = glm::vec4{ 0, 1, 1, 1 };
+  LineMaterial line_material;
 
-	transform1.Position = glm::vec3{ -1.5, 0, -1 };
-	transform2.Position = glm::vec3{ 0.5, 0, -1 };
-	transform3.Position = glm::vec3{ 0, 0.5, -1 };
-	transform4.Position = glm::vec3{ 0, -0.5, -1 };
+  line_material.color = colors::WHITE;
+  line_material.width = 2.0f;
 
-	cube1->SetTransform(transform1);
-	cube1->SetMaterial(material1);
+  glm::vec4 start_screen_space = {-0.9, -0.9, 0, 1};
+  glm::vec4 end_screen_space = {-0.9, 0.9f, 0, 1};
 
-	cube2->SetTransform(transform2);
-	cube2->SetMaterial(material2);
+  transform_1.position = glm::vec3{-1.4, -1, 0};
+  transform_2.position = glm::vec3{1.4, 1, 0};
+  transform_3.position = glm::vec3{-1.4, 1, 0};
+  transform_4.position = glm::vec3{1.4, -1, 0};
 
-	cube3->SetTransform(transform3);
-	cube3->SetMaterial(material3);
+  line_start.position = Camera::ScreenToWorld() * start_screen_space;
+  line_end.position = Camera::ScreenToWorld() * end_screen_space;
+  line_pivot.position = glm::vec3{0, 0, 0};
 
-	cube4->SetTransform(transform4);
-	cube4->SetMaterial(material4);
+  cube1->SetTransform(transform_1);
+  cube1->material_.color = colors::RED;
 
-	Renderer::_primitivesQueue.push(cube1);
-	Renderer::_primitivesQueue.push(cube2);
-	Renderer::_primitivesQueue.push(cube3);
-	Renderer::_primitivesQueue.push(cube4);
+  cube2->SetTransform(transform_2);
+  cube2->material_.color = colors::GREEN;
+
+  cube3->SetTransform(transform_3);
+  cube3->material_.color = colors::BLUE;
+
+  cube4->SetTransform(transform_4);
+  cube4->material_.color = colors::YELLOW;
+
+  line1->SetStart(line_start);
+  line1->SetEnd(line_end);
+  line1->SetPivot(line_pivot);
+  line1->material_.color = colors::WHITE;
+  line1->material_.width = 2.0f;
+
+  renderer::primitivesList.insert(renderer::primitivesList.end(),
+								  {cube1, cube2, cube3, cube4, line1});
 }
 
-void Game::Terminate()
-{
-
+void game::Terminate() {
+  delete cube1;
+  delete cube2;
+  delete cube3;
+  delete cube4;
+  delete line1;
 }
