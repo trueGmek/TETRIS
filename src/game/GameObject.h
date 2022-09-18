@@ -7,20 +7,18 @@ class GameObject {
  public:
   Transform transform_{};
 
-  virtual void OnEnable() {
-  }
+  GameObject();
 
-  virtual void Start() {
-  }
+  virtual ~GameObject() = default;
 
-  virtual void Update() {
-  }
+  virtual void OnEnable() = 0;
 
-  virtual void OnDisable() {
-  }
+  virtual void Start() = 0;
 
-  virtual void OnDestroy() {
-  }
+  virtual void Update() = 0;
+
+  virtual void OnDisable() = 0;
+
+  virtual void OnDestroy() = 0;
 };
-
 #endif //TETRIS_SRC_GAME_GAMEOBJECT_H_

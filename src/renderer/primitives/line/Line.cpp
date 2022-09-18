@@ -1,5 +1,6 @@
 #include "Line.h"
 #include "../../../camera/Camera.h"
+#include "../../Provider.h"
 
 const std::string kVertexShaderPath = "/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/line/line.vert";
 const std::string kFragmentShaderPath = "/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/line/line.frag";
@@ -10,12 +11,14 @@ Line::Line() {
   shader_ = new Shader(kVertexShaderPath, kFragmentShaderPath);
   glGenVertexArrays(1, &vao_);
   glGenBuffers(1, &vbo_);
+  renderer::primitives.insert(primitives.end(), this);
 }
 
 Line::~Line() {
   delete shader_;
   glDeleteVertexArrays(1, &vao_);
   glDeleteBuffers(1, &vbo_);
+  std::remove(renderer::primitives.begin(), renderer::primitives.end(), this);
 }
 
 void Line::Draw() {

@@ -4,16 +4,25 @@
 #include "../renderer/primitives/cube/Cube.h"
 #include "GameObject.h"
 
-namespace game {
-class GameCube : GameObject {
+class GameCube : public GameObject {
  public:
   GameCube();
-  ~GameCube();
+  ~GameCube() override;
 
- private:
   renderer::Cube *renderer_;
-};
 
-} // Game
+  void OnEnable() override {}
+
+  void Start() override {}
+
+  void Update() override {
+	renderer_->SetTransform(transform_);
+  }
+
+  void OnDisable() override {}
+
+  void OnDestroy() override {}
+
+};
 
 #endif //TETRIS_SRC_GAME_GAMECUBE_H_

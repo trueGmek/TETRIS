@@ -1,4 +1,5 @@
 #include "Cube.h"
+#include "../../Provider.h"
 
 const std::string kVertexShaderPath = "/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/cube/cube.vert";
 const std::string kFragmentShaderPath = "/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/cube/cube.frag";
@@ -32,6 +33,7 @@ Cube::Cube() {
   glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
   glEnableVertexAttribArray(0);
 
+  renderer::primitives.insert(primitives.begin(), this);
 }
 
 Cube::~Cube() {
@@ -40,10 +42,13 @@ Cube::~Cube() {
   glDeleteBuffers(1, &ebo_);
 
   delete shader_;
+  std::remove(primitives.begin(), primitives.end(), this);
 }
 
 void Cube::SetTransform(const Transform &transform) {
-  transform_ = transform;
+  position_ = transform.position;
+  rotation_ = transform.rotation;
+  scale_ = transform.scale;
 }
 
 void Cube::Draw() {
@@ -52,9 +57,9 @@ void Cube::Draw() {
 
 void Cube::SetData() {
   glm::mat4 model{1.0f};
-  model = glm::translate(model, transform_.position);
-  model = glm::rotate(model, angle(transform_.rotation), axis(transform_.rotation));
-  model = glm::scale(model, transform_.scale);
+  model = glm::translate(model, position_);
+  model = glm::rotate(model, angle(rotation_), axis(rotation_));
+  model = glm::scale(model, scale_);
   glm::mat4 mvp = Camera::ProjectionMatrix() * Camera::ViewMatrix() * model;
 
   shader_->SetMat4Uniform("MVP", mvp);

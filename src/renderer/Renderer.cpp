@@ -58,14 +58,13 @@ void renderer::Terminate() {
 void renderer::Update() {
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-  for (auto primitive : primitivesList) {
+  for (auto primitive : primitives) {
 	primitive->Bind();
 	primitive->SetData();
 	primitive->Draw();
 	primitive->Unbind();
   }
 
-  primitivesList.clear();
   glfwPollEvents();
   glfwSwapBuffers(window);
 }

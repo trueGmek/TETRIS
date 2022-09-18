@@ -26,8 +26,8 @@
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/Game.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/Game.cpp",
-  "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/game/Game.cpp"
+  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -std=gnu++20 -o CMakeFiles/tetris.dir/src/engine/Engine.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/engine/Engine.cpp",
+  "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/engine/Engine.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
@@ -43,6 +43,26 @@
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
   "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -std=gnu++20 -o CMakeFiles/tetris.dir/src/renderer/Provider.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Provider.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Provider.cpp"
+},
+{
+  "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
+  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/MovingCube.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/MovingCube.cpp",
+  "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/game/MovingCube.cpp"
+},
+{
+  "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
+  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/Initializer.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/Initializer.cpp",
+  "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/game/Initializer.cpp"
+},
+{
+  "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
+  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/GameObject.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/GameObject.cpp",
+  "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/game/GameObject.cpp"
+},
+{
+  "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
+  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/Grid.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/Grid.cpp",
+  "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/game/Grid.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",

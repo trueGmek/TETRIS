@@ -1,12 +1,9 @@
 #include "GameCube.h"
-#include "../renderer/Provider.h"
 
-namespace game {
 GameCube::GameCube() {
-  renderer_ = renderer::CreateCube();
+  renderer_ = new renderer::Cube();
 }
 
 GameCube::~GameCube() {
   delete this->renderer_;
 }
-} // Game

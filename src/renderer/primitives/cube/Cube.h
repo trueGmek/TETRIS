@@ -11,7 +11,9 @@ class Cube : public Primitive {
  public:
   Material material_;
  private:
-  Transform transform_;
+  glm::vec3 position_{};
+  glm::quat rotation_{};
+  glm::vec3 scale_{};
   Shader *shader_{};
 
   unsigned int vbo_{};
