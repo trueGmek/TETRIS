@@ -22,6 +22,9 @@ class Line : public renderer::Primitive {
 
  public:
   Line();
+  Line(Transform start, Transform end, Transform pivot, LineMaterial line_material);
+  Line(Line &&line) noexcept;
+  Line &operator=(Line &&a) noexcept;
   ~Line();
 
   void Bind() override;

@@ -33,7 +33,7 @@ Cube::Cube() {
   glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
   glEnableVertexAttribArray(0);
 
-  renderer::primitives.insert(primitives.begin(), this);
+  renderer::primitives.insert(primitives.end(), this);
 }
 
 Cube::~Cube() {

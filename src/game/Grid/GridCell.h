@@ -1,0 +1,8 @@
+#ifndef TETRIS_SRC_GAME_GRID_GRIDCELL_H_
+#define TETRIS_SRC_GAME_GRID_GRIDCELL_H_
+
+struct GridCell {
+  
+};
+
+#endif //TETRIS_SRC_GAME_GRID_GRIDCELL_H_

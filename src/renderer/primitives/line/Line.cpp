@@ -14,6 +14,14 @@ Line::Line() {
   renderer::primitives.insert(primitives.end(), this);
 }
 
+Line::Line(Transform start, Transform end, Transform pivot, LineMaterial line_material)
+	: pivot_(pivot), start_(start), end_(end), material_(line_material) {
+  shader_ = new Shader(kVertexShaderPath, kFragmentShaderPath);
+  glGenVertexArrays(1, &vao_);
+  glGenBuffers(1, &vbo_);
+  renderer::primitives.insert(primitives.end(), this);
+}
+
 Line::~Line() {
   delete shader_;
   glDeleteVertexArrays(1, &vao_);
@@ -68,4 +76,18 @@ void Line::SetEnd(const Transform &transform) {
 void Line::SetPivot(const Transform &transform) {
   pivot_ = transform;
 }
+
+Line::Line(Line &&line) noexcept {
+  vbo_ = line.vbo_;
+  vao_ = line.vao_;
+  shader_ = line.shader_;
+  start_ = line.start_;
+  end_ = line.end_;
+  pivot_ = line.pivot_;
+  material_ = line.material_;
+}
+Line &Line::operator=(Line &&a) noexcept {
+  return *this;
+}
+
 } // Renderer
