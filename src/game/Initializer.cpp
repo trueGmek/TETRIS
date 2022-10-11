@@ -5,7 +5,7 @@
 #include "MovingCube.h"
 #include "Grid/Grid.h"
 
-//GameCube cube1;
+GameCube *cube1;
 GameCube *cube2;
 GameCube *cube3;
 GameCube *cube4;
@@ -14,7 +14,7 @@ MovingCube *cube5;
 Grid<10, 20> *grid;
 
 bool Initializer::Initialize() {
-//  GameCube cube_1 = GameCube();
+  cube1 = new GameCube();
   cube2 = new GameCube();
   cube3 = new GameCube();
   cube4 = new GameCube();
@@ -24,12 +24,12 @@ bool Initializer::Initialize() {
 
   LineMaterial line_material{colors::WHITE, 2.0f};
 
-//  cube_1.transform_.position = glm::vec3{-1.4, -1, 0};
+  cube1->transform_.position = glm::vec3{-1.4, -1, 0};
   cube2->transform_.position = glm::vec3{1.4, 1, 0};
   cube3->transform_.position = glm::vec3{-1.4, 1, 0};
   cube4->transform_.position = glm::vec3{1.4, -1, 0};
 
-//  cube_1.renderer_->material_.color = colors::RED;
+  cube1->renderer_->material_.color = colors::RED;
   cube2->renderer_->material_.color = colors::GREEN;
   cube3->renderer_->material_.color = colors::BLUE;
   cube4->renderer_->material_.color = colors::YELLOW;
