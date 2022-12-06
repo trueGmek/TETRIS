@@ -4,24 +4,25 @@
 #include <ostream>
 #include "glm/ext/matrix_float4x4.hpp"
 
-namespace debug {
-std::ostream &operator<<(std::ostream &out, const glm::mat4 &matrix) {
-  out << "";
-  return out;
-}
-
-std::string Print(glm::mat4 mat) {
-  std::string value;
-
-  for (int j = 0; j < 4; ++j) {
-	for (int i = 0; i < 4; ++i) {
-	  value.append("[").append(std::to_string(mat[j][i])).append("]");
+namespace debug
+{
+	std::ostream& operator<<(std::ostream& out, const glm::mat4& matrix) {
+		out << "";
+		return out;
 	}
-	value.append("\n");
-  }
 
-  return value;
-}
+	std::string Print(glm::mat4 mat) {
+		std::string value;
+
+		for (int j = 0; j < 4; ++j) {
+			for (int i = 0; i < 4; ++i) {
+				value.append("[").append(std::to_string(mat[j][i])).append("]");
+			}
+			value.append("\n");
+		}
+
+		return value;
+	}
 
 }
 

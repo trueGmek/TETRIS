@@ -5,17 +5,19 @@
 #include "../Material.h"
 #include "../../Transform.h"
 
-namespace renderer {
-class Primitive {
- public:
-  virtual void Bind() = 0;
+namespace renderer
+{
+	class Primitive
+	{
+	public:
+		virtual void Bind() = 0;
 
-  virtual void Unbind() = 0;
+		virtual void Unbind() = 0;
 
-  virtual void SetData() = 0;
+		virtual void SetData() = 0;
 
-  virtual void Draw() = 0;
-};
+		virtual void Draw() = 0;
+	};
 
 } // Renderer
 

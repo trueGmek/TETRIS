@@ -4,24 +4,27 @@
 #include "../renderer/primitives/cube/Cube.h"
 #include "GameObject.h"
 
-class GameCube : public GameObject {
- public:
-  GameCube();
-  ~GameCube() override;
+class GameCube : public GameObject
+{
+public:
+	GameCube();
+	~GameCube() override;
 
-  renderer::Cube *renderer_;
+	renderer::Cube* renderer_;
 
-  void OnEnable() override {}
+	void OnEnable() override {
+	}
 
-  void Start() override {}
+	void Start() override {
+	}
 
-  void Update() override {
-	renderer_->SetTransform(transform_);
-  }
+	void Update() override;
 
-  void OnDisable() override {}
+	void OnDisable() override {
+	}
 
-  void OnDestroy() override {}
+	void OnDestroy() override {
+	}
 
 };
 

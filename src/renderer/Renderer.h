@@ -10,16 +10,20 @@
 #include "primitives/Primitive.h"
 #include "queue"
 
-const int kInitialWidth{640};
-const int kInitialHeight{480};
+namespace renderer
+{
+	extern GLFWwindow* window;
 
-namespace renderer {
-extern GLFWwindow *window;
+	const int kInitialWidth{ 800 };
+	const int kInitialHeight{ 800 };
 
-bool Initialize();
-void Terminate();
-void Update();
-bool IsWindowClosing();
+	extern float width;
+	extern float height;
+
+	bool Initialize();
+	void Terminate();
+	void Update();
+	bool IsWindowClosing();
 }
 
 #endif //TETRIS_SRC_RENDERER_RENDERER_H_

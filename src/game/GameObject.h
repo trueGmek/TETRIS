@@ -3,22 +3,24 @@
 
 #include "../Transform.h"
 
-class GameObject {
- public:
-  Transform transform_{};
+class GameObject
+{
+public:
+	Transform transform_{};
 
-  GameObject();
+	GameObject();
 
-  virtual ~GameObject() = default;
+	virtual ~GameObject() = default;
 
-  virtual void OnEnable() = 0;
+	virtual void OnEnable() = 0;
 
-  virtual void Start() = 0;
+	virtual void Start() = 0;
 
-  virtual void Update() = 0;
+	virtual void Update() = 0;
 
-  virtual void OnDisable() = 0;
+	virtual void OnDisable() = 0;
 
-  virtual void OnDestroy() = 0;
+	virtual void OnDestroy() = 0;
 };
+
 #endif //TETRIS_SRC_GAME_GAMEOBJECT_H_

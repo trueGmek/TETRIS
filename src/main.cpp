@@ -2,14 +2,17 @@
 #include "engine/Engine.h"
 
 int main() {
-  renderer::Initialize();
-  engine::Initialize();
+	renderer::Initialize();
+	engine::Initialize();
 
-  while (!renderer::IsWindowClosing()) {
-	engine::Update();
-	renderer::Update();
-  }
+	engine::StartGameObjects();
+	engine::EnableGameObjects();
 
-  engine::Terminate();
-  renderer::Terminate();
+	while (!renderer::IsWindowClosing()) {
+		engine::Update();
+		renderer::Update();
+	}
+
+	engine::Terminate();
+	renderer::Terminate();
 }

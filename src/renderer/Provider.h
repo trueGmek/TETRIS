@@ -5,8 +5,9 @@
 
 #include "primitives/Primitive.h"
 
-namespace renderer {
-extern std::vector<renderer::Primitive *> primitives;
+namespace renderer
+{
+	extern std::vector<renderer::Primitive*> primitives;
 }
 
 #endif //TETRIS_SRC_RENDERER_PROVIDER_H_

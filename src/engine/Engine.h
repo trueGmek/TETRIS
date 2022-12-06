@@ -5,13 +5,16 @@
 #include "../renderer/primitives/cube/Cube.h"
 #include "../game/GameObject.h"
 
-namespace engine {
+namespace engine
+{
 
-extern std::vector<GameObject *> gameObjects;
+	extern std::vector<GameObject*> gameObjects;
 
-bool Initialize();
-void Update();
-void Terminate();
+	bool Initialize();
+	void Update();
+	void EnableGameObjects();
+	void StartGameObjects();
+	void Terminate();
 
 }
 

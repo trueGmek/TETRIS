@@ -4,38 +4,41 @@
 #include "../Primitive.h"
 #include "LineMaterial.h"
 
-namespace renderer {
+namespace renderer
+{
 
-class Line : public renderer::Primitive {
- public:
+	class Line : public renderer::Primitive
+	{
+	public:
 
-  LineMaterial material_{};
- private:
+		LineMaterial material_{};
+	private:
 
-  unsigned int vbo_{};
-  unsigned int vao_{};
+		unsigned int vbo_{};
+		unsigned int vao_{};
 
-  Shader *shader_;
-  Transform start_{};
-  Transform end_{};
-  Transform pivot_{};
+		Shader* shader_;
 
- public:
-  Line();
-  Line(Transform start, Transform end, Transform pivot, LineMaterial line_material);
-  Line(Line &&line) noexcept;
-  Line &operator=(Line &&a) noexcept;
-  ~Line();
+	public:
+		Transform start_{};
+		Transform end_{};
+		Transform pivot_{};
 
-  void Bind() override;
-  void Draw() override;
-  void Unbind() override;
-  void SetData() override;
+		Line();
+		Line(Transform start, Transform end, Transform pivot, LineMaterial line_material);
+		Line(Line&& line) noexcept;
+		Line& operator=(Line&& a) noexcept;
+		~Line();
 
-  void SetStart(const Transform &transform);
-  void SetEnd(const Transform &transform);
-  void SetPivot(const Transform &transform);
-};
+		void Bind() override;
+		void Draw() override;
+		void Unbind() override;
+		void SetData() override;
+
+		void SetStart(const Transform& transform);
+		void SetEnd(const Transform& transform);
+		void SetPivot(const Transform& transform);
+	};
 
 } // Renderer
 

@@ -5,32 +5,32 @@
 #include "../../../Transform.h"//;
 #include "../../../camera/Camera.h"
 
-namespace renderer {
+namespace renderer
+{
 
-class Cube : public Primitive {
- public:
-  Material material_;
- private:
-  glm::vec3 position_{};
-  glm::quat rotation_{};
-  glm::vec3 scale_{};
-  Shader *shader_{};
+	class Cube : public Primitive
+	{
+	public:
+		Transform transform_;
+		Material material_;
+	private:
+		Shader* shader_{};
 
-  unsigned int vbo_{};
-  unsigned int vao_{};
-  unsigned int ebo_{};
+		unsigned int vbo_{};
+		unsigned int vao_{};
+		unsigned int ebo_{};
 
- public:
-  Cube();
-  ~Cube();
+	public:
+		Cube();
+		~Cube();
 
-  void Bind() override;
-  void Draw() override;
-  void Unbind() override;
-  void SetData() override;
+		void Bind() override;
+		void Draw() override;
+		void Unbind() override;
+		void SetData() override;
 
-  void SetTransform(const Transform &transform);
-};
+		void SetTransform(const Transform& transform);
+	};
 
 } // Renderer
 

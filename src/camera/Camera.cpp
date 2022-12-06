@@ -1,18 +1,19 @@
 #include "Camera.h"
+#include "../renderer/Renderer.h"
 
 Camera::Camera() = default;
 
 glm::mat4 Camera::ProjectionMatrix() {
-  return glm::ortho(-8.0f, +8.0f, -8.0f, +8.0f, 0.1f, 100.0f);
+	return glm::ortho(0.0f, renderer::width, renderer::height, 0.0f, 0.1f, 100.0f);
 }
 
 glm::mat4 Camera::ViewMatrix() {
-  glm::mat4 view{1.0f};
-  view = glm::translate(view, glm::vec3(0, 0, -1));
+	glm::mat4 view{ 1.0f };
+	view = glm::translate(view, glm::vec3(0, 0, -1));
 
-  return view;
+	return view;
 }
 
 glm::mat4 Camera::ScreenToWorld() {
-  return glm::inverse(ProjectionMatrix() * ViewMatrix());
+	return glm::inverse(ProjectionMatrix() * ViewMatrix());
 }
