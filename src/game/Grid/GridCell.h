@@ -9,9 +9,9 @@ class Piece;
 
 struct GridCell
 {
-	Piece* Piece{ nullptr };
 	glm::vec4 Color;
 	glm::vec3 Position;
+	Piece* GamePiece;
 };
 
 #endif //TETRIS_SRC_GAME_GRID_GRIDCELL_H_

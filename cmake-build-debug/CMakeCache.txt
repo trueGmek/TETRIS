@@ -299,6 +299,9 @@ Fontconfig_INCLUDE_DIR:PATH=/usr/include
 //Path to a library.
 Fontconfig_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libfontconfig.so
 
+//The directory containing a CMake configuration file for GDB.
+GDB_DIR:PATH=GDB_DIR-NOTFOUND
+
 //Value Computed by CMake
 GLFW_BINARY_DIR:STATIC=/home/gmek/Dev/C++/Dependencies/glfw/src
 

@@ -1674,6 +1674,18 @@
 			"value" : "/usr/lib/x86_64-linux-gnu/libfontconfig.so"
 		},
 		{
+			"name" : "GDB_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for GDB."
+				}
+			],
+			"type" : "PATH",
+			"value" : "GDB_DIR-NOTFOUND"
+		},
+		{
 			"name" : "GLFW_BINARY_DIR",
 			"properties" : 
 			[

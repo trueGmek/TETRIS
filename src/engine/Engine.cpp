@@ -14,29 +14,16 @@ bool engine::Initialize() {
 
 void engine::Update() {
 
-	for (GameObject* game_object : engine::gameObjects) {
-		game_object->Update();
+	for (GameObject* gameObject : engine::gameObjects) {
+		gameObject->Update();
 	}
 }
 
 void engine::Terminate() {
 
-	for (GameObject* game_object : engine::gameObjects) {
-		delete game_object;
+	for (GameObject* gameObject : engine::gameObjects) {
+		delete gameObject;
 	}
 
 	gameObjects.clear();
-}
-
-void engine::StartGameObjects() {
-
-	for (GameObject* game_object : engine::gameObjects) {
-		game_object->Start();
-	}
-}
-
-void engine::EnableGameObjects() {
-	for (GameObject* game_object : engine::gameObjects) {
-		game_object->OnEnable();
-	}
 }

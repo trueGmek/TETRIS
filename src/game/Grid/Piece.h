@@ -1,14 +1,7 @@
-//
-// Created by gmek on 11/1/22.
-//
-
-#ifndef tetris_src_game_grid_piece_h_
-#define tetris_src_game_grid_piece_h_
+#ifndef TETRIS_SRC_GAME_GRID_PIECE_H
+#define TETRIS_SRC_GAME_GRID_PIECE_H
 
 #include "glm/vec2.hpp"
-#include "Board.h"
-
-class Board;
 
 class Piece
 {
@@ -17,4 +10,4 @@ public:
 	glm::ivec2 Position = { 0, 0 };
 };
 
-#endif //TETRIS_SRC_GAME_GRID_PIECE_H_
+#endif //TETRIS_SRC_GAME_GRID_PIECE_H

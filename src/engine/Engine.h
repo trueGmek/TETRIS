@@ -12,8 +12,6 @@ namespace engine
 
 	bool Initialize();
 	void Update();
-	void EnableGameObjects();
-	void StartGameObjects();
 	void Terminate();
 
 }

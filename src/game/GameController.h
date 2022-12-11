@@ -16,24 +16,13 @@ class GameController : public GameObject
 
 private:
 	bool _isUpdating = false;
-	Board* _board;
-	std::array<Piece, 200> _pieces;
-	Tetromino _current;
+	Board _board{ glm::vec3{ 400, 400, 0 }, glm::vec2{ 400, 600 }};
+	Tetromino* _current;
 
 public:
-	explicit GameController(Board* grid);
+	explicit GameController();
 
-	void Start() override;
 	void Update() override;
-
-	void OnDestroy() override {
-	}
-
-	void OnEnable() override {
-	}
-
-	void OnDisable() override {
-	}
 
 	void MoveTetrominoRight();
 	void MoveTetrominoLeft();
@@ -44,11 +33,12 @@ public:
 	void StepUpdate();
 
 private:
-	bool IsRowFull(int row) const;
+	bool IsRowFull(int row);
 	void ClearRow(int row);
 	void MoveRowsDown(int formRow);
 	void ClearFullRows();
 	void SetNewPiece();
+
 };
 
 #endif //TETRIS_SRC_GAME_GAMECONTROLLER_H

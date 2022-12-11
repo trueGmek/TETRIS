@@ -36,11 +36,6 @@
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/GameCube.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/GameCube.cpp",
-  "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/game/GameCube.cpp"
-},
-{
-  "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
   "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/renderer/Provider.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Provider.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Provider.cpp"
 },

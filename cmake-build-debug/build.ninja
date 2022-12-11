@@ -55,8 +55,6 @@ build CMakeFiles/tetris.dir/src/main.cpp.o: CXX_COMPILER__tetris_Debug /home/gme
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 build CMakeFiles/tetris.dir/src/renderer/Renderer.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Renderer.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/renderer/Renderer.cpp.o.d
@@ -64,8 +62,6 @@ build CMakeFiles/tetris.dir/src/renderer/Renderer.cpp.o: CXX_COMPILER__tetris_De
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/renderer
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 build CMakeFiles/tetris.dir/src/renderer/shader/Shader.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/shader/Shader.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/renderer/shader/Shader.cpp.o.d
@@ -73,8 +69,6 @@ build CMakeFiles/tetris.dir/src/renderer/shader/Shader.cpp.o: CXX_COMPILER__tetr
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/renderer/shader
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 build CMakeFiles/tetris.dir/src/camera/Camera.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/camera/Camera.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/camera/Camera.cpp.o.d
@@ -82,8 +76,6 @@ build CMakeFiles/tetris.dir/src/camera/Camera.cpp.o: CXX_COMPILER__tetris_Debug 
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/camera
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 build CMakeFiles/tetris.dir/src/renderer/primitives/cube/Cube.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/primitives/cube/Cube.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/renderer/primitives/cube/Cube.cpp.o.d
@@ -91,8 +83,6 @@ build CMakeFiles/tetris.dir/src/renderer/primitives/cube/Cube.cpp.o: CXX_COMPILE
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/renderer/primitives/cube
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 build CMakeFiles/tetris.dir/src/engine/Engine.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/engine/Engine.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/engine/Engine.cpp.o.d
@@ -100,8 +90,6 @@ build CMakeFiles/tetris.dir/src/engine/Engine.cpp.o: CXX_COMPILER__tetris_Debug 
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/engine
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 build CMakeFiles/tetris.dir/src/renderer/primitives/line/Line.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/primitives/line/Line.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/renderer/primitives/line/Line.cpp.o.d
@@ -109,17 +97,6 @@ build CMakeFiles/tetris.dir/src/renderer/primitives/line/Line.cpp.o: CXX_COMPILE
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/renderer/primitives/line
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
-
-build CMakeFiles/tetris.dir/src/game/GameCube.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/game/GameCube.cpp || cmake_object_order_depends_target_tetris
-  DEP_FILE = CMakeFiles/tetris.dir/src/game/GameCube.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
-  INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
-  OBJECT_DIR = CMakeFiles/tetris.dir
-  OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/game
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 build CMakeFiles/tetris.dir/src/renderer/Provider.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Provider.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/renderer/Provider.cpp.o.d
@@ -127,8 +104,6 @@ build CMakeFiles/tetris.dir/src/renderer/Provider.cpp.o: CXX_COMPILER__tetris_De
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/renderer
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 build CMakeFiles/tetris.dir/src/game/Initializer.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/game/Initializer.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/game/Initializer.cpp.o.d
@@ -136,8 +111,6 @@ build CMakeFiles/tetris.dir/src/game/Initializer.cpp.o: CXX_COMPILER__tetris_Deb
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/game
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 build CMakeFiles/tetris.dir/src/game/GameObject.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/game/GameObject.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/game/GameObject.cpp.o.d
@@ -145,8 +118,6 @@ build CMakeFiles/tetris.dir/src/game/GameObject.cpp.o: CXX_COMPILER__tetris_Debu
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/game
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 build CMakeFiles/tetris.dir/src/game/Grid/Board.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/game/Grid/Board.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/game/Grid/Board.cpp.o.d
@@ -154,8 +125,6 @@ build CMakeFiles/tetris.dir/src/game/Grid/Board.cpp.o: CXX_COMPILER__tetris_Debu
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/game/Grid
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 build CMakeFiles/tetris.dir/src/game/GameController.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/game/GameController.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/game/GameController.cpp.o.d
@@ -163,8 +132,6 @@ build CMakeFiles/tetris.dir/src/game/GameController.cpp.o: CXX_COMPILER__tetris_
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/game
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 build CMakeFiles/tetris.dir/src/engine/Input.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/engine/Input.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/engine/Input.cpp.o.d
@@ -172,8 +139,6 @@ build CMakeFiles/tetris.dir/src/engine/Input.cpp.o: CXX_COMPILER__tetris_Debug /
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/engine
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 build CMakeFiles/tetris.dir/src/game/Grid/Piece.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/game/Grid/Piece.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/game/Grid/Piece.cpp.o.d
@@ -181,8 +146,6 @@ build CMakeFiles/tetris.dir/src/game/Grid/Piece.cpp.o: CXX_COMPILER__tetris_Debu
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/game/Grid
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 build CMakeFiles/tetris.dir/src/game/Grid/Tetromino.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/game/Grid/Tetromino.cpp || cmake_object_order_depends_target_tetris
   DEP_FILE = CMakeFiles/tetris.dir/src/game/Grid/Tetromino.cpp.o.d
@@ -190,8 +153,6 @@ build CMakeFiles/tetris.dir/src/game/Grid/Tetromino.cpp.o: CXX_COMPILER__tetris_
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/game/Grid
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
-  TARGET_PDB = tetris.pdb
 
 
 # =============================================================================
@@ -201,15 +162,14 @@ build CMakeFiles/tetris.dir/src/game/Grid/Tetromino.cpp.o: CXX_COMPILER__tetris_
 #############################################
 # Link the executable tetris
 
-build tetris: CXX_EXECUTABLE_LINKER__tetris_Debug CMakeFiles/tetris.dir/src/main.cpp.o CMakeFiles/tetris.dir/src/renderer/Renderer.cpp.o CMakeFiles/tetris.dir/src/renderer/shader/Shader.cpp.o CMakeFiles/tetris.dir/src/camera/Camera.cpp.o CMakeFiles/tetris.dir/src/renderer/primitives/cube/Cube.cpp.o CMakeFiles/tetris.dir/src/engine/Engine.cpp.o CMakeFiles/tetris.dir/src/renderer/primitives/line/Line.cpp.o CMakeFiles/tetris.dir/src/game/GameCube.cpp.o CMakeFiles/tetris.dir/src/renderer/Provider.cpp.o CMakeFiles/tetris.dir/src/game/Initializer.cpp.o CMakeFiles/tetris.dir/src/game/GameObject.cpp.o CMakeFiles/tetris.dir/src/game/Grid/Board.cpp.o CMakeFiles/tetris.dir/src/game/GameController.cpp.o CMakeFiles/tetris.dir/src/engine/Input.cpp.o CMakeFiles/tetris.dir/src/game/Grid/Piece.cpp.o CMakeFiles/tetris.dir/src/game/Grid/Tetromino.cpp.o | external/glad/libglad.a /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a external/glad/libglad.a
+build tetris: CXX_EXECUTABLE_LINKER__tetris_Debug CMakeFiles/tetris.dir/src/main.cpp.o CMakeFiles/tetris.dir/src/renderer/Renderer.cpp.o CMakeFiles/tetris.dir/src/renderer/shader/Shader.cpp.o CMakeFiles/tetris.dir/src/camera/Camera.cpp.o CMakeFiles/tetris.dir/src/renderer/primitives/cube/Cube.cpp.o CMakeFiles/tetris.dir/src/engine/Engine.cpp.o CMakeFiles/tetris.dir/src/renderer/primitives/line/Line.cpp.o CMakeFiles/tetris.dir/src/renderer/Provider.cpp.o CMakeFiles/tetris.dir/src/game/Initializer.cpp.o CMakeFiles/tetris.dir/src/game/GameObject.cpp.o CMakeFiles/tetris.dir/src/game/Grid/Board.cpp.o CMakeFiles/tetris.dir/src/game/GameController.cpp.o CMakeFiles/tetris.dir/src/engine/Input.cpp.o CMakeFiles/tetris.dir/src/game/Grid/Piece.cpp.o CMakeFiles/tetris.dir/src/game/Grid/Tetromino.cpp.o | external/glad/libglad.a /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a external/glad/libglad.a
   FLAGS = -g
   LINK_LIBRARIES = external/glad/libglad.a  /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a  /usr/lib/x86_64-linux-gnu/librt.a  -lm  -ldl  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
   OBJECT_DIR = CMakeFiles/tetris.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/tetris.dir/
   TARGET_FILE = tetris
-  TARGET_PDB = tetris.pdb
+  TARGET_PDB = tetris.dbg
 
 
 #############################################
@@ -296,8 +256,6 @@ build external/glad/CMakeFiles/glad.dir/src/glad.c.o: C_COMPILER__glad_Debug /ho
   INCLUDES = -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include
   OBJECT_DIR = external/glad/CMakeFiles/glad.dir
   OBJECT_FILE_DIR = external/glad/CMakeFiles/glad.dir/src
-  TARGET_COMPILE_PDB = external/glad/CMakeFiles/glad.dir/glad.pdb
-  TARGET_PDB = external/glad/libglad.pdb
 
 
 # =============================================================================
@@ -312,9 +270,8 @@ build external/glad/libglad.a: C_STATIC_LIBRARY_LINKER__glad_Debug external/glad
   OBJECT_DIR = external/glad/CMakeFiles/glad.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = external/glad/CMakeFiles/glad.dir/glad.pdb
   TARGET_FILE = external/glad/libglad.a
-  TARGET_PDB = external/glad/libglad.pdb
+  TARGET_PDB = glad.a.dbg
 
 
 #############################################
@@ -625,8 +582,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/context.c
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/init.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -635,8 +590,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/init.c.o:
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/input.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -645,8 +598,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/input.c.o
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -655,8 +606,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/monitor.c
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/platform.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/platform.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -665,8 +614,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/platform.
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -675,8 +622,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/vulkan.c.
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/window.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -685,8 +630,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/window.c.
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -695,8 +638,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/egl_conte
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -705,8 +646,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/osmesa_co
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/null_init.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/null_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -715,8 +654,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/null_init
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/null_monitor.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/null_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -725,8 +662,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/null_moni
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/null_window.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/null_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -735,8 +670,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/null_wind
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/null_joystick.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/null_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -745,8 +678,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/null_joys
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/posix_module.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/posix_module.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -755,8 +686,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/posix_mod
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/posix_time.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/posix_time.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -765,8 +694,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/posix_tim
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -775,8 +702,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/posix_thr
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/x11_init.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/x11_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -785,8 +710,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/x11_init.
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/x11_monitor.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/x11_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -795,8 +718,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/x11_monit
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/x11_window.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/x11_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -805,8 +726,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/x11_windo
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/xkb_unicode.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/xkb_unicode.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -815,8 +734,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/xkb_unico
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glx_context.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/glx_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -825,8 +742,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glx_conte
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/linux_joystick.c.o: C_COMPILER__glfw_Debug /home/gmek/Dev/C++/Dependencies/glfw/src/linux_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_DEFAULT_SOURCE -D_GLFW_X11
@@ -835,8 +750,6 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/linux_joy
   INCLUDES = -I/home/gmek/Dev/C++/Dependencies/glfw/include -I/home/gmek/Dev/C++/Dependencies/glfw/src -I/home/gmek/Dev/C++/Dependencies/glfw/src/src
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
 
 
 # =============================================================================
@@ -851,9 +764,8 @@ build /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a: C_STATIC_LIBRARY_
   OBJECT_DIR = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_FILE = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a
-  TARGET_PDB = /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.pdb
+  TARGET_PDB = glfw3.a.dbg
 
 
 #############################################
@@ -1001,14 +913,14 @@ build external/glm/glm/all: phony
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3.pc.in /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3Config.cmake.in /home/gmek/Dev/C++/Dependencies/glfw/CMakeLists.txt /home/gmek/Dev/C++/Dependencies/glfw/src/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/external/glad/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/external/glm/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/external/glm/cmake/cmake_uninstall.cmake.in /home/gmek/Dev/C++/OpenGL/tetris/external/glm/glm/CMakeLists.txt /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompilerABI.c /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDependentOption.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystem.cmake.in /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckFunctionExists.c /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckFunctionExists.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckIncludeFile.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckLibraryExists.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindDoxygen.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindFontconfig.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindFreetype.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindOpenGL.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageMessage.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindPkgConfig.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindThreads.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindX11.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/GNUInstallDirs.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-Determine-CXX.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3.pc.in /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3Config.cmake.in /home/gmek/Dev/C++/Dependencies/glfw/CMakeLists.txt /home/gmek/Dev/C++/Dependencies/glfw/src/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/external/glad/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/external/glm/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/external/glm/cmake/cmake_uninstall.cmake.in /home/gmek/Dev/C++/OpenGL/tetris/external/glm/glm/CMakeLists.txt /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDependentOption.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckFunctionExists.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckIncludeFile.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckLibraryExists.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindFontconfig.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindFreetype.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindOpenGL.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageMessage.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindPkgConfig.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindThreads.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindX11.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/GNUInstallDirs.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3.pc.in /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3Config.cmake.in /home/gmek/Dev/C++/Dependencies/glfw/CMakeLists.txt /home/gmek/Dev/C++/Dependencies/glfw/src/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/external/glad/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/external/glm/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/external/glm/cmake/cmake_uninstall.cmake.in /home/gmek/Dev/C++/OpenGL/tetris/external/glm/glm/CMakeLists.txt /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompilerABI.c /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDependentOption.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystem.cmake.in /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckFunctionExists.c /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckFunctionExists.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckIncludeFile.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckLibraryExists.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindDoxygen.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindFontconfig.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindFreetype.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindOpenGL.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageMessage.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindPkgConfig.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindThreads.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindX11.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/GNUInstallDirs.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-Determine-CXX.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+build /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3.pc.in /home/gmek/Dev/C++/Dependencies/glfw/CMake/glfw3Config.cmake.in /home/gmek/Dev/C++/Dependencies/glfw/CMakeLists.txt /home/gmek/Dev/C++/Dependencies/glfw/src/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/external/glad/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/external/glm/CMakeLists.txt /home/gmek/Dev/C++/OpenGL/tetris/external/glm/cmake/cmake_uninstall.cmake.in /home/gmek/Dev/C++/OpenGL/tetris/external/glm/glm/CMakeLists.txt /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDependentOption.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckFunctionExists.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckIncludeFile.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/CheckLibraryExists.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindFontconfig.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindFreetype.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindOpenGL.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageMessage.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindPkgConfig.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindThreads.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/FindX11.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/GNUInstallDirs.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /snap/clion/218/bin/cmake/linux/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
 
 
 #############################################

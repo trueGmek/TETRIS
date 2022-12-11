@@ -8,126 +8,119 @@
 
 glm::vec4 debugColors[] = { colors::RED, colors::GREEN, colors::BLUE, colors::WHITE };
 
-Tetromino::Tetromino(EShape shape, Piece& piece1, Piece& piece2, Piece& piece3, Piece& piece4) : Pieces{ piece1,
-																										 piece2,
-																										 piece3,
-																										 piece4 } {
+Tetromino::Tetromino(EShape shape, Board& board)
+	: Pieces{}, GameBoard(board) {
 	std::array<glm::ivec2, 4> shapeCoordinates = TetrominoData[shape].Coordinates;
 
 	for (int i = 0; i < 4; ++i) {
-		Pieces[i].IsActive = true;
-		Pieces[i].Position = shapeCoordinates[i];
+		Pieces[i] = new Piece();
+		Pieces[i]->IsActive = true;
+		Pieces[i]->Position = shapeCoordinates[i];
 	}
 
+	for (Piece* tetrominoPart : Pieces) {
+		GameBoard.SetPiece(tetrominoPart->Position, tetrominoPart);
+	}
 }
 
-bool Tetromino::CanBeMoved(glm::ivec2 direction, Board& board) {
+bool Tetromino::CanBeMoved(glm::ivec2 direction) {
 
 	bool isAllowed = true;
 
-	for (Piece tetrominoPart : Pieces) {
+	for (Piece* tetrominoPart : Pieces) {
 
-		if (tetrominoPart.Position.x + direction.x >= Board::across_
-			|| tetrominoPart.Position.y + direction.y >= Board::down_)
+		if (tetrominoPart->Position.x + direction.x >= Board::ACROSS
+			|| tetrominoPart->Position.y + direction.y >= Board::DOWN)
 			return false;
 
-		if (tetrominoPart.Position.x + direction.x < 0 || tetrominoPart.Position.y + direction.y < 0)
+		if (tetrominoPart->Position.x + direction.x < 0 || tetrominoPart->Position.y + direction.y < 0)
 			return false;
 
-		GridCell cellAtDestination =
-			board.cells_[tetrominoPart.Position.x + direction.x][tetrominoPart.Position.y + direction.y];
+		bool isPieceAtDestination = GameBoard.GetPiece(tetrominoPart->Position + direction) != nullptr;
 
-		if (cellAtDestination.Piece == nullptr)
-			continue; // its empty, nothing to worry about;
-
-		isAllowed &= IsPiecePartOfTetromino(tetrominoPart.Position + direction);
+		if (isPieceAtDestination)
+			isAllowed &= IsPiecePartOfTetromino(tetrominoPart->Position + direction);
 	}
 
 	return isAllowed;
-
 }
 
 bool Tetromino::IsPiecePartOfTetromino(glm::ivec2 destination) {
-
-	for (Piece piece : Pieces) {
-		if (destination == piece.Position)
+	for (Piece* piece : Pieces) {
+		if (destination == piece->Position)
 			return true;
 	}
 	return false;
 }
 
-void Tetromino::Move(glm::ivec2 direction, Board& board) {
+void Tetromino::Move(glm::ivec2 direction) {
 
-	for (Piece tetrominoPart : Pieces) {
-		board.cells_[tetrominoPart.Position.x][tetrominoPart.Position.y].Piece = nullptr;
+	for (Piece* tetrominoPart : Pieces) {
+		GameBoard.SetPiece(tetrominoPart->Position, nullptr);
 	}
 
-	for (Piece tetrominoPart : Pieces) {
-		tetrominoPart.Position += direction;
+	for (Piece* tetrominoPart : Pieces) {
+		tetrominoPart->Position += direction;
 	}
 
-	for (Piece tetrominoPart : Pieces) {
-		board.cells_[tetrominoPart.Position.x][tetrominoPart.Position.y].Piece = &tetrominoPart;
+	for (Piece* tetrominoPart : Pieces) {
+		GameBoard.SetPiece(tetrominoPart->Position, tetrominoPart);
 	}
 
-	SetColors(board);
+	SetColors();
 }
 
-void Tetromino::SetColors(Board& board) {
+void Tetromino::SetColors() {
 	for (int i = 0; i < 4; ++i) {
-		Piece tetrominoPart = Pieces[i];
-		board.cells_[tetrominoPart.Position.x][tetrominoPart.Position.y].color = debugColors[i];
+		Piece* tetrominoPart = Pieces[i];
+		GameBoard.GetGridCell(tetrominoPart->Position)->Color = debugColors[i];
 	}
 }
 
-bool Tetromino::CanBeRotated(RotationDir direction, Board& board) {
+bool Tetromino::CanBeRotated(RotationDir direction) {
 
 	bool isAllowed = true;
 
-	glm::ivec2 anchorPosition = Pieces[0].Position;
-	for (Piece tetrominoPart : Pieces) {
+	glm::ivec2 anchorPosition = Pieces[0]->Position;
+	for (Piece* tetrominoPart : Pieces) {
 
-		glm::ivec2 relativePosition = tetrominoPart.Position - anchorPosition;
+		glm::ivec2 relativePosition = tetrominoPart->Position - anchorPosition;
 		glm::mat2 rotationMatrix = GetRotationMatrix(direction == CLOCKWISE ? 90 : 270);
 		glm::vec2 newFloatPosition = rotationMatrix * relativePosition;
 		glm::ivec2 newRelativePosition = glm::round(newFloatPosition);
 		glm::ivec2 newPosition = newRelativePosition + anchorPosition;
 
-		if (newPosition.x >= Board::across_ || newPosition.y >= Board::down_ || newPosition.x < 0
+		if (newPosition.x >= Board::ACROSS || newPosition.y >= Board::DOWN || newPosition.x < 0
 			|| newPosition.y < 0)
 			return false;
 
-		GridCell cell_at_destination = board.cells_[newPosition.x][newPosition.y];
-
-		if (cell_at_destination.Piece == nullptr)
-			continue; // its empty, nothing to worry about;
-
-		isAllowed &= IsPiecePartOfTetromino(newPosition);
+		if (GameBoard.GetPiece(newPosition) != nullptr)
+			isAllowed &= IsPiecePartOfTetromino(newPosition);
 
 	}
 
 	return isAllowed;
 }
 
-void Tetromino::Rotate(RotationDir direction, Board& board) {
-	for (Piece tetrominoPart : Pieces) {
-		board.cells_[tetrominoPart.Position.x][tetrominoPart.Position.y].Piece = nullptr;
+void Tetromino::Rotate(RotationDir direction) {
+	for (Piece* tetrominoPart : Pieces) {
+		GameBoard.SetPiece(tetrominoPart->Position, nullptr);
 	}
 
-	glm::ivec2 anchorPosition = Pieces[0].Position;
-	for (Piece tetrominoPart : Pieces) {
-		glm::ivec2 relativePosition = tetrominoPart.Position - anchorPosition;
+	glm::ivec2 anchorPosition = Pieces[0]->Position;
+	for (Piece* tetrominoPart : Pieces) {
+		glm::ivec2 relativePosition = tetrominoPart->Position - anchorPosition;
 		glm::mat2 rotationMatrix = GetRotationMatrix(direction == CLOCKWISE ? 90 : 270);
 
 		glm::vec2 newFloatPosition = rotationMatrix * relativePosition;
 		glm::ivec2 newRelativePosition = glm::round(newFloatPosition);
-		tetrominoPart.Position = newRelativePosition + anchorPosition;
+		tetrominoPart->Position = newRelativePosition + anchorPosition;
 	}
 
-	for (Piece tetrominoPart : Pieces) {
-		board.cells_[tetrominoPart.Position.x][tetrominoPart.Position.y].Piece = &tetrominoPart;
+	for (Piece* tetrominoPart : Pieces) {
+		GameBoard.SetPiece(tetrominoPart->Position, tetrominoPart);
 	}
 
-	SetColors(board);
+	SetColors();
 
 }

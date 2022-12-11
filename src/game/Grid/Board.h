@@ -1,6 +1,7 @@
-#ifndef TETRIS_SRC_GAME_GRID_BOARD_H_
-#define TETRIS_SRC_GAME_GRID_BOARD_H_
+#ifndef TETRIS_SRC_GAME_GRID_BOARD_H
+#define TETRIS_SRC_GAME_GRID_BOARD_H
 
+#include <map>
 #include "../../renderer/primitives/cube/Cube.h"
 #include "../GameObject.h"
 #include "../../renderer/primitives/Colors.h"
@@ -10,37 +11,40 @@
 class Board : GameObject
 {
 public:
-	static const int across_{ 10 };
-	static const int down_{ 20 };
+	static const int ACROSS{ 10 };
+	static const int DOWN{ 20 };
 
-	GridCell cells_[across_][down_];
-	Board(glm::vec3 center, glm::vec2 size);
 private:
-	renderer::Cube cubes_renderer_[across_ * down_];
-	renderer::Line top_;
-	renderer::Line bottom_;
-	renderer::Line left_;
-	renderer::Line right_;
 
-	glm::vec3 center_{};
-	glm::vec2 size_{};
-	glm::vec3 cell_size_{};
+	renderer::Cube _cubesRenderer[ACROSS * DOWN];
+	renderer::Line _top;
+	renderer::Line _bottom;
+	renderer::Line _left;
+	renderer::Line _right;
 
-	void OnEnable() override {
-	};
+	glm::vec3 _center{};
+	glm::vec2 _size{};
+	glm::vec3 _cellSize{};
 
-	void Start() override {
-	};
+	std::array<std::array<GridCell, DOWN>, ACROSS> _cells{};
+public:
 
+	Board(glm::vec3 center, glm::vec2 size);
+
+	Piece* GetPiece(glm::ivec2 position);
+	Piece* GetPiece(int x, int y);
+
+	GridCell* GetGridCell(glm::ivec2 position);
+	GridCell* GetGridCell(int x, int y);
+
+	void SetPiece(glm::ivec2 position, Piece* piece);
+	void SetPiece(int x, int y, Piece* piece);
+private:
 	void Update() override;
 
-	void OnDisable() override {
-	};
-
-	void OnDestroy() override {
-	};
 	void EnableVisibleSquares(const glm::vec3& center, const glm::vec2& size);
 	void InitializeSquares(const glm::vec3& center, const glm::vec2& size);
+	void SetUpGameState();
 };
 
-#endif //TETRIS_SRC_GAME_GRID_BOARD_H_
+#endif //TETRIS_SRC_GAME_GRID_BOARD_H
