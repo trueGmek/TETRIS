@@ -16,7 +16,6 @@ public:
 
 private:
 
-	renderer::Cube _cubesRenderer[ACROSS * DOWN];
 	renderer::Line _top;
 	renderer::Line _bottom;
 	renderer::Line _left;
@@ -26,7 +25,9 @@ private:
 	glm::vec2 _size{};
 	glm::vec3 _cellSize{};
 
+	std::array<renderer::Cube, ACROSS * DOWN> _cubesRenderer;
 	std::array<std::array<GridCell, DOWN>, ACROSS> _cells{};
+
 public:
 
 	Board(glm::vec3 center, glm::vec2 size);
@@ -39,6 +40,7 @@ public:
 
 	void SetPiece(glm::ivec2 position, Piece* piece);
 	void SetPiece(int x, int y, Piece* piece);
+
 private:
 	void Update() override;
 

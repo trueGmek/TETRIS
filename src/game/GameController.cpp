@@ -14,7 +14,6 @@ double timeSinceLastMove = 0;
 GameController::GameController() : _current() {
 
 	_current = new Tetromino((EShape)(distr(gen)), _board);
-
 	_current->Move(glm::vec2{ 5, 5 });
 	glfwSetWindowUserPointer(renderer::window, this);
 }

@@ -16,6 +16,7 @@ class Tetromino
 public:
 	Piece* Pieces[4];
 	Board& GameBoard;
+	EShape Shape;
 
 	explicit Tetromino(EShape shape, Board& board);
 

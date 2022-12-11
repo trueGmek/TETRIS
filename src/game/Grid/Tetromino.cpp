@@ -9,7 +9,7 @@
 glm::vec4 debugColors[] = { colors::RED, colors::GREEN, colors::BLUE, colors::WHITE };
 
 Tetromino::Tetromino(EShape shape, Board& board)
-	: Pieces{}, GameBoard(board) {
+	: Pieces{}, GameBoard(board), Shape{ shape } {
 	std::array<glm::ivec2, 4> shapeCoordinates = TetrominoData[shape].Coordinates;
 
 	for (int i = 0; i < 4; ++i) {
@@ -71,9 +71,8 @@ void Tetromino::Move(glm::ivec2 direction) {
 }
 
 void Tetromino::SetColors() {
-	for (int i = 0; i < 4; ++i) {
-		Piece* tetrominoPart = Pieces[i];
-		GameBoard.GetGridCell(tetrominoPart->Position)->Color = debugColors[i];
+	for (auto tetrominoPart : Pieces) {
+		GameBoard.GetGridCell(tetrominoPart->Position)->Color = TetrominoData[Shape].Color;
 	}
 }
 

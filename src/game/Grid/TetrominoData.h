@@ -20,7 +20,7 @@ enum EShape
 struct data
 {
 	std::array<glm::ivec2, 4> Coordinates;
-	glm::ivec4 Color;
+	glm::vec4 Color;
 };
 
 static std::map<EShape, data> TetrominoData{
@@ -29,25 +29,25 @@ static std::map<EShape, data> TetrominoData{
 					  glm::ivec2{ 0, -1 },
 					  glm::ivec2{ 0, 1 },
 					  glm::ivec2{ 0, 2 }
-				  }, { colors::RED }}},
+				  }, { colors::LIGHT_BLUE }}},
 	{ EShape::O, {{
 					  glm::ivec2{ 0, 0 },
 					  glm::ivec2{ -1, 0 },
 					  glm::ivec2{ -1, 1 },
 					  glm::ivec2{ 0, 1 }
-				  }, { colors::RED }}},
+				  }, { colors::YELLOW }}},
 	{ EShape::T, {{
 					  glm::ivec2{ 0, 0 },
 					  glm::ivec2{ -1, 0 },
 					  glm::ivec2{ 1, 0 },
 					  glm::ivec2{ 0, -1 }
-				  }, { colors::RED }}},
+				  }, { colors::PURPLE }}},
 	{ EShape::S, {{
 					  glm::ivec2{ 0, 0 },
 					  glm::ivec2{ 1, 0 },
 					  glm::ivec2{ -1, 1 },
 					  glm::ivec2{ 0, 1 },
-				  }, { colors::RED }}},
+				  }, { colors::GREEN }}},
 	{ EShape::Z, {{
 					  glm::ivec2{ 0, 0 },
 					  glm::ivec2{ -1, 0 },
@@ -59,13 +59,13 @@ static std::map<EShape, data> TetrominoData{
 					  glm::ivec2{ 1, 0 },
 					  glm::ivec2{ -1, 0 },
 					  glm::ivec2{ -1, -1 },
-				  }, { colors::RED }}},
+				  }, { colors::BLUE }}},
 	{ EShape::L, {{
 					  glm::ivec2{ 0, 0 },
 					  glm::ivec2{ 1, -1 },
 					  glm::ivec2{ -1, 0 },
 					  glm::ivec2{ 1, 0 }
-				  }, { colors::RED }}},
+				  }, { colors::ORANGE }}},
 
 };
 
