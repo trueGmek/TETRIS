@@ -1,3 +1,3 @@
 #include "Provider.h"
 
-std::vector<renderer::Primitive*> renderer::primitives{};
+std::vector<Renderer::Primitive*> Renderer::primitives{};

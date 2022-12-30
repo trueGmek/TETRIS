@@ -4,10 +4,10 @@
 #include "../Primitive.h"
 #include "LineMaterial.h"
 
-namespace renderer
+namespace Renderer
 {
 
-	class Line : public renderer::Primitive
+	class Line : public Renderer::Primitive
 	{
 	public:
 

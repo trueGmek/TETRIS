@@ -8,20 +8,20 @@ Board::Board(glm::vec3 center, glm::vec2 size) : _center{ center }, _size{ size 
 	glm::vec3 leftBottom{ center.x - size.x / 2, center.y - size.y / 2, center.z };
 	glm::vec3 rightBottom{ center.x + size.x / 2, center.y - size.y / 2, center.z };
 
-	_top.start_.position = leftTop;
-	_top.end_.position = rightTop;
+	_top.start_.Position = leftTop;
+	_top.end_.Position = rightTop;
 	_top.material_.color = colors::WHITE;
 
-	_bottom.start_.position = leftBottom;
-	_bottom.end_.position = rightBottom;
+	_bottom.start_.Position = leftBottom;
+	_bottom.end_.Position = rightBottom;
 	_bottom.material_.color = colors::WHITE;
 
-	_left.start_.position = leftTop;
-	_left.end_.position = leftBottom;
+	_left.start_.Position = leftTop;
+	_left.end_.Position = leftBottom;
 	_left.material_.color = colors::WHITE;
 
-	_right.start_.position = rightTop;
-	_right.end_.position = rightBottom;
+	_right.start_.Position = rightTop;
+	_right.end_.Position = rightBottom;
 	_right.material_.color = colors::WHITE;
 
 	InitializeSquares(center, size);
@@ -47,12 +47,12 @@ void Board::EnableVisibleSquares(const glm::vec3& center, const glm::vec2& size)
 			Piece* piece = _cells[i][j].GamePiece;
 
 			if (piece != nullptr && piece->IsActive) {
-				_cubesRenderer[index].transform_.scale = _cellSize;
-				_cubesRenderer[index].transform_.position = _cells[i][j].Position;
-				_cubesRenderer[index].material_.color = _cells[i][j].Color;
+				_cubesRenderer[index].MyTransform.Scale = _cellSize;
+				_cubesRenderer[index].MyTransform.Position = _cells[i][j].Position;
+				_cubesRenderer[index].MyMaterial.color = _cells[i][j].Color;
 			}
 			else {
-				_cubesRenderer[index].transform_.scale = glm::vec3{ 0 };
+				_cubesRenderer[index].MyTransform.Scale = glm::vec3{ 0 };
 			}
 		}
 	}

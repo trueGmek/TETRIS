@@ -3,10 +3,10 @@
 #include "../debug/Debug.h"
 #include "Provider.h"
 
-GLFWwindow* renderer::window;
+GLFWwindow* Renderer::window;
 
-float renderer::width = (float)renderer::kInitialWidth;
-float renderer::height = (float)renderer::kInitialHeight;
+float Renderer::windowWidth = (float)Renderer::kInitialWidth;
+float Renderer::windowHeight = (float)Renderer::kInitialHeight;
 
 static void ErrorCallback(int error, const char* description) {
 	std::cout << "Error: " << description << std::endl;
@@ -14,11 +14,11 @@ static void ErrorCallback(int error, const char* description) {
 
 void FramebufferSizeCallback(GLFWwindow* window, int width, int height) {
 	glViewport(0, 0, width, height);
-	renderer::width = width;
-	renderer::height = height;
+	Renderer::windowWidth = width;
+	Renderer::windowHeight = height;
 }
 
-bool renderer::Initialize() {
+bool Renderer::Initialize() {
 	if (!glfwInit())
 		return false;
 
@@ -48,14 +48,14 @@ bool renderer::Initialize() {
 	return true;
 }
 
-void renderer::Terminate() {
+void Renderer::Terminate() {
 	if (window != nullptr)
 		glfwDestroyWindow(window);
 
 	glfwTerminate();
 }
 
-void renderer::Update() {
+void Renderer::Update() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	for (auto primitive : primitives) {
@@ -69,6 +69,6 @@ void renderer::Update() {
 	glfwPollEvents();
 }
 
-bool renderer::IsWindowClosing() {
+bool Renderer::IsWindowClosing() {
 	return glfwWindowShouldClose(window);
 }

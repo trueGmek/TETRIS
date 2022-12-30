@@ -5,7 +5,7 @@
 #include "../Material.h"
 #include "../../Transform.h"
 
-namespace renderer
+namespace Renderer
 {
 	class Primitive
 	{

@@ -4,7 +4,7 @@
 Camera::Camera() = default;
 
 glm::mat4 Camera::ProjectionMatrix() {
-	return glm::ortho(0.0f, renderer::width, renderer::height, 0.0f, 0.1f, 100.0f);
+	return glm::ortho(0.0f, Renderer::windowWidth, Renderer::windowHeight, 0.0f, 0.1f, 100.0f);
 }
 
 glm::mat4 Camera::ViewMatrix() {

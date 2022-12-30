@@ -16,16 +16,16 @@ public:
 
 private:
 
-	renderer::Line _top;
-	renderer::Line _bottom;
-	renderer::Line _left;
-	renderer::Line _right;
+	Renderer::Line _top;
+	Renderer::Line _bottom;
+	Renderer::Line _left;
+	Renderer::Line _right;
 
 	glm::vec3 _center{};
 	glm::vec2 _size{};
 	glm::vec3 _cellSize{};
 
-	std::array<renderer::Cube, ACROSS * DOWN> _cubesRenderer;
+	std::array<Renderer::Cube, ACROSS * DOWN> _cubesRenderer;
 	std::array<std::array<GridCell, DOWN>, ACROSS> _cells{};
 
 public:

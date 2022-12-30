@@ -1,5 +1,5 @@
-#ifndef TETRIS_SRC_RENDERER_RENDERER_H_
-#define TETRIS_SRC_RENDERER_RENDERER_H_
+#ifndef TETRIS_SRC_RENDERER_RENDERER_H
+#define TETRIS_SRC_RENDERER_RENDERER_H
 
 #define GLFW_INCLUDE_NONE
 
@@ -10,15 +10,15 @@
 #include "primitives/Primitive.h"
 #include "queue"
 
-namespace renderer
+namespace Renderer
 {
 	extern GLFWwindow* window;
 
 	const int kInitialWidth{ 800 };
 	const int kInitialHeight{ 800 };
 
-	extern float width;
-	extern float height;
+	extern float windowWidth;
+	extern float windowHeight;
 
 	bool Initialize();
 	void Terminate();
@@ -26,4 +26,4 @@ namespace renderer
 	bool IsWindowClosing();
 }
 
-#endif //TETRIS_SRC_RENDERER_RENDERER_H_
+#endif //TETRIS_SRC_RENDERER_RENDERER_H

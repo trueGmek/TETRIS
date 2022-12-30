@@ -3,32 +3,32 @@
 #include "../../Provider.h"
 #include "../../Renderer.h"
 
-const std::string kVertexShaderPath = "/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/line/line.vert";
-const std::string kFragmentShaderPath = "/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/line/line.frag";
+const std::string VERTEX_SHADER_PATH = "/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/line/line.vert";
+const std::string FRAGMENT_SHADER_PATH = "/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/line/line.frag";
 
-namespace renderer
+namespace Renderer
 {
 
 	Line::Line() {
-		shader_ = new Shader(kVertexShaderPath, kFragmentShaderPath);
+		shader_ = new Shader(VERTEX_SHADER_PATH, FRAGMENT_SHADER_PATH);
 		glGenVertexArrays(1, &vao_);
 		glGenBuffers(1, &vbo_);
-		renderer::primitives.insert(primitives.end(), this);
+		Renderer::primitives.insert(primitives.end(), this);
 	}
 
 	Line::Line(Transform start, Transform end, Transform pivot, LineMaterial line_material)
 		: pivot_(pivot), start_(start), end_(end), material_(line_material) {
-		shader_ = new Shader(kVertexShaderPath, kFragmentShaderPath);
+		shader_ = new Shader(VERTEX_SHADER_PATH, FRAGMENT_SHADER_PATH);
 		glGenVertexArrays(1, &vao_);
 		glGenBuffers(1, &vbo_);
-		renderer::primitives.insert(primitives.end(), this);
+		Renderer::primitives.insert(primitives.end(), this);
 	}
 
 	Line::~Line() {
 		delete shader_;
 		glDeleteVertexArrays(1, &vao_);
 		glDeleteBuffers(1, &vbo_);
-		std::remove(renderer::primitives.begin(), renderer::primitives.end(), this);
+		std::remove(Renderer::primitives.begin(), Renderer::primitives.end(), this);
 	}
 
 	void Line::Draw() {
@@ -37,17 +37,17 @@ namespace renderer
 
 	void Line::SetData() {
 
-		float vertices[] = { start_.position.x, start_.position.y, start_.position.z,
-							 end_.position.x, end_.position.y, end_.position.z };
+		float vertices[] = { start_.Position.x, start_.Position.y, start_.Position.z,
+							 end_.Position.x, end_.Position.y, end_.Position.z };
 
 		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
 		glEnableVertexAttribArray(0);
 
 		glm::mat4 model{ 1.0f };
-		model = glm::translate(model, pivot_.position);
-		model = glm::rotate(model, angle(pivot_.rotation), axis(pivot_.rotation));
-		model = glm::scale(model, pivot_.scale);
+		model = glm::translate(model, pivot_.Position);
+		model = glm::rotate(model, angle(pivot_.Rotation), axis(pivot_.Rotation));
+		model = glm::scale(model, pivot_.Scale);
 
 //  model = glm::scale(model, glm::vec3{1 - (1 / renderer::aspectRatio), aspectRatio - 1, 1});
 		glm::mat4 mvp = Camera::ProjectionMatrix() * Camera::ViewMatrix() * model;

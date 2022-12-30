@@ -2,14 +2,14 @@
 #include "engine/Engine.h"
 
 int main() {
-	renderer::Initialize();
+	Renderer::Initialize();
 	engine::Initialize();
 
-	while (!renderer::IsWindowClosing()) {
+	while (!Renderer::IsWindowClosing()) {
 		engine::Update();
-		renderer::Update();
+		Renderer::Update();
 	}
 
 	engine::Terminate();
-	renderer::Terminate();
+	Renderer::Terminate();
 }

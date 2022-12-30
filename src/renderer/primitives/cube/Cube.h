@@ -1,24 +1,24 @@
-#ifndef TETRIS_SRC_RENDERER_PRIMITIVES_CUBE_CUBE_H_
-#define TETRIS_SRC_RENDERER_PRIMITIVES_CUBE_CUBE_H_
+#ifndef TETRIS_SRC_RENDERER_PRIMITIVES_CUBE_CUBE_H
+#define TETRIS_SRC_RENDERER_PRIMITIVES_CUBE_CUBE_H
 
 #include "../Primitive.h"
-#include "../../../Transform.h"//;
+#include "../../../Transform.h"
 #include "../../../camera/Camera.h"
 
-namespace renderer
+namespace Renderer
 {
-
 	class Cube : public Primitive
 	{
 	public:
-		Transform transform_;
-		Material material_;
+		Transform MyTransform;
+		Material MyMaterial;
 	private:
-		Shader* shader_{};
+		Shader* _shader{};
 
-		unsigned int vbo_{};
-		unsigned int vao_{};
-		unsigned int ebo_{};
+		unsigned int _vbo{};
+		unsigned int _vao{};
+		unsigned int _ebo{};
+		unsigned int _texture{};
 
 	public:
 		Cube();
@@ -28,10 +28,8 @@ namespace renderer
 		void Draw() override;
 		void Unbind() override;
 		void SetData() override;
-
-		void SetTransform(const Transform& transform);
 	};
 
 } // Renderer
 
-#endif //TETRIS_SRC_RENDERER_PRIMITIVES_CUBE_CUBE_H_
+#endif //TETRIS_SRC_RENDERER_PRIMITIVES_CUBE_CUBE_H

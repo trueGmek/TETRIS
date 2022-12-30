@@ -15,7 +15,7 @@ bool Input::Initialize() {
 
 	SetKeyScancodes();
 
-	glfwSetKeyCallback(renderer::window, InputKeyCallback);
+	glfwSetKeyCallback(Renderer::window, InputKeyCallback);
 
 	return true;
 }

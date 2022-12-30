@@ -53,6 +53,8 @@ void Shader::LoadShader(unsigned int* shader, GLenum type, const std::string& sh
 
 }
 
+
+
 int Shader::CompileShader(unsigned int* shader, GLenum type, const std::string& shaderSource) {
 	*shader = glCreateShader(type);
 
