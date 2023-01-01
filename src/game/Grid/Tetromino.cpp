@@ -29,11 +29,11 @@ bool Tetromino::CanBeMoved(glm::ivec2 direction) {
 
 	for (Piece* tetrominoPart : Pieces) {
 
-		if (tetrominoPart->Position.x + direction.x >= Board::ACROSS
-			|| tetrominoPart->Position.y + direction.y >= Board::DOWN)
+		if (tetrominoPart->Position.x + direction.x >= Board::REAL_ACROSS
+			|| tetrominoPart->Position.y + direction.y >= Board::REAL_DOWN)
 			return false;
 
-		if (tetrominoPart->Position.x + direction.x < 0 || tetrominoPart->Position.y + direction.y < 0)
+		if (tetrominoPart->Position.x + direction.x < 0)
 			return false;
 
 		bool isPieceAtDestination = GameBoard.GetPiece(tetrominoPart->Position + direction) != nullptr;
@@ -89,7 +89,7 @@ bool Tetromino::CanBeRotated(RotationDir direction) {
 		glm::ivec2 newRelativePosition = glm::round(newFloatPosition);
 		glm::ivec2 newPosition = newRelativePosition + anchorPosition;
 
-		if (newPosition.x >= Board::ACROSS || newPosition.y >= Board::DOWN || newPosition.x < 0
+		if (newPosition.x >= Board::REAL_ACROSS || newPosition.y >= Board::REAL_DOWN || newPosition.x < 0
 			|| newPosition.y < 0)
 			return false;
 
@@ -122,4 +122,10 @@ void Tetromino::Rotate(RotationDir direction) {
 
 	SetColors();
 
+}
+
+Tetromino::~Tetromino() {
+	for (Piece* tetrominoPart : Pieces) {
+		tetrominoPart->IsActive = false;
+	}
 }

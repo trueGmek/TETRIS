@@ -39,6 +39,7 @@ private:
 	void ClearFullRows();
 	void SetNewPiece();
 
+	void EndGame();
 };
 
 #endif //TETRIS_SRC_GAME_GAMECONTROLLER_H

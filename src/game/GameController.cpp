@@ -14,7 +14,7 @@ double timeSinceLastMove = 0;
 GameController::GameController() : _current() {
 
 	_current = new Tetromino((EShape)(distr(gen)), _board);
-	_current->Move(glm::vec2{ 5, 5 });
+	_current->Move(glm::vec2{ 5, 2 });
 	glfwSetWindowUserPointer(Renderer::window, this);
 }
 
@@ -43,7 +43,19 @@ void GameController::SetNewPiece() {
 	auto shape = (EShape)(distr(gen));
 	_current = new Tetromino(shape, _board);
 
-	_current->Move(glm::vec2{ 5, 2 });
+	if (_current->CanBeMoved(glm::vec2{ 5, 2 }))
+		_current->Move(glm::vec2{ 5, 2 });
+	else {
+		EndGame();
+	}
+}
+
+void GameController::EndGame() {
+	_isUpdating = false;
+	for (Piece* piece : _current->Pieces) {
+		_board.SetPiece(piece->Position, nullptr);
+	}
+	std::cout << "You lost" << std::endl;
 }
 
 void GameController::MoveTetrominoRight() {
@@ -57,18 +69,19 @@ void GameController::MoveTetrominoLeft() {
 }
 
 void GameController::DropTetromino() {
-	for (int k = Board::DOWN; k >= 0; --k) {
-		if (_current->CanBeMoved(k * down_dir)) {
-			_current->Move(k * down_dir);
+	for (int i = 1; i < Board::REAL_DOWN; ++i) {
+		if (_current->CanBeMoved(down_dir * i)) {
+			continue;
+		}
+		else {
+			_current->Move(down_dir * (i - 1));
 			return;
 		}
 	}
 }
 
 void GameController::ClearFullRows() {
-
-	for (int k = 0; k < Board::DOWN; ++k) {
-
+	for (int k = 0; k < Board::REAL_DOWN; ++k) {
 		if (IsRowFull(k)) {
 			ClearRow(k);
 			MoveRowsDown(k);
@@ -77,7 +90,7 @@ void GameController::ClearFullRows() {
 }
 
 bool GameController::IsRowFull(int row) {
-	for (int column = 0; column < Board::ACROSS; ++column) {
+	for (int column = 0; column < Board::REAL_ACROSS; ++column) {
 		if (_board.GetPiece(glm::ivec2{ column, row }) == nullptr)
 			return false;
 	}
@@ -86,7 +99,7 @@ bool GameController::IsRowFull(int row) {
 }
 
 void GameController::ClearRow(int row) {
-	for (int column = 0; column < Board::ACROSS; ++column) {
+	for (int column = 0; column < Board::REAL_ACROSS; ++column) {
 		Piece* piece = _board.GetPiece(column, row);
 		_board.SetPiece(column, row, nullptr);
 
@@ -96,7 +109,7 @@ void GameController::ClearRow(int row) {
 
 void GameController::MoveRowsDown(int formRow) {
 	for (int row = formRow; row >= 0; row--) {
-		for (int column = 0; column < Board::ACROSS; ++column) {
+		for (int column = 0; column < Board::GAME_ACROSS; ++column) {
 
 			Piece* piece = _board.GetPiece(glm::ivec2{ column, row });
 			if (piece != nullptr && piece->IsActive) {

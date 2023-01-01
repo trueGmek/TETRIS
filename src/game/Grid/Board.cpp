@@ -1,7 +1,7 @@
 #include "Board.h"
 
 Board::Board(glm::vec3 center, glm::vec2 size) : _center{ center }, _size{ size } {
-	_cellSize = glm::vec3{ (float)size.x / ACROSS, (float)size.y / DOWN, 1 };
+	_cellSize = glm::vec3{ (float)size.x / GAME_ACROSS, (float)size.y / GAME_DOWN, 1 };
 
 	glm::vec3 leftTop{ center.x - size.x / 2, center.y + size.y / 2, center.z };
 	glm::vec3 rightTop{ center.x + size.x / 2, center.y + size.y / 2, center.z };
@@ -30,20 +30,19 @@ Board::Board(glm::vec3 center, glm::vec2 size) : _center{ center }, _size{ size 
 }
 
 void Board::InitializeSquares(const glm::vec3& center, const glm::vec2& size) {
-
-	glm::vec3 left_corner{ -size.x / 2 + _cellSize.x / 2, -size.y / 2 + _cellSize.y / 2, 0 };
-	for (int i = 0; i < ACROSS; i++) {
-		for (int j = 0; j < DOWN; j++) {
-			_cells[i][j].Position = center + left_corner + glm::vec3{ i, j, 0 } * _cellSize;
+	glm::vec3
+		leftCorner{ -size.x / 2 + _cellSize.x / 2, -size.y / 2 + _cellSize.y / 2 - VERTICAL_BUFFER * _cellSize.y, 0 };
+	for (int i = 0; i < REAL_ACROSS; i++) {
+		for (int j = 0; j < REAL_DOWN; j++) {
+			_cells[i][j].Position = center + leftCorner + glm::vec3{ i, j, 0 } * _cellSize;
 		}
 	}
 }
 
-void Board::EnableVisibleSquares(const glm::vec3& center, const glm::vec2& size) {
-
-	for (int i = 0; i < ACROSS; i++) {
-		for (int j = 0; j < DOWN; j++) {
-			int index = i * DOWN + j;
+void Board::EnableVisibleSquares() {
+	for (int i = 0; i < REAL_ACROSS; i++) {
+		for (int j = 0; j < REAL_DOWN; j++) {
+			int index = i * REAL_DOWN + j;
 			Piece* piece = _cells[i][j].GamePiece;
 
 			if (piece != nullptr && piece->IsActive) {
@@ -59,31 +58,43 @@ void Board::EnableVisibleSquares(const glm::vec3& center, const glm::vec2& size)
 }
 
 void Board::Update() {
-	EnableVisibleSquares(_center, _size);
+	EnableVisibleSquares();
 }
 
 void Board::SetUpGameState() {
-	for (int row = 0; row < ACROSS; ++row) {
-		for (int column = 0; column < DOWN; ++column) {
+	for (int row = 0; row < REAL_ACROSS; ++row) {
+		for (int column = 0; column < REAL_DOWN; ++column) {
 			_cells[row][column].GamePiece = nullptr;
 		}
 	}
 }
 
 Piece* Board::GetPiece(glm::ivec2 position) {
-	return _cells[position.x][position.y].GamePiece;
+	if (position.x >= 0 && position.y >= 0)
+		return _cells[position.x][position.y].GamePiece;
+
+	return nullptr;
 }
 
 Piece* Board::GetPiece(int x, int y) {
-	return _cells[x][y].GamePiece;
+	if (x >= 0 && y >= 0)
+		return _cells[x][y].GamePiece;
+
+	return nullptr;
 }
 
 GridCell* Board::GetGridCell(glm::ivec2 position) {
-	return &_cells[position.x][position.y];
+	if (position.x >= 0 && position.y >= 0)
+		return &_cells[position.x][position.y];
+
+	return nullptr;
 }
 
 GridCell* Board::GetGridCell(int x, int y) {
-	return &_cells[x][y];
+	if (x >= 0 && y >= 0)
+		return &_cells[x][y];
+
+	return nullptr;
 }
 
 void Board::SetPiece(glm::ivec2 position, Piece* piece) {

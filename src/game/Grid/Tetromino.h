@@ -19,6 +19,7 @@ public:
 	EShape Shape;
 
 	explicit Tetromino(EShape shape, Board& board);
+	~Tetromino();
 
 	bool CanBeMoved(glm::ivec2 direction);
 	void Move(glm::ivec2 direction);
