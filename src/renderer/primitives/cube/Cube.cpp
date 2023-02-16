@@ -24,6 +24,8 @@ unsigned int const INDICES[] = {
 
 namespace Renderer
 {
+	//TODO: THERE IS SOMETHING WRONG WITH THE TEXTURES BECAUSE COLORS IS SET IN THE SHADER
+	// WEIRD, FOR A SPLIT SECOND YOU CAN SEE THE CORRECT TEXTURE
 	Cube::Cube() {
 		_shader = new Shader(VERTEX_SHADER_PATH, FRAGMENT_SHADER_PATH);
 
@@ -96,6 +98,7 @@ namespace Renderer
 	void Cube::Bind() {
 		glBindVertexArray(_vao);
 		_shader->Use();
+		glBindTexture(GL_TEXTURE_2D, _texture);
 	}
 
 	void Cube::Unbind() {

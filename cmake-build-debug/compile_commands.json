@@ -1,78 +1,88 @@
 [
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/main.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/main.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/main.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/main.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/main.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/renderer/Renderer.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Renderer.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/renderer/Renderer.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Renderer.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Renderer.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/renderer/shader/Shader.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/shader/Shader.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/renderer/shader/Shader.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/shader/Shader.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/renderer/shader/Shader.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/camera/Camera.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/camera/Camera.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/camera/Camera.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/camera/Camera.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/camera/Camera.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/renderer/primitives/cube/Cube.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/primitives/cube/Cube.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/renderer/primitives/cube/Cube.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/primitives/cube/Cube.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/renderer/primitives/cube/Cube.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/engine/Engine.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/engine/Engine.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/engine/Engine.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/engine/Engine.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/engine/Engine.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/renderer/primitives/line/Line.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/primitives/line/Line.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/renderer/primitives/line/Line.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/primitives/line/Line.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/renderer/primitives/line/Line.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/renderer/Provider.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Provider.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/renderer/Provider.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Provider.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Provider.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/Initializer.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/Initializer.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/Initializer.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/Initializer.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/game/Initializer.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/GameObject.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/GameObject.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/GameObject.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/GameObject.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/game/GameObject.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/Grid/Board.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/Grid/Board.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/Grid/Board.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/Grid/Board.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/game/Grid/Board.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/GameController.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/GameController.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/GameController.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/GameController.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/game/GameController.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/engine/Input.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/engine/Input.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/engine/Input.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/engine/Input.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/engine/Input.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/Grid/Piece.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/Grid/Piece.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/Grid/Piece.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/Grid/Piece.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/game/Grid/Piece.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
-  "command": "/usr/bin/c++ -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/Grid/Tetromino.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/Grid/Tetromino.cpp",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/game/Grid/Tetromino.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/game/Grid/Tetromino.cpp",
   "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/game/Grid/Tetromino.cpp"
+},
+{
+  "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/renderer/Text.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Text.cpp",
+  "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/renderer/Text.cpp"
+},
+{
+  "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",
+  "command": "/usr/bin/c++ -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles/tetris.dir/src/renderer/primitives/TextPrimitive.cpp.o -c /home/gmek/Dev/C++/OpenGL/tetris/src/renderer/primitives/TextPrimitive.cpp",
+  "file": "/home/gmek/Dev/C++/OpenGL/tetris/src/renderer/primitives/TextPrimitive.cpp"
 },
 {
   "directory": "/home/gmek/Dev/C++/OpenGL/tetris/cmake-build-debug",

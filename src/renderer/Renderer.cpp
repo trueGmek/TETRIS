@@ -2,11 +2,14 @@
 #include "shader/Shader.h"
 #include "../debug/Debug.h"
 #include "Provider.h"
+#include "Text.h"
 
 GLFWwindow* Renderer::window;
 
 float Renderer::windowWidth = (float)Renderer::kInitialWidth;
 float Renderer::windowHeight = (float)Renderer::kInitialHeight;
+
+const std::string FONT_PATH{ "/home/gmek/Dev/C++/OpenGL/tetris/resources/FiraCode-Bold.ttf" };
 
 static void ErrorCallback(int error, const char* description) {
 	std::cout << "Error: " << description << std::endl;
@@ -45,6 +48,12 @@ bool Renderer::Initialize() {
 
 	glEnable(GL_DEPTH_TEST);
 
+	if (!Renderer::Text::Initialize(FONT_PATH)) {
+		return false;
+	}
+	GenerateCharacterTextures();
+	Renderer::Text::Deinitialize();
+
 	return true;
 }
 
@@ -71,4 +80,52 @@ void Renderer::Update() {
 
 bool Renderer::IsWindowClosing() {
 	return glfwWindowShouldClose(window);
+}
+
+void Renderer::GenerateCharacterTextures() {
+
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 1); // disable byte-alignment restriction
+
+	for (unsigned char c = 0; c < 128; ++c) {
+		FT_GlyphSlot glyphSlot = Renderer::Text::GetGlyph(c);
+
+		unsigned int texture;
+		glGenTextures(1, &texture);
+		glBindTexture(GL_TEXTURE_2D, texture);
+
+		if (c == 'c') {
+			std::cout << "Texture id for c: " << texture << std::endl;
+		}
+		glTexImage2D(
+			GL_TEXTURE_2D,
+			0,
+			GL_RED,
+			glyphSlot->bitmap.width,
+			glyphSlot->bitmap.rows,
+			0,
+			GL_RED,
+			GL_UNSIGNED_BYTE,
+			glyphSlot->bitmap.buffer
+		);
+
+		// set texture options
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+		Character character = {
+			texture,
+			glm::ivec2(glyphSlot->bitmap.width, glyphSlot->bitmap.rows),
+			glm::ivec2(glyphSlot->bitmap_left, glyphSlot->bitmap_top),
+			static_cast<unsigned int>(glyphSlot->advance.x)
+		};
+
+		Renderer::Text::Characters.insert(std::pair<char, Character>(c, character));
+
+		glBindTexture(GL_TEXTURE_2D, 0);
+	}
+
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 0);
+
 }

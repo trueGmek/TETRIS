@@ -1,12 +1,17 @@
 #include <random>
 #include "GameController.h"
 #include "../renderer/Renderer.h"
+#include "../renderer/primitives/TextPrimitive.h"
 
 const glm::ivec2 down_dir{ 0, 1 };
+
+int score{};
 
 std::random_device rd; // obtain a random number from hardware
 std::mt19937 gen(rd()); // seed the generator
 std::uniform_int_distribution<> distr(0, 6); // define the range
+
+Renderer::TextPrimitive* textPrimitive;
 
 double const kMovePeriod = 0.5;
 double timeSinceLastMove = 0;
@@ -14,12 +19,22 @@ double timeSinceLastMove = 0;
 GameController::GameController() : _current() {
 
 	_current = new Tetromino((EShape)(distr(gen)), _board);
+	_nextShape = (EShape)(distr(gen));
+
 	_current->Move(glm::vec2{ 5, 2 });
 	glfwSetWindowUserPointer(Renderer::window, this);
+
+	textPrimitive = new Renderer::TextPrimitive();
+	textPrimitive->MyTransform.Position = glm::vec3{ 625, 50, 0 };
+	textPrimitive->MyTransform.Scale = glm::vec3{ 1.0f };
+	textPrimitive->MyMaterial.color = glm::vec4{ 1.0f };
+
 }
 
 void GameController::Update() {
 	double currentTime = glfwGetTime();
+
+	textPrimitive->Text = std::string{ std::to_string(score) };
 
 	if (currentTime - timeSinceLastMove >= kMovePeriod && _isUpdating) {
 		StepUpdate();
@@ -40,8 +55,9 @@ void GameController::StepUpdate() {
 }
 
 void GameController::SetNewPiece() {
-	auto shape = (EShape)(distr(gen));
-	_current = new Tetromino(shape, _board);
+	_current = new Tetromino(_nextShape, _board);
+
+	_nextShape = (EShape)(distr(gen));
 
 	if (_current->CanBeMoved(glm::vec2{ 5, 2 }))
 		_current->Move(glm::vec2{ 5, 2 });
@@ -85,6 +101,7 @@ void GameController::ClearFullRows() {
 		if (IsRowFull(k)) {
 			ClearRow(k);
 			MoveRowsDown(k);
+			score++;
 		}
 	}
 }

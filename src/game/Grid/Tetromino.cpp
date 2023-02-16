@@ -6,8 +6,6 @@
 #include "../../utils/MathUtil.h"
 #include "TetrominoData.h"
 
-glm::vec4 debugColors[] = { colors::RED, colors::GREEN, colors::BLUE, colors::WHITE };
-
 Tetromino::Tetromino(EShape shape, Board& board)
 	: Pieces{}, GameBoard(board), Shape{ shape } {
 	std::array<glm::ivec2, 4> shapeCoordinates = TetrominoData[shape].Coordinates;

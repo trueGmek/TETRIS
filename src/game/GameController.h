@@ -17,6 +17,9 @@ class GameController : public GameObject
 private:
 	bool _isUpdating = false;
 	Board _board{ glm::vec3{ 400, 400, 0 }, glm::vec2{ 400, 600 }};
+
+	EShape _nextShape;
+
 	Tetromino* _current;
 
 public:

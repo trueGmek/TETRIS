@@ -24,6 +24,7 @@ namespace Renderer
 	void Terminate();
 	void Update();
 	bool IsWindowClosing();
+	void GenerateCharacterTextures();
 }
 
 #endif //TETRIS_SRC_RENDERER_RENDERER_H
