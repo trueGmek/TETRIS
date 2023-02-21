@@ -10,6 +10,7 @@ int KEY_W, KEY_S, KEY_A, KEY_D, KEY_F1, KEY_F2;
 
 int KEY_ESCAPE;
 int KEY_SPACE;
+int KEY_TAB;
 
 bool Input::Initialize() {
 
@@ -30,6 +31,7 @@ void Input::SetKeyScancodes() {
 
 	KEY_ESCAPE = glfwGetKeyScancode(GLFW_KEY_ESCAPE);
 	KEY_SPACE = glfwGetKeyScancode(GLFW_KEY_SPACE);
+	KEY_TAB = glfwGetKeyScancode(GLFW_KEY_TAB);
 }
 
 void Input::InputKeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
@@ -59,4 +61,7 @@ void Input::InputKeyCallback(GLFWwindow* window, int key, int scancode, int acti
 
 	if (scancode == KEY_F2 && action == GLFW_PRESS)
 		game_controller->StepUpdate();
+
+	if(scancode == KEY_TAB && action == GLFW_PRESS)
+		game_controller->SwapPieces();
 }

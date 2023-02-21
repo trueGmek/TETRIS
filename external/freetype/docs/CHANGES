@@ -639,7 +639,7 @@ CHANGES BETWEEN 2.8 and 2.8.1 (2017-Sep-16)
     - The `ftgrid'  demo program  can now toggle  the display  of grid
       lines with the `G' key.
 
-    - The `ftgrid' demo  program can toggle a different  set of colors
+    - The `ftgrid' demo  program can toggle a different  set of Colors
       (suitable to color-blind people) with the `C' key.
 
     - The `ftgrid'  demo program  now supports  the `-e'  command line

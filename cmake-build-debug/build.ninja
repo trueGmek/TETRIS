@@ -168,6 +168,13 @@ build CMakeFiles/tetris.dir/src/renderer/primitives/TextPrimitive.cpp.o: CXX_COM
   OBJECT_DIR = CMakeFiles/tetris.dir
   OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/renderer/primitives
 
+build CMakeFiles/tetris.dir/src/game/PiecePreview.cpp.o: CXX_COMPILER__tetris_Debug /home/gmek/Dev/C++/OpenGL/tetris/src/game/PiecePreview.cpp || cmake_object_order_depends_target_tetris
+  DEP_FILE = CMakeFiles/tetris.dir/src/game/PiecePreview.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  INCLUDES = -I/usr/include/freetype2 -I/home/gmek/Dev/C++/OpenGL/tetris/external/glad/include -I/home/gmek/Dev/C++/OpenGL/tetris/external/glm -I/home/gmek/Dev/C++/Dependencies/glfw/include
+  OBJECT_DIR = CMakeFiles/tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles/tetris.dir/src/game
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target tetris
@@ -176,7 +183,7 @@ build CMakeFiles/tetris.dir/src/renderer/primitives/TextPrimitive.cpp.o: CXX_COM
 #############################################
 # Link the executable tetris
 
-build tetris: CXX_EXECUTABLE_LINKER__tetris_Debug CMakeFiles/tetris.dir/src/main.cpp.o CMakeFiles/tetris.dir/src/renderer/Renderer.cpp.o CMakeFiles/tetris.dir/src/renderer/shader/Shader.cpp.o CMakeFiles/tetris.dir/src/camera/Camera.cpp.o CMakeFiles/tetris.dir/src/renderer/primitives/cube/Cube.cpp.o CMakeFiles/tetris.dir/src/engine/Engine.cpp.o CMakeFiles/tetris.dir/src/renderer/primitives/line/Line.cpp.o CMakeFiles/tetris.dir/src/renderer/Provider.cpp.o CMakeFiles/tetris.dir/src/game/Initializer.cpp.o CMakeFiles/tetris.dir/src/game/GameObject.cpp.o CMakeFiles/tetris.dir/src/game/Grid/Board.cpp.o CMakeFiles/tetris.dir/src/game/GameController.cpp.o CMakeFiles/tetris.dir/src/engine/Input.cpp.o CMakeFiles/tetris.dir/src/game/Grid/Piece.cpp.o CMakeFiles/tetris.dir/src/game/Grid/Tetromino.cpp.o CMakeFiles/tetris.dir/src/renderer/Text.cpp.o CMakeFiles/tetris.dir/src/renderer/primitives/TextPrimitive.cpp.o | external/glad/libglad.a /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a /usr/lib/x86_64-linux-gnu/libfreetype.so /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a external/glad/libglad.a
+build tetris: CXX_EXECUTABLE_LINKER__tetris_Debug CMakeFiles/tetris.dir/src/main.cpp.o CMakeFiles/tetris.dir/src/renderer/Renderer.cpp.o CMakeFiles/tetris.dir/src/renderer/shader/Shader.cpp.o CMakeFiles/tetris.dir/src/camera/Camera.cpp.o CMakeFiles/tetris.dir/src/renderer/primitives/cube/Cube.cpp.o CMakeFiles/tetris.dir/src/engine/Engine.cpp.o CMakeFiles/tetris.dir/src/renderer/primitives/line/Line.cpp.o CMakeFiles/tetris.dir/src/renderer/Provider.cpp.o CMakeFiles/tetris.dir/src/game/Initializer.cpp.o CMakeFiles/tetris.dir/src/game/GameObject.cpp.o CMakeFiles/tetris.dir/src/game/Grid/Board.cpp.o CMakeFiles/tetris.dir/src/game/GameController.cpp.o CMakeFiles/tetris.dir/src/engine/Input.cpp.o CMakeFiles/tetris.dir/src/game/Grid/Piece.cpp.o CMakeFiles/tetris.dir/src/game/Grid/Tetromino.cpp.o CMakeFiles/tetris.dir/src/renderer/Text.cpp.o CMakeFiles/tetris.dir/src/renderer/primitives/TextPrimitive.cpp.o CMakeFiles/tetris.dir/src/game/PiecePreview.cpp.o | external/glad/libglad.a /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a /usr/lib/x86_64-linux-gnu/libfreetype.so /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a external/glad/libglad.a
   FLAGS = -g
   LINK_LIBRARIES = external/glad/libglad.a  /home/gmek/Dev/C++/Dependencies/glfw/src/src/libglfw3.a  /usr/lib/x86_64-linux-gnu/libfreetype.so  /usr/lib/x86_64-linux-gnu/librt.a  -lm  -ldl  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
   OBJECT_DIR = CMakeFiles/tetris.dir

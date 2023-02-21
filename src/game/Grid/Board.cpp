@@ -10,19 +10,19 @@ Board::Board(glm::vec3 center, glm::vec2 size) : _center{ center }, _size{ size 
 
 	_top.start_.Position = leftTop;
 	_top.end_.Position = rightTop;
-	_top.material_.color = colors::WHITE;
+	_top.material_.color = Colors::WHITE;
 
 	_bottom.start_.Position = leftBottom;
 	_bottom.end_.Position = rightBottom;
-	_bottom.material_.color = colors::WHITE;
+	_bottom.material_.color = Colors::WHITE;
 
 	_left.start_.Position = leftTop;
 	_left.end_.Position = leftBottom;
-	_left.material_.color = colors::WHITE;
+	_left.material_.color = Colors::WHITE;
 
 	_right.start_.Position = rightTop;
 	_right.end_.Position = rightBottom;
-	_right.material_.color = colors::WHITE;
+	_right.material_.color = Colors::WHITE;
 
 	InitializeSquares(center, size);
 	SetUpGameState();

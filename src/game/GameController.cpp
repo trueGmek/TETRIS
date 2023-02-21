@@ -1,7 +1,7 @@
 #include <random>
 #include "GameController.h"
 #include "../renderer/Renderer.h"
-#include "../renderer/primitives/TextPrimitive.h"
+#include "PiecePreview.h"
 
 const glm::ivec2 down_dir{ 0, 1 };
 
@@ -10,8 +10,6 @@ int score{};
 std::random_device rd; // obtain a random number from hardware
 std::mt19937 gen(rd()); // seed the generator
 std::uniform_int_distribution<> distr(0, 6); // define the range
-
-Renderer::TextPrimitive* textPrimitive;
 
 double const kMovePeriod = 0.5;
 double timeSinceLastMove = 0;
@@ -24,17 +22,47 @@ GameController::GameController() : _current() {
 	_current->Move(glm::vec2{ 5, 2 });
 	glfwSetWindowUserPointer(Renderer::window, this);
 
-	textPrimitive = new Renderer::TextPrimitive();
-	textPrimitive->MyTransform.Position = glm::vec3{ 625, 50, 0 };
-	textPrimitive->MyTransform.Scale = glm::vec3{ 1.0f };
-	textPrimitive->MyMaterial.color = glm::vec4{ 1.0f };
+	SetUpGUI();
+}
 
+void GameController::SetUpGUI() {
+	_nextPiecePreview = new PiecePreview(glm::vec3{ 40, 40, 1 });
+	_nextPiecePreview->MyTransform.Position = glm::vec3{ 725, 165, 0 };
+	_nextPiecePreview->SetShape(_nextShape);
+
+	_heldPiecePreview = new PiecePreview(glm::vec3{ 40, 40, 1 });
+	_heldPiecePreview->MyTransform.Position = glm::vec3{ 725, 375, 0 };
+	_heldPiecePreview->SetShape(_heldShape);
+	_heldPiecePreview->SetActive(false);
+
+	_scoreText = new Renderer::TextPrimitive();
+	_scoreText->MyTransform.Position = glm::vec3{ 75, 100, 0 };
+	_scoreText->MyTransform.Scale = glm::vec3{ 1.0f };
+	_scoreText->MyMaterial.color = glm::vec4{ 1.0f };
+
+	_nextPieceTitle = new Renderer::TextPrimitive();
+	_nextPieceTitle->MyTransform.Position = glm::vec3{ 625, 75, 0 };
+	_nextPieceTitle->MyTransform.Scale = glm::vec3{ 0.5f };
+	_nextPieceTitle->MyMaterial.color = glm::vec4{ 1.0f };
+	_nextPieceTitle->Text = "NEXT PIECE";
+
+	_heldPieceTitle = new Renderer::TextPrimitive();
+	_heldPieceTitle->MyTransform.Position = glm::vec3{ 625, 300, 0 };
+	_heldPieceTitle->MyTransform.Scale = glm::vec3{ 0.5f };
+	_heldPieceTitle->MyMaterial.color = glm::vec4{ 1.0f };
+	_heldPieceTitle->Text = "HELD PIECE";
+
+	_scoreTitle = new Renderer::TextPrimitive();
+	_scoreTitle->MyTransform.Position = glm::vec3{ 50, 50, 0 };
+	_scoreTitle->MyTransform.Scale = glm::vec3{ .5f };
+	_scoreTitle->MyMaterial.color = glm::vec4{ 1.0f };
+	_scoreTitle->Text = "SCORE";
 }
 
 void GameController::Update() {
 	double currentTime = glfwGetTime();
 
-	textPrimitive->Text = std::string{ std::to_string(score) };
+	_scoreText->Text = std::string{ std::to_string(score) };
 
 	if (currentTime - timeSinceLastMove >= kMovePeriod && _isUpdating) {
 		StepUpdate();
@@ -47,20 +75,27 @@ void GameController::StepUpdate() {
 	if (_current->CanBeMoved(glm::ivec2{ 0, 1 }))
 		_current->Move(glm::ivec2{ 0, 1 });
 	else
-		SetNewPiece();
+		GenerateNewPiece();
 
 	ClearFullRows();
 
 	timeSinceLastMove = glfwGetTime();
 }
 
-void GameController::SetNewPiece() {
-	_current = new Tetromino(_nextShape, _board);
-
+void GameController::GenerateNewPiece() {
+	SetNewPiece(_nextShape);
 	_nextShape = (EShape)(distr(gen));
+	_nextPiecePreview->SetShape(_nextShape);
 
-	if (_current->CanBeMoved(glm::vec2{ 5, 2 }))
+	_isAbleToSwap = true;
+}
+
+void GameController::SetNewPiece(EShape shape) {
+	_current->SetShape(shape);
+
+	if (_current->CanBeMoved(glm::vec2{ 5, 2 })) {
 		_current->Move(glm::vec2{ 5, 2 });
+	}
 	else {
 		EndGame();
 	}
@@ -153,6 +188,42 @@ void GameController::RotateCounterclockwise() {
 void GameController::DebugToggleUpdate() {
 	_isUpdating = !_isUpdating;
 }
+
+void GameController::SwapPieces() {
+	if (_isAbleToSwap) {
+		_heldPiecePreview->SetActive(true);
+
+		if (_isHoldingShape) {
+			EShape temp = _current->Shape;
+
+			_current->Clear();
+			SetNewPiece(_heldShape);
+
+			_heldShape = temp;
+			_heldPiecePreview->SetShape(_heldShape);
+
+			_isAbleToSwap = false;
+			return;
+		}
+
+		_heldShape = _current->Shape;
+
+		_current->Clear();
+		SetNewPiece(_nextShape);
+
+		_nextShape = (EShape)(distr(gen));
+
+		_heldPiecePreview->SetShape(_heldShape);
+		_nextPiecePreview->SetShape(_nextShape);
+
+		_isHoldingShape = true;
+		_isAbleToSwap = false;
+
+		return;
+	}
+
+}
+
 
 
 

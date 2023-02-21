@@ -4,7 +4,7 @@
 #include <array>
 #include <map>
 #include "glm/ext/vector_int2.hpp"
-#include "Tetromino.h"
+#include "../../renderer/primitives/Colors.h"
 
 enum EShape
 {
@@ -29,43 +29,43 @@ static std::map<EShape, data> TetrominoData{
 					  glm::ivec2{ 0, -1 },
 					  glm::ivec2{ 0, 1 },
 					  glm::ivec2{ 0, 2 }
-				  }, { colors::LIGHT_BLUE }}},
+				  }, { Colors::LIGHT_BLUE }}},
 	{ EShape::O, {{
 					  glm::ivec2{ 0, 0 },
 					  glm::ivec2{ -1, 0 },
 					  glm::ivec2{ -1, 1 },
 					  glm::ivec2{ 0, 1 }
-				  }, { colors::YELLOW }}},
+				  }, { Colors::YELLOW }}},
 	{ EShape::T, {{
 					  glm::ivec2{ 0, 0 },
 					  glm::ivec2{ -1, 0 },
 					  glm::ivec2{ 1, 0 },
 					  glm::ivec2{ 0, -1 }
-				  }, { colors::PURPLE }}},
+				  }, { Colors::PURPLE }}},
 	{ EShape::S, {{
 					  glm::ivec2{ 0, 0 },
 					  glm::ivec2{ 1, 0 },
 					  glm::ivec2{ -1, 1 },
 					  glm::ivec2{ 0, 1 },
-				  }, { colors::GREEN }}},
+				  }, { Colors::GREEN }}},
 	{ EShape::Z, {{
 					  glm::ivec2{ 0, 0 },
 					  glm::ivec2{ -1, 0 },
 					  glm::ivec2{ 0, 1 },
 					  glm::ivec2{ 1, 1 },
-				  }, { colors::RED }}},
+				  }, { Colors::RED }}},
 	{ EShape::J, {{
 					  glm::ivec2{ 0, 0 },
 					  glm::ivec2{ 1, 0 },
 					  glm::ivec2{ -1, 0 },
 					  glm::ivec2{ -1, -1 },
-				  }, { colors::BLUE }}},
+				  }, { Colors::BLUE }}},
 	{ EShape::L, {{
 					  glm::ivec2{ 0, 0 },
 					  glm::ivec2{ 1, -1 },
 					  glm::ivec2{ -1, 0 },
 					  glm::ivec2{ 1, 0 }
-				  }, { colors::ORANGE }}},
+				  }, { Colors::ORANGE }}},
 
 };
 

@@ -21,6 +21,21 @@ Tetromino::Tetromino(EShape shape, Board& board)
 	}
 }
 
+void Tetromino::SetShape(EShape shape) {
+	Shape = shape;
+	std::array<glm::ivec2, 4> shapeCoordinates = TetrominoData[shape].Coordinates;
+
+	for (int i = 0; i < 4; ++i) {
+		Pieces[i]->IsActive = true;
+		Pieces[i]->Position = shapeCoordinates[i];
+	}
+
+	for (Piece* tetrominoPart : Pieces) {
+		GameBoard.SetPiece(tetrominoPart->Position, tetrominoPart);
+	}
+
+}
+
 bool Tetromino::CanBeMoved(glm::ivec2 direction) {
 
 	bool isAllowed = true;
@@ -123,7 +138,15 @@ void Tetromino::Rotate(RotationDir direction) {
 }
 
 Tetromino::~Tetromino() {
+	Clear();
+}
+
+void Tetromino::Clear() {
 	for (Piece* tetrominoPart : Pieces) {
 		tetrominoPart->IsActive = false;
+	}
+
+	for (Piece* tetrominoPart : Pieces) {
+		GameBoard.SetPiece(tetrominoPart->Position, nullptr);
 	}
 }

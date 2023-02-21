@@ -503,7 +503,7 @@ STBIDEF int      stbi_is_16_bit_from_file(FILE *f);
 
 
 // for image formats that explicitly notate that they have premultiplied alpha,
-// we just return the colors as stored in the file. set this flag to force
+// we just return the Colors as stored in the file. set this flag to force
 // unpremultiplication. results are undefined if the unpremultiply overflow.
 STBIDEF void stbi_set_unpremultiply_on_load(int flag_true_if_should_unpremultiply);
 
@@ -5159,7 +5159,7 @@ static int stbi__parse_png_file(stbi__png *z, int scan, int req_comp)
                stbi__de_iphone(z);
             if (pal_img_n) {
                // pal_img_n == 3 or 4
-               s->img_n = pal_img_n; // record the actual colors we had
+               s->img_n = pal_img_n; // record the actual Colors we had
                s->img_out_n = pal_img_n;
                if (req_comp >= 3) s->img_out_n = req_comp;
                if (!stbi__expand_png_palette(z, palette, pal_len, s->img_out_n))

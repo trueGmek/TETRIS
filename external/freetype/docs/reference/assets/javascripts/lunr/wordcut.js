@@ -6204,7 +6204,7 @@ exports.debuglog = function(set) {
  * @param {Object} obj The object to print out.
  * @param {Object} opts Optional options object that alters the output.
  */
-/* legacy: obj, showHidden, depth, colors*/
+/* legacy: obj, showHidden, depth, Colors*/
 function inspect(obj, opts) {
   // default options
   var ctx = {
@@ -6213,7 +6213,7 @@ function inspect(obj, opts) {
   };
   // legacy...
   if (arguments.length >= 3) ctx.depth = arguments[2];
-  if (arguments.length >= 4) ctx.colors = arguments[3];
+  if (arguments.length >= 4) ctx.Colors = arguments[3];
   if (isBoolean(opts)) {
     // legacy...
     ctx.showHidden = opts;
@@ -6224,16 +6224,16 @@ function inspect(obj, opts) {
   // set default options
   if (isUndefined(ctx.showHidden)) ctx.showHidden = false;
   if (isUndefined(ctx.depth)) ctx.depth = 2;
-  if (isUndefined(ctx.colors)) ctx.colors = false;
+  if (isUndefined(ctx.Colors)) ctx.Colors = false;
   if (isUndefined(ctx.customInspect)) ctx.customInspect = true;
-  if (ctx.colors) ctx.stylize = stylizeWithColor;
+  if (ctx.Colors) ctx.stylize = stylizeWithColor;
   return formatValue(ctx, obj, ctx.depth);
 }
 exports.inspect = inspect;
 
 
 // http://en.wikipedia.org/wiki/ANSI_escape_code#graphics
-inspect.colors = {
+inspect.Colors = {
   'bold' : [1, 22],
   'italic' : [3, 23],
   'underline' : [4, 24],
@@ -6267,8 +6267,8 @@ function stylizeWithColor(str, styleType) {
   var style = inspect.styles[styleType];
 
   if (style) {
-    return '\u001b[' + inspect.colors[style][0] + 'm' + str +
-           '\u001b[' + inspect.colors[style][1] + 'm';
+    return '\u001b[' + inspect.Colors[style][0] + 'm' + str +
+           '\u001b[' + inspect.Colors[style][1] + 'm';
   } else {
     return str;
   }

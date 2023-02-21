@@ -3,7 +3,7 @@
 
 #include "glm/vec4.hpp"
 
-namespace colors
+namespace Colors
 {
 	const glm::vec4 RED = { 1, 0, 0, 1 };
 	const glm::vec4 GREEN = { 0, 1, 0, 1 };
