@@ -8,16 +8,16 @@ class GameUI
 {
 
 public:
-	Renderer::TextPrimitive* ScoreTitle;
-	Renderer::TextPrimitive* ScoreText;
-	Renderer::TextPrimitive* NextPieceTitle;
-	Renderer::TextPrimitive* HeldPieceTitle;
+	Renderer::TextPrimitive* ScoreTitle{ new Renderer::TextPrimitive() };
+	Renderer::TextPrimitive* ScoreText{ new Renderer::TextPrimitive() };
+	Renderer::TextPrimitive* NextPieceTitle{ new Renderer::TextPrimitive() };
+	Renderer::TextPrimitive* HeldPieceTitle{ new Renderer::TextPrimitive() };
+	Renderer::TextPrimitive* LostText{ new Renderer::TextPrimitive() };
 
-	PiecePreview* NextPiecePreview;
-	PiecePreview* HeldPiecePreview;
+	PiecePreview* NextPiecePreview{ new PiecePreview(glm::vec3{ 40, 40, 1 }) };
+	PiecePreview* HeldPiecePreview{ new PiecePreview(glm::vec3{ 40, 40, 1 }) };
 
 public:
-
 	void SetUpGui(EShape nextShape, EShape heldShape);
 };
 

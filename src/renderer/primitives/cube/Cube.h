@@ -13,7 +13,7 @@ namespace Renderer
 		Transform MyTransform;
 		Material MyMaterial;
 	private:
-		Shader* _shader{};
+		Shader* _shader;
 
 		unsigned int _vbo{};
 		unsigned int _vao{};

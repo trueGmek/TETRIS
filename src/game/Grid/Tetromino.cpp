@@ -6,13 +6,7 @@ Tetromino::Tetromino(EShape shape, Board& board) : Pieces{}, GameBoard(board), S
 	std::array<glm::ivec2, 4> shapeCoordinates = TetrominoData[shape].Coordinates;
 
 	for (int i = 0; i < 4; ++i) {
-		Pieces[i] = new Piece();
-		Pieces[i]->IsActive = true;
-		Pieces[i]->Position = shapeCoordinates[i];
-	}
-
-	for (Piece* tetrominoPart : Pieces) {
-		GameBoard.SetPiece(tetrominoPart->Position, tetrominoPart);
+		Pieces[i] = board.CreatePieces(true,shapeCoordinates[i]);
 	}
 }
 

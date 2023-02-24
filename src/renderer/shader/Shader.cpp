@@ -19,10 +19,13 @@ Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentS
 
 	glDeleteShader(vertex);
 	glDeleteShader(fragment);
+	
+	delete vertexCode;
+	delete fragmentCode;
 }
 
 std::string* Shader::ReadShader(const std::string& pathToShader) {
-	auto* code = new std::string();
+	auto* code{ new std::string() };
 	std::ifstream fileStream;
 	fileStream.exceptions(std::ifstream::failbit | std::ifstream::badbit);
 

@@ -76,13 +76,6 @@ Piece* Board::GetPiece(glm::ivec2 position) {
 	return nullptr;
 }
 
-Piece* Board::GetPiece(int x, int y) {
-	if (x >= 0 && y >= 0)
-		return _cells[x][y].GamePiece;
-
-	return nullptr;
-}
-
 GridCell* Board::GetGridCell(glm::ivec2 position) {
 	if (position.x >= 0 && position.y >= 0)
 		return &_cells[position.x][position.y];
@@ -107,8 +100,9 @@ void Board::MoveRowsDown(int formRow) {
 			Piece* piece = GetPiece(glm::ivec2{ column, row });
 			if (piece != nullptr && !piece->IsActive) {
 
-				SetPiece(glm::ivec2{ column, row }, nullptr);
 				piece->Position += glm::ivec2{ 0, 1 };
+
+				SetPiece(glm::ivec2{ column, row }, nullptr);
 				SetPiece(glm::ivec2{ column, row + 1 }, piece);
 			}
 		}
@@ -117,7 +111,6 @@ void Board::MoveRowsDown(int formRow) {
 
 void Board::ClearRow(int row) {
 	for (int column = 0; column < Board::REAL_ACROSS; ++column) {
-		Piece* piece = GetPiece(column, row);
 		SetPiece(column, row, nullptr);
 	}
 }
@@ -132,8 +125,31 @@ bool Board::IsRowFull(int row) {
 }
 
 void Board::RemovePieces(std::array<Piece*, 4>& pieces) {
-	for (Piece* tetrominoPart : pieces) {
-		SetPiece(tetrominoPart->Position, nullptr);
+	for (int i = 0; i < 4; ++i) {
+		Piece* piece = pieces[i];
+		SetPiece(piece->Position, nullptr);
 	}
+
+	for (int i = 0; i < 4; ++i) {
+		if (pieces[i] != nullptr)
+			delete pieces[i];
+	}
+
 }
 
+Piece* Board::CreatePieces(bool isActive, glm::ivec2 coordinates) {
+	auto* piece{ new Piece(isActive, coordinates) };
+
+	SetPiece(coordinates, piece);
+
+	return piece;
+}
+
+Board::~Board() {
+	for (std::array<GridCell, 24> column : _cells) {
+		for (GridCell cell : column) {
+			delete cell.GamePiece;
+		}
+	}
+
+}

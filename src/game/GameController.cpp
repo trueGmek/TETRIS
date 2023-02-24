@@ -7,9 +7,9 @@ const glm::ivec2 down_dir{ 0, 1 };
 
 int score{};
 
-std::random_device rd; // obtain a random number from hardware
-std::mt19937 gen(rd()); // seed the generator
-std::uniform_int_distribution<> distr(0, 6); // define the range
+std::random_device rd;
+std::mt19937 gen(rd());
+std::uniform_int_distribution<> distr(0, 6);
 
 double const MIN_MOVE_TIME = 0.05;
 double const START_MOVE_TIME = 0.5;
@@ -17,28 +17,21 @@ double const START_MOVE_TIME = 0.5;
 double moveTime;
 double timeSinceLastMove = 0;
 
-GameController::GameController() : _current() {
-
-	_current = new Tetromino((EShape)(distr(gen)), _board);
+GameController::GameController() : _current{ new Tetromino((EShape)(distr(gen)), _board) } {
 	_nextShape = (EShape)(distr(gen));
-
 	_current->Move(glm::vec2{ 5, 2 });
 	glfwSetWindowUserPointer(Renderer::window, this);
 
-	ui = new GameUI();
-	ui->SetUpGui(_nextShape, _heldShape);
+	_ui.SetUpGui(_nextShape, _heldShape);
 }
 
 void GameController::Update() {
 	double currentTime = glfwGetTime();
 
-	ui->ScoreText->Text = std::string{ std::to_string(score) };
+	_ui.ScoreText->Text = std::string{ std::to_string(score) };
 
 	if (currentTime - timeSinceLastMove >= moveTime && _isUpdating) {
 		StepUpdate();
-
-		moveTime = CalculateMoveTime();
-		std::cout << moveTime << std::endl;
 	}
 
 }
@@ -52,20 +45,23 @@ void GameController::StepUpdate() {
 		GenerateNewPiece();
 		ClearFullRows();
 	}
+
 	timeSinceLastMove = glfwGetTime();
+	moveTime = CalculateMoveTime();
 }
 
 void GameController::GenerateNewPiece() {
+
+	delete _current;
 	CreateNewPiece(_nextShape);
 	_nextShape = (EShape)(distr(gen));
-	ui->NextPiecePreview->SetShape(_nextShape);
+	_ui.NextPiecePreview->SetShape(_nextShape);
 
 	_isAbleToSwap = true;
 }
 
 void GameController::CreateNewPiece(EShape shape) {
 
-	delete _current;
 	_current = new Tetromino(shape, _board);
 
 	if (_current->CanBeMoved(glm::vec2{ 5, 2 })) {
@@ -79,10 +75,10 @@ void GameController::CreateNewPiece(EShape shape) {
 void GameController::EndGame() {
 	_isUpdating = false;
 
-	_board.RemovePieces(_current->Pieces);
+	auto pieces = _current->Pieces;
 	delete _current;
-
-	std::cout << "You lost" << std::endl;
+	_board.RemovePieces(pieces);
+	_ui.LostText->MyTransform.Scale = glm::vec3{ 2.0f };
 }
 
 void GameController::MoveTetrominoRight() {
@@ -142,16 +138,18 @@ void GameController::DebugToggleUpdate() {
 
 void GameController::SwapPieces() {
 	if (_isAbleToSwap) {
-		ui->HeldPiecePreview->SetActive(true);
+		_ui.HeldPiecePreview->SetActive(true);
 
 		if (_isHoldingShape) {
 			EShape temp = _current->Shape;
 
-			_board.RemovePieces(_current->Pieces);
+			auto pieces = _current->Pieces;
+			delete _current;
+			_board.RemovePieces(pieces);
 			CreateNewPiece(_heldShape);
 
 			_heldShape = temp;
-			ui->HeldPiecePreview->SetShape(_heldShape);
+			_ui.HeldPiecePreview->SetShape(_heldShape);
 
 			_isAbleToSwap = false;
 			return;
@@ -159,13 +157,15 @@ void GameController::SwapPieces() {
 
 		_heldShape = _current->Shape;
 
-		_board.RemovePieces(_current->Pieces);
+		auto pieces = _current->Pieces;
+		delete _current;
+		_board.RemovePieces(pieces);
 		CreateNewPiece(_nextShape);
 
 		_nextShape = (EShape)(distr(gen));
 
-		ui->HeldPiecePreview->SetShape(_heldShape);
-		ui->NextPiecePreview->SetShape(_nextShape);
+		_ui.HeldPiecePreview->SetShape(_heldShape);
+		_ui.NextPiecePreview->SetShape(_nextShape);
 
 		_isHoldingShape = true;
 		_isAbleToSwap = false;
@@ -176,4 +176,8 @@ void GameController::SwapPieces() {
 
 double GameController::CalculateMoveTime() {
 	return glm::clamp(-0.0045 * score + 0.5, MIN_MOVE_TIME, START_MOVE_TIME);
+}
+
+GameController::~GameController() {
+	delete _current;
 }

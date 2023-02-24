@@ -24,14 +24,14 @@ private:
 	EShape _nextShape;
 	EShape _heldShape{};
 
+	Board _board{ glm::vec3{ 400, 400, -1 }, glm::vec2{ 400, 600 }};
+	GameUI _ui{};
+
 	Tetromino* _current;
-
-	Board _board{ glm::vec3{ 400, 400, 0 }, glm::vec2{ 400, 600 }};
-
-	GameUI* ui;
 
 public:
 	explicit GameController();
+	~GameController();
 
 	void Update() override;
 

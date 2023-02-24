@@ -10,7 +10,7 @@ public:
 
 	GameObject();
 
-	virtual ~GameObject() = default;
+	~GameObject();
 
 	virtual void Update() = 0;
 };

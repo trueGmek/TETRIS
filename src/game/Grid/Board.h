@@ -39,17 +39,19 @@ public:
 	Board(glm::vec3 center, glm::vec2 size);
 
 	Piece* GetPiece(glm::ivec2 position);
-	Piece* GetPiece(int x, int y);
 
 	GridCell* GetGridCell(glm::ivec2 position);
 
 	void MoveRowsDown(int formRow);
 	void ClearRow(int row);
 	bool IsRowFull(int row);
-	void RemovePieces(std::array<Piece*, 4> &pieces);
+
+	Piece* CreatePieces(bool isActive, glm::ivec2 coordinates);
+	void RemovePieces(std::array<Piece*, 4>& pieces);
 
 	void SetPiece(glm::ivec2 position, Piece* piece);
 	void SetPiece(int x, int y, Piece* piece);
+	~Board();
 
 private:
 	void Update() override;

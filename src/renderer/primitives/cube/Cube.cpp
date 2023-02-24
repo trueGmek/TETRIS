@@ -24,13 +24,10 @@ unsigned int const INDICES[] = {
 
 namespace Renderer
 {
-	//TODO: THERE IS SOMETHING WRONG WITH THE TEXTURES BECAUSE COLORS IS SET IN THE SHADER
-	// WEIRD, FOR A SPLIT SECOND YOU CAN SEE THE CORRECT TEXTURE
-	Cube::Cube() {
-		_shader = new Shader(VERTEX_SHADER_PATH, FRAGMENT_SHADER_PATH);
+	Cube::Cube() : _shader{ new Shader(VERTEX_SHADER_PATH, FRAGMENT_SHADER_PATH) } {
 
 		int width, height, nrChannels;
-		unsigned char* data = stbi_load(TEXTURE_PATH.c_str(), &width, &height, &nrChannels, 0);
+		unsigned char* data{ stbi_load(TEXTURE_PATH.c_str(), &width, &height, &nrChannels, 0) };
 
 		glGenVertexArrays(1, &_vao);
 		glGenBuffers(1, &_vbo);

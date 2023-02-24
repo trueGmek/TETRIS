@@ -9,3 +9,9 @@ bool Initializer::Initialize() {
 
 	return true;
 }
+
+bool Initializer::Deinitialize() {
+	delete gameController;
+
+	return true;
+}

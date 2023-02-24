@@ -21,9 +21,7 @@ void engine::Update() {
 
 void engine::Terminate() {
 
-	for (GameObject* gameObject : engine::gameObjects) {
-		delete gameObject;
-	}
+	Initializer::Deinitialize();
 
 	gameObjects.clear();
 }
