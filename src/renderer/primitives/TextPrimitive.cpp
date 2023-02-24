@@ -1,15 +1,11 @@
-//
-// Created by gmek on 2/8/23.
-//
-
 #include "TextPrimitive.h"
 #include "../Character.h"
 #include "../Text.h"
 #include "../Provider.h"
 #include "../../camera/Camera.h"
 
-const std::string VERTEX_SHADER_PATH = "/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/text/text.vert";
-const std::string FRAGMENT_SHADER_PATH = "/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/text/text.frag";
+const std::string VERTEX_SHADER_PATH = "../resources/shaders/text/text.vert";
+const std::string FRAGMENT_SHADER_PATH = "../resources/shaders/text/text.frag";
 namespace Renderer
 {
 	TextPrimitive::TextPrimitive() {

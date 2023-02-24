@@ -46,3 +46,16 @@
 3540	3628	1670325527931592859	/home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/xkb_unicode.c.o	13c36567ad61ea7c
 3510	3671	1670325527975592541	/home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/x11_monitor.c.o	7dca256fa73645bf
 3396	3496	1670325527799593813	/home/gmek/Dev/C++/Dependencies/glfw/src/src/CMakeFiles/glfw.dir/null_init.c.o	32f0035ab97caec0
+7	1602	1677264457491608521	CMakeFiles/tetris.dir/src/renderer/primitives/TextPrimitive.cpp.o	d71ed5a0c5ffa81e
+1602	1917	1677264457803605946	tetris	f29eb7069f2fe7ae
+2	1549	1677264466059537848	CMakeFiles/tetris.dir/src/renderer/primitives/TextPrimitive.cpp.o	d71ed5a0c5ffa81e
+1549	1827	1677264466335535570	tetris	f29eb7069f2fe7ae
+5	1434	1677264553406817407	CMakeFiles/tetris.dir/src/renderer/primitives/TextPrimitive.cpp.o	d71ed5a0c5ffa81e
+1434	1606	1677264553578815990	tetris	f29eb7069f2fe7ae
+2	1503	1677264566074716028	CMakeFiles/tetris.dir/src/renderer/primitives/TextPrimitive.cpp.o	d71ed5a0c5ffa81e
+1503	1711	1677264566282714368	tetris	f29eb7069f2fe7ae
+2	1426	1677265572050713292	CMakeFiles/tetris.dir/src/renderer/primitives/TextPrimitive.cpp.o	d71ed5a0c5ffa81e
+2	1736	1677265572362710817	CMakeFiles/tetris.dir/src/renderer/primitives/cube/Cube.cpp.o	21043f3d6d313ffd
+1736	1898	1677265572522709548	tetris	f29eb7069f2fe7ae
+8	1347	1677265606886437360	CMakeFiles/tetris.dir/src/renderer/primitives/line/Line.cpp.o	83337cc661cae707
+1347	1546	1677265607086435783	tetris	f29eb7069f2fe7ae

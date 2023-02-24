@@ -3,8 +3,8 @@
 #include "../../Provider.h"
 #include "../../Renderer.h"
 
-const std::string VERTEX_SHADER_PATH = "/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/line/line.vert";
-const std::string FRAGMENT_SHADER_PATH = "/home/gmek/Dev/C++/OpenGL/tetris/resources/shaders/line/line.frag";
+const std::string VERTEX_SHADER_PATH = "../resources/shaders/line/line.vert";
+const std::string FRAGMENT_SHADER_PATH = "../resources/shaders/line/line.frag";
 
 namespace Renderer
 {
