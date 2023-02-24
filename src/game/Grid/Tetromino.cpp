@@ -1,13 +1,8 @@
-//
-// Created by gmek on 11/1/22.
-//
-
 #include "Tetromino.h"
 #include "../../utils/MathUtil.h"
 #include "TetrominoData.h"
 
-Tetromino::Tetromino(EShape shape, Board& board)
-	: Pieces{}, GameBoard(board), Shape{ shape } {
+Tetromino::Tetromino(EShape shape, Board& board) : Pieces{}, GameBoard(board), Shape{ shape } {
 	std::array<glm::ivec2, 4> shapeCoordinates = TetrominoData[shape].Coordinates;
 
 	for (int i = 0; i < 4; ++i) {
@@ -19,21 +14,6 @@ Tetromino::Tetromino(EShape shape, Board& board)
 	for (Piece* tetrominoPart : Pieces) {
 		GameBoard.SetPiece(tetrominoPart->Position, tetrominoPart);
 	}
-}
-
-void Tetromino::SetShape(EShape shape) {
-	Shape = shape;
-	std::array<glm::ivec2, 4> shapeCoordinates = TetrominoData[shape].Coordinates;
-
-	for (int i = 0; i < 4; ++i) {
-		Pieces[i]->IsActive = true;
-		Pieces[i]->Position = shapeCoordinates[i];
-	}
-
-	for (Piece* tetrominoPart : Pieces) {
-		GameBoard.SetPiece(tetrominoPart->Position, tetrominoPart);
-	}
-
 }
 
 bool Tetromino::CanBeMoved(glm::ivec2 direction) {
@@ -138,15 +118,7 @@ void Tetromino::Rotate(RotationDir direction) {
 }
 
 Tetromino::~Tetromino() {
-	Clear();
-}
-
-void Tetromino::Clear() {
-	for (Piece* tetrominoPart : Pieces) {
-		tetrominoPart->IsActive = false;
-	}
-
-	for (Piece* tetrominoPart : Pieces) {
-		GameBoard.SetPiece(tetrominoPart->Position, nullptr);
+	for (Piece* piece : Pieces) {
+		piece->IsActive = false;
 	}
 }

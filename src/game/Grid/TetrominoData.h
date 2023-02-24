@@ -69,4 +69,11 @@ static std::map<EShape, data> TetrominoData{
 
 };
 
+static std::map<int, int> ScoreTable{
+	{ 1, 1 },
+	{ 2, 3 },
+	{ 3, 5 },
+	{ 4, 8 },
+};
+
 #endif //TETRIS_SRC_GAME_GRID_TETROMINODATA_H

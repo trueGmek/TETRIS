@@ -45,7 +45,7 @@ void Board::EnableVisibleSquares() {
 			int index = i * REAL_DOWN + j;
 			Piece* piece = _cells[i][j].GamePiece;
 
-			if (piece != nullptr && piece->IsActive) {
+			if (piece != nullptr) {
 				_cubesRenderer[index].MyTransform.Scale = _cellSize;
 				_cubesRenderer[index].MyTransform.Position = _cells[i][j].Position;
 				_cubesRenderer[index].MyMaterial.color = _cells[i][j].Color;
@@ -90,13 +90,6 @@ GridCell* Board::GetGridCell(glm::ivec2 position) {
 	return nullptr;
 }
 
-GridCell* Board::GetGridCell(int x, int y) {
-	if (x >= 0 && y >= 0)
-		return &_cells[x][y];
-
-	return nullptr;
-}
-
 void Board::SetPiece(glm::ivec2 position, Piece* piece) {
 	if (position.x >= 0 && position.x < _cells.size() && position.y >= 0 && position.y < _cells[0].size())
 		_cells[position.x][position.y].GamePiece = piece;
@@ -105,5 +98,42 @@ void Board::SetPiece(glm::ivec2 position, Piece* piece) {
 void Board::SetPiece(int x, int y, Piece* piece) {
 	if (x >= 0 && x < _cells.size() && y >= 0 && y < _cells[0].size())
 		_cells[x][y].GamePiece = piece;
+}
+
+void Board::MoveRowsDown(int formRow) {
+	for (int row = formRow; row >= 0; row--) {
+		for (int column = 0; column < Board::GAME_ACROSS; ++column) {
+
+			Piece* piece = GetPiece(glm::ivec2{ column, row });
+			if (piece != nullptr && !piece->IsActive) {
+
+				SetPiece(glm::ivec2{ column, row }, nullptr);
+				piece->Position += glm::ivec2{ 0, 1 };
+				SetPiece(glm::ivec2{ column, row + 1 }, piece);
+			}
+		}
+	}
+}
+
+void Board::ClearRow(int row) {
+	for (int column = 0; column < Board::REAL_ACROSS; ++column) {
+		Piece* piece = GetPiece(column, row);
+		SetPiece(column, row, nullptr);
+	}
+}
+
+bool Board::IsRowFull(int row) {
+	for (int column = 0; column < Board::REAL_ACROSS; ++column) {
+		if (GetPiece(glm::ivec2{ column, row }) == nullptr)
+			return false;
+	}
+
+	return true;
+}
+
+void Board::RemovePieces(std::array<Piece*, 4>& pieces) {
+	for (Piece* tetrominoPart : pieces) {
+		SetPiece(tetrominoPart->Position, nullptr);
+	}
 }
 

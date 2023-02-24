@@ -1,11 +1,12 @@
 #ifndef TETRIS_SRC_GAME_GRID_BOARD_H
 #define TETRIS_SRC_GAME_GRID_BOARD_H
 
-#include <map>
 #include "../../renderer/primitives/cube/Cube.h"
-#include "../GameObject.h"
 #include "../../renderer/primitives/Colors.h"
 #include "../../renderer/primitives/line/Line.h"
+
+#include <map>
+#include "../GameObject.h"
 #include "GridCell.h"
 
 class Board : GameObject
@@ -15,6 +16,7 @@ public:
 	static const int GAME_DOWN{ 20 };
 
 	static const int VERTICAL_BUFFER{ 4 };
+
 	static const int REAL_DOWN{ GAME_DOWN + VERTICAL_BUFFER };
 	static const int REAL_ACROSS{ GAME_ACROSS };
 
@@ -40,7 +42,11 @@ public:
 	Piece* GetPiece(int x, int y);
 
 	GridCell* GetGridCell(glm::ivec2 position);
-	GridCell* GetGridCell(int x, int y);
+
+	void MoveRowsDown(int formRow);
+	void ClearRow(int row);
+	bool IsRowFull(int row);
+	void RemovePieces(std::array<Piece*, 4> &pieces);
 
 	void SetPiece(glm::ivec2 position, Piece* piece);
 	void SetPiece(int x, int y, Piece* piece);
@@ -51,6 +57,7 @@ private:
 	void EnableVisibleSquares();
 	void InitializeSquares(const glm::vec3& center, const glm::vec2& size);
 	void SetUpGameState();
+
 };
 
 #endif //TETRIS_SRC_GAME_GRID_BOARD_H

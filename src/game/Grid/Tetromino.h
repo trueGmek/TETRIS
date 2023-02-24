@@ -14,15 +14,14 @@ enum RotationDir
 class Tetromino
 {
 public:
-	Piece* Pieces[4];
+	std::array<Piece*,4> Pieces; 
 	Board& GameBoard;
 	EShape Shape;
 
 	explicit Tetromino(EShape shape, Board& board);
 	~Tetromino();
 	
-	void SetShape(EShape shape);
-	void Clear();
+//	void SetShape(EShape shape);
 
 	bool CanBeMoved(glm::ivec2 direction);
 	void Move(glm::ivec2 direction);
