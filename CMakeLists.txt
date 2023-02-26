@@ -32,9 +32,14 @@ FIND_PACKAGE(OpenGL REQUIRED)
 target_link_libraries(${PROJECT_NAME} PUBLIC OpenGL::GL)
 
 # ADD FREETYPE
-find_package(Freetype REQUIRED)
-target_link_libraries(${PROJECT_NAME} PUBLIC ${FREETYPE_LIBRARIES})
-target_include_directories(${PROJECT_NAME} PUBLIC ${FREETYPE_INCLUDE_DIRS})
+SET(FT_DISABLE_HARFBUZZ ON) 
+SET(FT_DISABLE_PNG ON)
+SET(FT_DISABLE_ZLIB ON)
+SET(FT_DISABLE_BZIP2 ON)
+SET(FT_DISABLE_BROTLI ON)
 
+add_subdirectory(external/freetype)
+target_include_directories(${PROJECT_NAME} PUBLIC external/freetype)
+target_link_libraries(${PROJECT_NAME} PUBLIC freetype)
 
 
