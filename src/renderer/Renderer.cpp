@@ -9,7 +9,7 @@ GLFWwindow* Renderer::window;
 float Renderer::windowWidth = (float)Renderer::kInitialWidth;
 float Renderer::windowHeight = (float)Renderer::kInitialHeight;
 
-const std::string FONT_PATH{ "/home/gmek/Dev/C++/OpenGL/tetris/resources/FiraCode-Bold.ttf" };
+const std::string FONT_PATH{ "../resources/FiraCode-Bold.ttf" };
 
 static void ErrorCallback(int error, const char* description) {
 	std::cout << "Error: " << description << std::endl;

@@ -3,7 +3,7 @@
 
 #include <ostream>
 #include "glm/ext/matrix_float4x4.hpp"
-
+// do wyjebania w sumie
 namespace debug
 {
 	std::ostream& operator<<(std::ostream& out, const glm::mat4& matrix) {
