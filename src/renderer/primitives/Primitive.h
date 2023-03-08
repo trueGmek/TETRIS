@@ -1,9 +1,7 @@
-#ifndef TETRIS_SRC_RENDERER_PRIMITIVES_PRIMITIVE_H_
-#define TETRIS_SRC_RENDERER_PRIMITIVES_PRIMITIVE_H_
+#pragma  once
 
-#include "../shader/Shader.h"
-#include "../Material.h"
-#include "../../Transform.h"
+#include "shader/Shader.h"
+#include "Material.h"
 
 namespace Renderer
 {
@@ -20,5 +18,3 @@ namespace Renderer
 	};
 
 } // Renderer
-
-#endif //TETRIS_SRC_RENDERER_PRIMITIVES_PRIMITIVE_H_

@@ -1,10 +1,6 @@
-//
-// Created by gmek on 10/27/22.
-//
-
 #include "Input.h"
 #include "../renderer/Renderer.h"
-#include "../game/GameController.h"
+#include "GameController.h"
 
 int KEY_W, KEY_S, KEY_A, KEY_D, KEY_F1, KEY_F2;
 
@@ -62,6 +58,6 @@ void Input::InputKeyCallback(GLFWwindow* window, int key, int scancode, int acti
 	if (scancode == KEY_F2 && action == GLFW_PRESS)
 		game_controller->StepUpdate();
 
-	if(scancode == KEY_TAB && action == GLFW_PRESS)
+	if (scancode == KEY_TAB && action == GLFW_PRESS)
 		game_controller->SwapPieces();
 }

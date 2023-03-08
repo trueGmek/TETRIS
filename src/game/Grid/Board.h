@@ -6,7 +6,7 @@
 #include "../../renderer/primitives/line/Line.h"
 
 #include <map>
-#include "../GameObject.h"
+#include "../../engine/GameObject.h"
 #include "GridCell.h"
 
 class Board : GameObject

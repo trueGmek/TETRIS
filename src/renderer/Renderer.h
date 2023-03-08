@@ -3,10 +3,9 @@
 
 #define GLFW_INCLUDE_NONE
 
-#include <iostream>
 #include "GLFW/glfw3.h"
 #include "glad/glad.h"
-#include "../camera/Camera.h"
+#include "camera/Camera.h"
 #include "primitives/Primitive.h"
 #include "queue"
 

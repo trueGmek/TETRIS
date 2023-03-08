@@ -1,11 +1,8 @@
-//
-// Created by gmek on 2/8/23.
-//
-
-#ifndef TETRIS_SRC_RENDERER_PRIMITIVES_TEXTPRIMITIVE_H
-#define TETRIS_SRC_RENDERER_PRIMITIVES_TEXTPRIMITIVE_H
+#pragma once
 
 #include "Primitive.h"
+#include "glm/vec3.hpp"
+#include "glm/gtc/quaternion.hpp"
 
 namespace Renderer
 {
@@ -13,7 +10,10 @@ namespace Renderer
 	class TextPrimitive : public Primitive
 	{
 	public:
-		Transform MyTransform;
+		glm::vec3 Position{ 0.0f, 0.0f, 0.0f };
+		glm::quat Rotation{ 1.0f, 0.0f, 0.0f, 0.0f };
+		glm::vec3 Scale{ 1, 1, 1 };
+
 		Material MyMaterial;
 		std::string Text;
 
@@ -21,7 +21,6 @@ namespace Renderer
 		Shader* _shader;
 		unsigned int _vbo{};
 		unsigned int _vao{};
-
 
 	public:
 		TextPrimitive();
@@ -34,5 +33,3 @@ namespace Renderer
 	};
 
 } // Renderer
-
-#endif //TETRIS_SRC_RENDERER_PRIMITIVES_TEXTPRIMITIVE_H

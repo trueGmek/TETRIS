@@ -14,6 +14,6 @@ namespace Renderer::Text
 	bool Initialize(std::string const& path);
 	bool Deinitialize();
 	FT_GlyphSlot GetGlyph(char character);
-};
+}
 
 #endif //TETRIS_SRC_RENDERER_TEXT_H

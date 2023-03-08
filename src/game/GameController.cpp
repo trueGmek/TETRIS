@@ -78,7 +78,7 @@ void GameController::EndGame() {
 	auto pieces = _current->Pieces;
 	delete _current;
 	_board.RemovePieces(pieces);
-	_ui.LostText->MyTransform.Scale = glm::vec3{ 2.0f };
+	_ui.LostText->Scale = glm::vec3{ 2.0f };
 }
 
 void GameController::MoveTetrominoRight() {

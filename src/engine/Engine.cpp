@@ -1,16 +1,6 @@
 #include "Engine.h"
-#include "../renderer/Provider.h"
-#include "../game/Initializer.h"
-#include "Input.h"
 
 std::vector<GameObject*> engine::gameObjects{};
-
-bool engine::Initialize() {
-	bool result = false;
-	result |= Input::Initialize();
-	result |= Initializer::Initialize();
-	return result;
-}
 
 void engine::Update() {
 
@@ -20,8 +10,5 @@ void engine::Update() {
 }
 
 void engine::Terminate() {
-
-	Initializer::Deinitialize();
-
 	gameObjects.clear();
 }

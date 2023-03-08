@@ -4,6 +4,7 @@
 #include <array>
 #include "../renderer/primitives/cube/Cube.h"
 #include "Grid/TetrominoData.h"
+#include "Transform.h"
 
 class PiecePreview
 {

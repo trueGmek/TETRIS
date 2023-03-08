@@ -1,5 +1,4 @@
-#ifndef TETRIS_SRC_RENDERER_PRIMITIVES_COLORS_H_
-#define TETRIS_SRC_RENDERER_PRIMITIVES_COLORS_H_
+#pragma once
 
 #include "glm/vec4.hpp"
 
@@ -14,5 +13,3 @@ namespace Colors
 	const glm::vec4 ORANGE = { 1, 0.5, 0, 1 };
 	const glm::vec4 PURPLE = { 0.5, 0, 0.5, 1 };
 }
-
-#endif //TETRIS_SRC_RENDERER_PRIMITIVES_COLORS_H_

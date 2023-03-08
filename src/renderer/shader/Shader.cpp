@@ -70,11 +70,11 @@ int Shader::CompileShader(unsigned int* shader, GLenum type, const std::string& 
 	return success;
 }
 
-void Shader::Use() {
+void Shader::Use() const {
 	glUseProgram(ID);
 }
 
-void Shader::CheckLinking(unsigned int id) {
+void Shader::CheckLinking(unsigned int id) const {
 	int status;
 	char infoLog[512];
 

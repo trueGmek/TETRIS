@@ -1,8 +1,8 @@
 #include "TextPrimitive.h"
-#include "../Character.h"
-#include "../Text.h"
-#include "../Provider.h"
-#include "../../camera/Camera.h"
+#include "Character.h"
+#include "Text.h"
+#include "Provider.h"
+#include "camera/Camera.h"
 
 const std::string VERTEX_SHADER_PATH = "../resources/shaders/text/text.vert";
 const std::string FRAGMENT_SHADER_PATH = "../resources/shaders/text/text.frag";
@@ -40,12 +40,12 @@ namespace Renderer
 
 	void TextPrimitive::SetData() {
 		glm::mat4 model{ 1.0f };
-		model = glm::translate(model, MyTransform.Position);
-		model = glm::rotate(model, angle(MyTransform.Rotation), axis(MyTransform.Rotation));
-		model = glm::scale(model, MyTransform.Scale);
-		glm::mat4 mvp = Camera::ProjectionMatrix() * Camera::ViewMatrix() * model;
+		model = glm::translate(model, Position);
+		model = glm::rotate(model, angle(Rotation), axis(Rotation));
+		model = glm::scale(model, Scale);
+		glm::mat4 mvp = Camera::GetProjectionMatrix() * Camera::GetViewMatrix() * model;
 
-		_shader->SetVec3Uniform("textColor", MyMaterial.color);
+		_shader->SetVec3Uniform("textColor", MyMaterial.Color);
 		_shader->SetMat4Uniform("MVP", mvp);
 	}
 

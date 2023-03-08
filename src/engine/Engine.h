@@ -2,15 +2,12 @@
 #define TETRIS_SRC_ENGINE_ENGINE_H_
 
 #include <vector>
-#include "../renderer/primitives/cube/Cube.h"
-#include "../game/GameObject.h"
+#include "GameObject.h"
 
 namespace engine
 {
-
 	extern std::vector<GameObject*> gameObjects;
 
-	bool Initialize();
 	void Update();
 	void Terminate();
 

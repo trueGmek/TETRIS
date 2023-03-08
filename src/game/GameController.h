@@ -1,7 +1,7 @@
 #ifndef TETRIS_SRC_GAME_GAMECONTROLLER_H
 #define TETRIS_SRC_GAME_GAMECONTROLLER_H
 
-#include "GameObject.h"
+#include "../engine/GameObject.h"
 
 #define GLFW_INCLUDE_NONE
 

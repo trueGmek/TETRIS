@@ -1,7 +1,7 @@
 #ifndef TETRIS_SRC_GAME_GAMEOBJECT_H
 #define TETRIS_SRC_GAME_GAMEOBJECT_H
 
-#include "../Transform.h"
+#include "Transform.h"
 
 class GameObject
 {

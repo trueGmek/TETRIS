@@ -1,6 +1,5 @@
 #include "Renderer.h"
 #include "shader/Shader.h"
-#include "../debug/Debug.h"
 #include "Provider.h"
 #include "Text.h"
 

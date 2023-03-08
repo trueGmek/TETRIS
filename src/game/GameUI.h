@@ -18,7 +18,7 @@ public:
 	PiecePreview* HeldPiecePreview{ new PiecePreview(glm::vec3{ 40, 40, 1 }) };
 
 public:
-	void SetUpGui(EShape nextShape, EShape heldShape);
+	void SetUpGui(EShape nextShape, EShape heldShape) const;
 };
 
 #endif //TETRIS_SRC_GAME_GAMEUI_H

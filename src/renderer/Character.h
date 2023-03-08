@@ -1,6 +1,4 @@
-
-#ifndef TETRIS_SRC_RENDERER_CHARACTER_H
-#define TETRIS_SRC_RENDERER_CHARACTER_H
+#pragma once
 
 #include "glm/ext/vector_int2.hpp"
 
@@ -14,5 +12,3 @@ namespace Renderer
 		unsigned int Advance;
 	};
 }
-
-#endif //TETRIS_SRC_RENDERER_CHARACTER_H

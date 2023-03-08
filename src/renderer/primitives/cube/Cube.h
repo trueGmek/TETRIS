@@ -1,16 +1,19 @@
-#ifndef TETRIS_SRC_RENDERER_PRIMITIVES_CUBE_CUBE_H
-#define TETRIS_SRC_RENDERER_PRIMITIVES_CUBE_CUBE_H
+#pragma once
 
-#include "../Primitive.h"
-#include "../../../Transform.h"
-#include "../../../camera/Camera.h"
+#include "primitives/Primitive.h"
+#include "camera/Camera.h"
+#include "glm/ext/matrix_transform.hpp"
+#include "glm/ext/quaternion_float.hpp"
 
 namespace Renderer
 {
 	class Cube : public Primitive
 	{
 	public:
-		Transform MyTransform;
+		glm::vec3 Position{ 0.0f, 0.0f, 0.0f };
+		glm::quat Rotation{ 1.0f, 0.0f, 0.0f, 0.0f };
+		glm::vec3 Scale{ 1, 1, 1 };
+
 		Material MyMaterial;
 	private:
 		Shader* _shader;
@@ -31,5 +34,3 @@ namespace Renderer
 	};
 
 } // Renderer
-
-#endif //TETRIS_SRC_RENDERER_PRIMITIVES_CUBE_CUBE_H

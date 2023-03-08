@@ -1,7 +1,3 @@
-//
-// Created by gmek on 10/27/22.
-//
-
 #ifndef TETRIS_SRC_ENGINE_INPUT_H_
 #define TETRIS_SRC_ENGINE_INPUT_H_
 
