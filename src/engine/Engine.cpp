@@ -1,14 +1,14 @@
 #include "Engine.h"
 
-std::vector<GameObject*> engine::gameObjects{};
+std::vector<GameObject*> Engine::gameObjects{};
 
-void engine::Update() {
+void Engine::Update() {
 
-	for (GameObject* gameObject : engine::gameObjects) {
+	for (GameObject* gameObject : Engine::gameObjects) {
 		gameObject->Update();
 	}
 }
 
-void engine::Terminate() {
+void Engine::Terminate() {
 	gameObjects.clear();
 }

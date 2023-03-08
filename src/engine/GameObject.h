@@ -1,5 +1,4 @@
-#ifndef TETRIS_SRC_GAME_GAMEOBJECT_H
-#define TETRIS_SRC_GAME_GAMEOBJECT_H
+#pragma once
 
 #include "Transform.h"
 
@@ -14,5 +13,3 @@ public:
 
 	virtual void Update() = 0;
 };
-
-#endif //TETRIS_SRC_GAME_GAMEOBJECT_H

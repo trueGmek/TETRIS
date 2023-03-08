@@ -1,10 +1,9 @@
-#ifndef TETRIS_SRC_ENGINE_ENGINE_H_
-#define TETRIS_SRC_ENGINE_ENGINE_H_
+#pragma once
 
 #include <vector>
 #include "GameObject.h"
 
-namespace engine
+namespace Engine
 {
 	extern std::vector<GameObject*> gameObjects;
 
@@ -12,5 +11,3 @@ namespace engine
 	void Terminate();
 
 }
-
-#endif //TETRIS_SRC_ENGINE_ENGINE_H_

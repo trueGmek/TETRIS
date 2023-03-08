@@ -1,5 +1,4 @@
-#ifndef TETRIS_SRC_TRANSFORM_H
-#define TETRIS_SRC_TRANSFORM_H
+#pragma once
 
 #include "glm/vec3.hpp"
 #include "glm/gtc/quaternion.hpp"
@@ -10,5 +9,3 @@ struct Transform
 	glm::quat Rotation{ 1.0f, 0.0f, 0.0f, 0.0f };
 	glm::vec3 Scale{ 1, 1, 1 };
 };
-
-#endif //TETRIS_SRC_TRANSFORM_H
