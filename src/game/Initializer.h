@@ -2,9 +2,11 @@
 
 #include "GameController.h"
 
-class Initializer
+
+namespace Game
 {
-public:
-	static bool Initialize();
-	static bool Deinitialize();
-};
+extern	GameController* GameController;
+
+	bool Initialize();
+	bool Deinitialize();
+}

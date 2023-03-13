@@ -2,18 +2,18 @@
 #include "GameController.h"
 #include "Input.h"
 
-GameController* gameController;
+GameController* Game::GameController;
 
-bool Initializer::Initialize() {
+bool Game::Initialize() {
 
 	Input::Initialize();
-	gameController = new GameController();
+	GameController = new class GameController();
 
 	return true;
 }
 
-bool Initializer::Deinitialize() {
-	delete gameController;
+bool Game::Deinitialize() {
+	delete GameController;
 
 	return true;
 }

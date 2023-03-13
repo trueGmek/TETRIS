@@ -42,7 +42,6 @@ set(ENGINE_SOURCES
         src/engine/Engine.h
         src/engine/GameObject.h
         src/engine/GameObject.cpp
-        src/utils/MathUtil.h
         )
 
 add_library(engine ${ENGINE_SOURCES})
@@ -73,6 +72,8 @@ add_executable(tetris src/main.cpp
         src/game/Input.cpp
         src/game/Input.h
         )
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++")
 
 target_include_directories(${PROJECT_NAME} PRIVATE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/game>)
 

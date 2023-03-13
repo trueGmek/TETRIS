@@ -1,17 +1,17 @@
+#include "Initializer.h"
 #include "Renderer.h"
 #include "Engine.h"
-#include "Initializer.h"
 
 int main() {
 	Renderer::Initialize();
-	Initializer::Initialize();
+	Game::Initialize();
 
 	while (!Renderer::IsWindowClosing()) {
 		Engine::Update();
 		Renderer::Update();
 	}
 
-	Initializer::Deinitialize();
+	Game::Deinitialize();
 
 	Engine::Terminate();
 	Renderer::Terminate();

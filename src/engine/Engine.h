@@ -9,5 +9,4 @@ namespace Engine
 
 	void Update();
 	void Terminate();
-
 }
