@@ -1,5 +1,4 @@
-#ifndef TETRIS_SRC_GAME_GRID_BOARD_H
-#define TETRIS_SRC_GAME_GRID_BOARD_H
+#pragma once
 
 #include "primitives/cube/Cube.h"
 #include "primitives/Colors.h"
@@ -61,5 +60,3 @@ private:
 	void SetUpGameState();
 
 };
-
-#endif //TETRIS_SRC_GAME_GRID_BOARD_H
