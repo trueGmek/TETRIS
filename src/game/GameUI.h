@@ -1,7 +1,6 @@
-#ifndef TETRIS_SRC_GAME_GAMEUI_H
-#define TETRIS_SRC_GAME_GAMEUI_H
+#pragma once
 
-#include "../renderer/primitives/TextPrimitive.h"
+#include "primitives/TextPrimitive.h"
 #include "PiecePreview.h"
 
 class GameUI
@@ -20,5 +19,3 @@ public:
 public:
 	void SetUpGui(EShape nextShape, EShape heldShape) const;
 };
-
-#endif //TETRIS_SRC_GAME_GAMEUI_H

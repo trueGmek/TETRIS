@@ -1,5 +1,4 @@
-#ifndef TETRIS_SRC_ENGINE_INPUT_H_
-#define TETRIS_SRC_ENGINE_INPUT_H_
+#pragma once
 
 #define GLFW_INCLUDE_NONE
 
@@ -15,5 +14,3 @@ public:
 
 	static void SetKeyScancodes();
 };
-
-#endif //TETRIS_SRC_ENGINE_INPUT_H_

@@ -1,5 +1,4 @@
-#ifndef TETRIS_SRC_RENDERER_RENDERER_H
-#define TETRIS_SRC_RENDERER_RENDERER_H
+#pragma once
 
 #define GLFW_INCLUDE_NONE
 
@@ -25,5 +24,3 @@ namespace Renderer
 	bool IsWindowClosing();
 	void GenerateCharacterTextures();
 }
-
-#endif //TETRIS_SRC_RENDERER_RENDERER_H

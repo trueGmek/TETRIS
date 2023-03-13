@@ -1,7 +1,4 @@
-#ifndef TETRIS_SRC_GAME_GAMECONTROLLER_H
-#define TETRIS_SRC_GAME_GAMECONTROLLER_H
-
-#include "../engine/GameObject.h"
+#pragma once
 
 #define GLFW_INCLUDE_NONE
 
@@ -10,9 +7,10 @@
 #include "Grid/Tetromino.h"
 #include "Grid/Board.h"
 #include "Grid/Piece.h"
-#include "../renderer/primitives/TextPrimitive.h"
+#include "primitives/TextPrimitive.h"
 #include "PiecePreview.h"
 #include "GameUI.h"
+#include "GameObject.h"
 
 class GameController : public GameObject
 {
@@ -54,5 +52,3 @@ private:
 	bool _isAbleToSwap = true;
 	static double CalculateMoveTime();
 };
-
-#endif //TETRIS_SRC_GAME_GAMECONTROLLER_H

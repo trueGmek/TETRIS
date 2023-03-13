@@ -1,12 +1,12 @@
 #ifndef TETRIS_SRC_GAME_GRID_BOARD_H
 #define TETRIS_SRC_GAME_GRID_BOARD_H
 
-#include "../../renderer/primitives/cube/Cube.h"
-#include "../../renderer/primitives/Colors.h"
-#include "../../renderer/primitives/line/Line.h"
+#include "primitives/cube/Cube.h"
+#include "primitives/Colors.h"
+#include "primitives/line/Line.h"
 
 #include <map>
-#include "../../engine/GameObject.h"
+#include "GameObject.h"
 #include "GridCell.h"
 
 class Board : GameObject

@@ -1,6 +1,6 @@
 #include "Renderer.h"
 #include "Engine.h"
-#include "game/Initializer.h"
+#include "Initializer.h"
 
 int main() {
 	Renderer::Initialize();

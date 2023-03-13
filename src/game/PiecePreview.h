@@ -1,8 +1,7 @@
-#ifndef TETRIS_SRC_GAME_PIECEPREVIEW_H
-#define TETRIS_SRC_GAME_PIECEPREVIEW_H
+#pragma once
 
 #include <array>
-#include "../renderer/primitives/cube/Cube.h"
+#include "primitives/cube/Cube.h"
 #include "Grid/TetrominoData.h"
 #include "Transform.h"
 
@@ -21,5 +20,3 @@ private:
 	glm::vec3 _cellSize;
 
 };
-
-#endif //TETRIS_SRC_GAME_PIECEPREVIEW_H

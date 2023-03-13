@@ -1,6 +1,6 @@
 #include <random>
 #include "GameController.h"
-#include "../renderer/Renderer.h"
+#include "Renderer.h"
 #include "PiecePreview.h"
 
 const glm::ivec2 down_dir{ 0, 1 };

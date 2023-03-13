@@ -33,4 +33,4 @@ namespace Renderer
 		void SetData() override;
 	};
 
-} // Renderer
+} 

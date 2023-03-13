@@ -1,5 +1,4 @@
-#ifndef TETRIS_SRC_GAME_GRID_GRIDCELL_H_
-#define TETRIS_SRC_GAME_GRID_GRIDCELL_H_
+#pragma once
 
 #include "glm/vec3.hpp"
 #include "glm/vec4.hpp"
@@ -13,5 +12,3 @@ struct GridCell
 	glm::vec3 Position;
 	Piece* GamePiece;
 };
-
-#endif //TETRIS_SRC_GAME_GRID_GRIDCELL_H_

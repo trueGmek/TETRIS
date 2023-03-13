@@ -1,5 +1,4 @@
-#ifndef TETRIS_SRC_RENDERER_TEXT_H
-#define TETRIS_SRC_RENDERER_TEXT_H
+#pragma once
 
 #include <iostream>
 #include <map>
@@ -15,5 +14,3 @@ namespace Renderer::Text
 	bool Deinitialize();
 	FT_GlyphSlot GetGlyph(char character);
 }
-
-#endif //TETRIS_SRC_RENDERER_TEXT_H

@@ -1,12 +1,11 @@
 #include "Tetromino.h"
-#include "../../utils/MathUtil.h"
 #include "TetrominoData.h"
 
 Tetromino::Tetromino(EShape shape, Board& board) : Pieces{}, GameBoard(board), Shape{ shape } {
 	std::array<glm::ivec2, 4> shapeCoordinates = TetrominoData[shape].Coordinates;
 
 	for (int i = 0; i < 4; ++i) {
-		Pieces[i] = board.CreatePieces(true,shapeCoordinates[i]);
+		Pieces[i] = board.CreatePieces(true, shapeCoordinates[i]);
 	}
 }
 
@@ -109,6 +108,11 @@ void Tetromino::Rotate(RotationDir direction) {
 
 	SetColors();
 
+}
+
+glm::mat2 Tetromino::GetRotationMatrix(float rotationAngle) {
+	float angle = glm::radians(rotationAngle);
+	return glm::mat2x2{{ glm::cos(angle), glm::sin(angle) }, { -glm::sin(angle), glm::cos(angle) }};
 }
 
 Tetromino::~Tetromino() {

@@ -8,7 +8,6 @@ bool Initializer::Initialize() {
 
 	Input::Initialize();
 	gameController = new GameController();
-	
 
 	return true;
 }

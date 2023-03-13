@@ -1,5 +1,4 @@
-#ifndef TETRIS_SRC_GAME_INITIALIZER_H_
-#define TETRIS_SRC_GAME_INITIALIZER_H_
+#pragma once
 
 #include "GameController.h"
 
@@ -9,5 +8,3 @@ public:
 	static bool Initialize();
 	static bool Deinitialize();
 };
-
-#endif //TETRIS_SRC_GAME_INITIALIZER_H_

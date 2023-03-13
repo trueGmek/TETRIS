@@ -1,10 +1,9 @@
-#ifndef TETRIS_SRC_GAME_GRID_TETROMINODATA_H
-#define TETRIS_SRC_GAME_GRID_TETROMINODATA_H
+#pragma once
 
 #include <array>
 #include <map>
 #include "glm/ext/vector_int2.hpp"
-#include "../../renderer/primitives/Colors.h"
+#include "primitives/Colors.h"
 
 enum EShape
 {
@@ -75,5 +74,3 @@ static std::map<int, int> ScoreTable{
 	{ 3, 5 },
 	{ 4, 8 },
 };
-
-#endif //TETRIS_SRC_GAME_GRID_TETROMINODATA_H

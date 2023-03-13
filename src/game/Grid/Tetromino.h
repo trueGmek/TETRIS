@@ -1,5 +1,4 @@
-#ifndef TETRIS_SRC_GAME_GRID_TETROMINO_H
-#define TETRIS_SRC_GAME_GRID_TETROMINO_H
+#pragma once
 
 #include "glm/ext/vector_int2.hpp"
 #include "Board.h"
@@ -14,15 +13,12 @@ enum RotationDir
 class Tetromino
 {
 public:
-	std::array<Piece*,4> Pieces; 
+	std::array<Piece*, 4> Pieces;
 	Board& GameBoard;
 	EShape Shape;
 
 	explicit Tetromino(EShape shape, Board& board);
 	~Tetromino();
-	
-//	void SetShape(EShape shape);
-
 	bool CanBeMoved(glm::ivec2 direction);
 	void Move(glm::ivec2 direction);
 
@@ -30,7 +26,7 @@ public:
 	void Rotate(RotationDir direction);
 	bool IsPiecePartOfTetromino(glm::ivec2 destination);
 
+	static glm::mat2 GetRotationMatrix(float rotationAngle);
+
 	void SetColors();
 };
-
-#endif //TETRIS_SRC_GAME_GRID_TETROMINO_H

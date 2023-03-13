@@ -1,5 +1,5 @@
 #include "Input.h"
-#include "../renderer/Renderer.h"
+#include "Renderer.h"
 #include "GameController.h"
 
 int KEY_W, KEY_S, KEY_A, KEY_D, KEY_F1, KEY_F2;
@@ -32,32 +32,32 @@ void Input::SetKeyScancodes() {
 
 void Input::InputKeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
 
-	auto* game_controller = (GameController*)glfwGetWindowUserPointer(window);
+	auto* gameController = (GameController*)glfwGetWindowUserPointer(window);
 
 	if (scancode == KEY_A && action == GLFW_PRESS)
-		game_controller->MoveTetrominoLeft();
+		gameController->MoveTetrominoLeft();
 
 	if (scancode == KEY_D && action == GLFW_PRESS)
-		game_controller->MoveTetrominoRight();
+		gameController->MoveTetrominoRight();
 
 	if (scancode == KEY_SPACE && action == GLFW_PRESS)
-		game_controller->DropTetromino();
+		gameController->DropTetromino();
 
 	if (scancode == KEY_W && action == GLFW_PRESS)
-		game_controller->RotateClockwise();
+		gameController->RotateClockwise();
 
 	if (scancode == KEY_S && action == GLFW_PRESS)
-		game_controller->RotateCounterclockwise();
+		gameController->RotateCounterclockwise();
 
 	if (scancode == KEY_ESCAPE && action == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, GLFW_TRUE);
 
 	if (scancode == KEY_F1 && action == GLFW_PRESS)
-		game_controller->DebugToggleUpdate();
+		gameController->DebugToggleUpdate();
 
 	if (scancode == KEY_F2 && action == GLFW_PRESS)
-		game_controller->StepUpdate();
+		gameController->StepUpdate();
 
 	if (scancode == KEY_TAB && action == GLFW_PRESS)
-		game_controller->SwapPieces();
+		gameController->SwapPieces();
 }
