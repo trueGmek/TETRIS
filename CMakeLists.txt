@@ -73,7 +73,7 @@ add_executable(tetris src/main.cpp
         src/game/Input.h
         )
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static")
 
 target_include_directories(${PROJECT_NAME} PRIVATE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/game>)
 
@@ -92,14 +92,14 @@ target_link_libraries(renderer PUBLIC glm)
 target_link_libraries(engine PUBLIC glm)
 
 # ADD GLFW
-add_subdirectory(${GLFW_DIR}
-        ${GLFW_DIR}/src)
+add_subdirectory(${GLFW_DIR} ${GLFW_DIR}/src)
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC glfw)
+target_link_libraries(renderer PUBLIC glfw)
 
 # ADD OPENGL
 FIND_PACKAGE(OpenGL REQUIRED)
