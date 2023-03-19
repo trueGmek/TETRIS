@@ -73,7 +73,9 @@ add_executable(tetris src/main.cpp
         src/game/Input.h
         )
 
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static")
+if(WIN32)
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static")
+endif()
 
 target_include_directories(${PROJECT_NAME} PRIVATE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/game>)
 
@@ -116,4 +118,11 @@ add_subdirectory(external/freetype)
 target_include_directories(renderer PUBLIC external/freetype)
 target_link_libraries(renderer PUBLIC freetype)
 
+#ADD RESOURCES
+add_custom_target(copy_resources ALL
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${PROJECT_SOURCE_DIR}/resources
+        ${PROJECT_BINARY_DIR}/resources
+        COMMENT "Copying resources into binary directory")
 
+add_dependencies(${PROJECT_NAME} copy_resources)
