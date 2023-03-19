@@ -7,9 +7,9 @@
 #include "stb_image.h"
 #include "glm/ext/quaternion_trigonometric.hpp"
 
-const std::string VERTEX_SHADER_PATH = "../resources/shaders/cube/cube.vert";
-const std::string FRAGMENT_SHADER_PATH = "../resources/shaders/cube/cube.frag";
-const std::string TEXTURE_PATH = "../resources/block_texture.jpg";
+const std::string VERTEX_SHADER_PATH = "./resources/shaders/cube/cube.vert";
+const std::string FRAGMENT_SHADER_PATH = "./resources/shaders/cube/cube.frag";
+const std::string TEXTURE_PATH = "./resources/block_texture.jpg";
 
 float const VERTEX_ATTRIBUTES[] = {
 	-0.5, 0.5, 0, 0.0, 1.0,    //TOP LEFT

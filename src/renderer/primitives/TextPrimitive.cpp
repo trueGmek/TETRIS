@@ -4,8 +4,8 @@
 #include "Provider.h"
 #include "camera/Camera.h"
 
-const std::string VERTEX_SHADER_PATH = "../resources/shaders/text/text.vert";
-const std::string FRAGMENT_SHADER_PATH = "../resources/shaders/text/text.frag";
+const std::string VERTEX_SHADER_PATH = "./resources/shaders/text/text.vert";
+const std::string FRAGMENT_SHADER_PATH = "./resources/shaders/text/text.frag";
 namespace Renderer
 {
 	TextPrimitive::TextPrimitive() {

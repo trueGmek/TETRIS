@@ -16,7 +16,7 @@ class GameController : public GameObject
 {
 
 private:
-	bool _isUpdating = false;
+	bool _isUpdating = true;
 	bool _isHoldingShape = false;
 
 	EShape _nextShape;

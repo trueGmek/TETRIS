@@ -2,8 +2,8 @@
 #include "camera/Camera.h"
 #include "Provider.h"
 
-const std::string VERTEX_SHADER_PATH = "../resources/shaders/line/line.vert";
-const std::string FRAGMENT_SHADER_PATH = "../resources/shaders/line/line.frag";
+const std::string VERTEX_SHADER_PATH = "./resources/shaders/line/line.vert";
+const std::string FRAGMENT_SHADER_PATH = "./resources/shaders/line/line.frag";
 
 namespace Renderer
 {
