@@ -91,10 +91,7 @@ void Renderer::GenerateCharacterTextures() {
 		unsigned int texture;
 		glGenTextures(1, &texture);
 		glBindTexture(GL_TEXTURE_2D, texture);
-
-		if (c == 'c') {
-			std::cout << "Texture id for c: " << texture << std::endl;
-		}
+        
 		glTexImage2D(
 			GL_TEXTURE_2D,
 			0,
